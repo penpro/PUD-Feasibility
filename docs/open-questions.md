@@ -6,7 +6,7 @@ recording the answer and its source. **P1** = changes a headline number, **P2** 
 
 | ID | Pri | Question | Why it matters | Next step | Status |
 |---|---|---|---|---|---|
-| OQ-01 | P1 | What were PSE's actual 2022 Kitsap kWh by sector (and by month)? | Replaces Method B's back-calculation with a measurement. | [Records request draft](records-requests/2026-11-04_kitsap-electricity-consumption.md) to Commerce + Kitsap DCD. | Drafted 2026-11-04; PDF letters ready, not sent |
+| OQ-01 | P1 | What were PSE's actual 2022 Kitsap kWh by sector (and by month)? | Replaces Method B's back-calculation with a measurement. | [Records request draft](records-requests/2026-11-04_kitsap-electricity-consumption.md) to Commerce + Kitsap DCD. | Sent 2026-11-04 2:30 PM to Commerce and Kitsap County; first responses due by Nov 12 (RCW 42.56.520) |
 | OQ-02 | P1 | Which electricity emission factor(s) did the GHG inventory apply, and was any non-PSE utility included? | The factor choice moves Method B by about ±20%. A single factor is also what lets us split kWh by sector. | Records request item 4. | Open |
 | OQ-03 | P1 | How many PSE customers are in Kitsap, by rate class? | Method C's largest structural input. PSE's "130,000" is rounded and came from an advocacy release. | Ask PSE directly; check UTC filings and PSE community reports. | Open |
 | OQ-04 | P2 | Are Naval Base Kitsap Bremerton and Bangor still BPA direct-service customers? Does PSE serve any federal load as retail? | Defines what KPUD would and would not take over. Federal loads are large. | BPA customer list; Navy (NAVFAC NW) utility contracts; EIA-861 BPA detail. Source S013 is from 2016. | Open |

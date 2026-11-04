@@ -182,6 +182,44 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .labels { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
 .lab-chip { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.03em; padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border); margin-bottom: 6px; }
 
+/* PSE owners' profit counter */
+.owners { margin-top: 14px; }
+.ticker-label { font-size: 15px; font-weight: 600; color: var(--ink-2); margin: 16px 0 2px; }
+.ticker { display: flex; align-items: center; gap: 10px; font-size: clamp(34px, 9vw, 54px); font-weight: 700; line-height: 1.1;
+  font-variant-numeric: tabular-nums; letter-spacing: -0.01em; color: var(--ink); overflow: hidden; white-space: nowrap; }
+.ticker-mark { width: 12px; height: 12px; border-radius: 50%; background: var(--s2); flex: none; }
+.ticker-rate { font-size: 15px; color: var(--ink-2); margin: 4px 0 12px; }
+.owners-how { margin: 0; background: var(--surface); }
+.owners-how summary { font-size: 15px; }
+.owners-how p { font-size: 15px; color: var(--ink-2); }
+
+/* records requests in motion */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.motion { margin-top: 22px; border: 2px solid var(--s1); }
+.motion-head { display: flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--s1); }
+.live-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ok); flex: none; animation: pulse 2s ease-out infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(12,163,12,0.45); } 70% { box-shadow: 0 0 0 9px rgba(12,163,12,0); } 100% { box-shadow: 0 0 0 0 rgba(12,163,12,0); } }
+@media (prefers-reduced-motion: reduce) { .live-dot { animation: none; } }
+.motion-title { font-size: 19px; font-weight: 600; line-height: 1.4; margin: 8px 0 14px; }
+.timer-label { font-size: 14px; color: var(--ink-2); margin: 0 0 6px; }
+.timer { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 0 0 16px; }
+.timer div { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 8px 4px; text-align: center; }
+.timer b { display: block; font-size: 30px; font-weight: 650; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.timer span { font-size: 13px; color: var(--ink-2); }
+.cal { display: grid; gap: 4px; margin: 6px 0 8px; }
+.cal div { border-radius: 6px; padding: 6px 1px; text-align: center; font-size: 12px; line-height: 1.25; color: var(--ink-2); border: 1px solid var(--border); background: var(--card); }
+.cal div b { display: block; font-size: 15px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.cal .off { border-style: dashed; background: transparent; color: var(--muted); }
+.cal .off b { color: var(--muted); font-weight: 500; }
+.cal .done { background: var(--s1); border-color: transparent; color: #fff; }
+.cal .done b { color: #fff; }
+.cal .today { outline: 2px solid var(--s1); outline-offset: -2px; }
+.cal-note { font-size: 14px; color: var(--ink-2); margin: 0 0 14px; }
+.m-ag { list-style: none; padding: 0; margin: 0 0 12px; display: grid; gap: 8px; }
+.m-ag li { display: flex; justify-content: space-between; gap: 6px 12px; flex-wrap: wrap; align-items: center; font-size: 16px; }
+.m-ag .chip { font-size: 13px; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--border); color: var(--ink-2); background: var(--surface); }
+.m-links { font-size: 15px; margin: 0; }
+
 details.faq { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; margin-bottom: 10px; }
 details.faq summary { cursor: pointer; font-weight: 600; }
 details.faq p { margin: 10px 0 0; }
@@ -212,6 +250,19 @@ footer a { color: var(--ink-2); }
   <h1>Could Kitsap run its own electric utility?</h1>
   <p class="lede">The numbers behind the Kitsap PUD question, in plain English, with every source public.</p>
   <p class="small">Updated <span data-k="as_of"></span> · Early results: we've started with how much electricity Kitsap uses. Costs and bills come next.</p>
+  <div class="card motion" id="motion" hidden>
+    <div class="motion-head"><span class="live-dot" aria-hidden="true"></span>Already in motion</div>
+    <p class="motion-title">Public records requests for Kitsap's real electricity data went to <span id="m-n"></span> agencies on <span id="m-sent"></span> Pacific.</p>
+    <p class="timer-label" aria-hidden="true">In motion for</p>
+    <div class="timer" aria-hidden="true">
+      <div><b id="t-d">0</b><span>days</span></div><div><b id="t-h">00</b><span>hours</span></div><div><b id="t-m">00</b><span>minutes</span></div><div><b id="t-s">00</b><span>seconds</span></div>
+    </div>
+    <p class="sr-only" id="m-sr"></p>
+    <div class="cal" id="m-cal" aria-hidden="true"></div>
+    <p class="cal-note" id="m-note"></p>
+    <ul class="m-ag" id="m-ag"></ul>
+    <p class="m-links"><a id="m-link" href="#">Read the request</a> · <a href="#help">Help follow up (C2)</a></p>
+  </div>
   <noscript><p class="callout">This page needs JavaScript to show its numbers and charts. Everything is also readable on <a href="https://github.com/penpro/PUD-Feasibility">GitHub</a>.</p></noscript>
 </div>
 
@@ -256,7 +307,20 @@ footer a { color: var(--ink-2); }
     <div class="card"><h3>Peninsula Light Co.</h3><p class="small" style="margin:0">A member-owned co-op. Serves a small part of Kitsap. Exactly how many Kitsap customers is <a href="#help">one of our open questions</a>.</p></div>
     <div class="card"><h3>Mason County PUD 3</h3><p class="small" style="margin:0">A public utility district. Also serves a small part of Kitsap. Customer count is an open question too.</p></div>
   </div>
-  <p class="small" style="margin-top:12px">Sources: U.S. Energy Information Administration utility list for Kitsap County (2025); BPA presentation, 2016.</p>
+  <div class="card owners" id="owners">
+    <h3>Who owns PSE?</h3>
+    <p class="small" style="margin:0">PSE's parent company is owned by six pension and infrastructure funds based outside the United States: BCI, AIMCo, OMERS and Ontario Teachers' (Canada), PGGM (the Netherlands), and a fund run by Macquarie (Australia).</p>
+    <div class="ticker-label">Profit PSE has earned for its foreign owners since Election Day</div>
+    <div class="ticker" aria-hidden="true"><span class="ticker-mark"></span>$<span id="own-count">0.00</span></div>
+    <p class="sr-only">About <span data-k="owners_per_day"></span> a day, counted from 12:00 AM on November 3, 2026.</p>
+    <p class="ticker-rate">At 2025's rate: <strong><span data-k="owners_net_income"></span></strong> a year, about <strong><span data-k="owners_per_day"></span></strong> a day, or <span data-k="owners_per_sec"></span> every second. All of PSE, not just Kitsap.</p>
+    <details class="faq owners-how"><summary>What this counts, and what it doesn't</summary>
+      <p>It counts profit, whether it is paid out as cash (<span data-k="owners_dividends"></span> in dividends in 2025) or kept in the company, where it adds to the value the owners hold. The owners also put money in: <span data-k="owners_contrib_2024"></span> in 2024. Cash paid out minus cash put in over 2023–2025 was <span data-k="owners_net_cash_3yr"></span>.</p>
+      <p>Not counted, because there is no public breakdown by country: interest paid to foreign bondholders, and payments for power bought from Canadian suppliers. The Macquarie fund's own investors are not disclosed and may include Americans. The counter spreads a year's profit evenly over its seconds; real earnings rise and fall with the seasons.</p>
+      <p>Source: <a href="https://www.sec.gov/Archives/edgar/data/1085392/000108539226000008/psd-20251231.htm">Puget Energy and PSE 2025 annual report (Form 10-K, SEC)</a>: ownership in Item 1, figures in the consolidated statements.</p>
+    </details>
+  </div>
+  <p class="small" style="margin-top:12px">Sources: U.S. Energy Information Administration utility list for Kitsap County (2025); BPA presentation, 2016; Puget Energy 2025 Form 10-K.</p>
 </div></section>
 
 <section id="how-much"><div class="wrap">
@@ -436,6 +500,86 @@ footer a { color: var(--ink-2); }
   document.querySelectorAll(".repo-link").forEach(function (a) { a.href = D.repo + a.getAttribute("data-path"); });
   document.getElementById("volunteer-link").href = D.repo + "/issues/new?template=volunteer.md&title=" + encodeURIComponent("[Help] I'll take on ");
   document.getElementById("help-md").href = D.repo + "/blob/main/docs/help-wanted.md";
+
+  // ---- profit earned for PSE's owners since Election Day (rate = 2025 net income spread evenly over the year)
+  (function () {
+    var C = D.owners_counter, out = document.getElementById("own-count");
+    if (!C || !out) return;
+    var start = new Date(C.start).getTime();
+    var slow = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var box = out.parentNode, lastLen = 0;
+    function fit() {  // shrink the font only when a new digit would overflow the card (e.g. passing $100 million)
+      box.style.fontSize = "";
+      var size = parseFloat(getComputedStyle(box).fontSize);
+      while (box.scrollWidth > box.clientWidth && size > 20) { size -= 1; box.style.fontSize = size + "px"; }
+    }
+    function draw() {
+      var v = Math.max(0, (Date.now() - start) / 1000 * C.per_second);
+      out.textContent = v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      if (out.textContent.length !== lastLen) { lastLen = out.textContent.length; fit(); }
+    }
+    window.addEventListener("resize", fit);
+    draw();
+    setInterval(draw, slow ? 1000 : 50);
+  })();
+
+  // ---- records requests in motion: a running clock since the send, and the legal response window
+  (function () {
+    var R = (D.records || [])[0], box = document.getElementById("motion");
+    if (!R || !box) return;
+    box.hidden = false;
+    var sent = new Date(R.sent_at), dueEnd = new Date(R.due_end);
+    document.getElementById("m-n").textContent = R.agencies.length === 2 ? "two" : String(R.agencies.length);
+    document.getElementById("m-sent").textContent = R.sent_label;
+    document.getElementById("m-link").href = R.url;
+    document.getElementById("m-sr").textContent = "Sent " + R.sent_label + " Pacific. First replies are due by " + R.due_label + ".";
+    var note = document.getElementById("m-note");
+    note.appendChild(document.createTextNode("By law each agency owes a first reply within 5 business days, so by "));
+    var b = document.createElement("b"); b.textContent = R.due_label; note.appendChild(b);
+    note.appendChild(document.createTextNode(". Weekends" + (R.holidays.length ? " and the " + R.holidays.join(", ") + " state holiday" : "") +
+      " don't count. A first reply is often a time estimate, not the records themselves."));
+
+    var cal = document.getElementById("m-cal"), cells = [];
+    cal.style.gridTemplateColumns = "repeat(" + R.calendar.length + ", minmax(0, 1fr))";
+    R.calendar.forEach(function (c) {
+      var d = document.createElement("div");
+      if (c.kind !== "business") d.className = "off";
+      d.title = c.kind === "business" ? "Business day" : (c.kind === "holiday" ? "State holiday: doesn't count" : "Weekend: doesn't count");
+      d.appendChild(document.createTextNode(c.dow));
+      var n = document.createElement("b"); n.textContent = c.day; d.appendChild(n);
+      cal.appendChild(d); cells.push({ el: d, c: c, start: new Date(c.start), end: new Date(c.end) });
+    });
+
+    var list = document.getElementById("m-ag"), chips = [];
+    R.agencies.forEach(function (a) {
+      var li = document.createElement("li"), name = document.createElement("strong"), chip = document.createElement("span");
+      name.textContent = a.name; chip.className = "chip";
+      li.appendChild(name); li.appendChild(chip); list.appendChild(li);
+      chips.push({ chip: chip, a: a, due: new Date(a.due_end) });
+    });
+
+    function pad(n) { return (n < 10 ? "0" : "") + n; }
+    function tick() {
+      var now = Date.now(), s = Math.max(0, Math.floor((now - sent) / 1000));
+      document.getElementById("t-d").textContent = Math.floor(s / 86400);
+      document.getElementById("t-h").textContent = pad(Math.floor(s / 3600) % 24);
+      document.getElementById("t-m").textContent = pad(Math.floor(s / 60) % 60);
+      document.getElementById("t-s").textContent = pad(s % 60);
+      cells.forEach(function (x) {
+        if (x.c.kind !== "business") return;
+        x.el.classList.toggle("done", now > x.end);
+        x.el.classList.toggle("today", now >= x.start && now <= x.end);
+      });
+      chips.forEach(function (x) {
+        var t = x.a.replied ? x.a.status + ", " + x.a.status_at
+          : (now > x.due ? "No reply logged yet (was due " + x.a.due_label + ")" : "Sent, waiting for first reply");
+        if (x.a.tracking) t += " · #" + x.a.tracking;
+        if (x.chip.textContent !== t) x.chip.textContent = t;
+      });
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
 
   // ---- helpers
   function el(tag, attrs, parent) {

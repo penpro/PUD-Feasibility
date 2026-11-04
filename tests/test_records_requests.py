@@ -65,3 +65,35 @@ def test_personal_details_never_tracked():
     assert "private/" in ignore, "private/ (requester details, built letters) must stay gitignored"
     for p in (ROOT / "docs" / "records-requests").glob("*.md"):
         assert "[YOUR NAME]" in p.read_text(encoding="utf-8"), f"{p.name}: public text should carry blanks"
+
+
+# ---------------------------------------------------------------- legal response clock (RCW 42.56.520, RCW 1.16.050)
+
+def test_wa_legal_holidays_follow_rcw_1_16_050():
+    from datetime import date
+    h26 = brr.wa_legal_holidays(2026)
+    assert {date(2026, 11, 11), date(2026, 11, 26), date(2026, 11, 27), date(2026, 1, 19)} <= h26
+    assert date(2026, 7, 3) in h26 and date(2026, 7, 4) not in h26      # Saturday holiday -> preceding Friday
+    h27 = brr.wa_legal_holidays(2027)
+    assert date(2027, 7, 5) in h27                                     # Sunday holiday -> following Monday
+    assert date(2027, 12, 24) in h27                                   # Christmas 2027 is a Saturday
+    assert len(h26) == 11
+
+
+def test_response_window_skips_weekends_and_holidays():
+    from datetime import date
+    sent = brr.parse_at("2026-11-04T14:30:00-08:00")
+    assert brr.response_window(sent) == [date(2026, 11, d) for d in (5, 6, 9, 10, 12)]   # Nov 11 = Veterans Day
+    thanksgiving_week = brr.response_window(brr.parse_at("2026-11-25T10:00:00-08:00"))
+    assert thanksgiving_week[0] == date(2026, 11, 30) and thanksgiving_week[-1] == date(2026, 12, 4)
+
+
+@pytest.mark.parametrize("req", REQUESTS, ids=lambda r: r["id"])
+def test_sent_requests_show_status_and_due_date(req):
+    md = brr.md_path(req).read_text(encoding="utf-8")
+    for a in req["agencies"]:
+        st = brr.agency_status(a)
+        if st is None:
+            continue
+        assert [e["at"] for e in a["log"]] == sorted(e["at"] for e in a["log"]), f"{a['id']}: log out of order"
+        assert brr.day_label(st["due"]) in md, f"{a['id']}: due date missing from the .md status column"

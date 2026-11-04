@@ -318,3 +318,19 @@ sources:
       Yes: "Unplug PSE" (registration 70079) raised $9,055.00 (27 individual contributions, $6,055;
       3 organizational, $3,000) and spent $7,252.97. Individual donors are archived only as counts and sums.
       Post-election reports will change these totals; rerun the script to add a snapshot.
+
+  - id: S025
+    title: "Puget Energy, Inc. and Puget Sound Energy, Inc. Form 10-K for fiscal year 2025 (filed 2026-02-19)"
+    publisher: Puget Energy, Inc. / Puget Sound Energy, Inc. via SEC EDGAR (accession 0001085392-26-000008)
+    kind: primary
+    url: https://www.sec.gov/Archives/edgar/data/1085392/000108539226000008/psd-20251231.htm
+    accessed: 2026-11-04
+    files: [data/raw/sec_puget_energy_10k_fy2025/psd-20251231.htm]
+    notes: >-
+      Item 1: Puget Holdings, which indirectly owns all of Puget Energy (PSE's parent), "is owned by a consortium
+      of long-term infrastructure investors including" BCIMC, AIMCo, OMERS (Canada), Ontario Teachers' Pension Plan
+      (Canada), PGGM Vermogensbeheer (Netherlands) and Macquarie Washington Clean Energy Investment, L.P. (managed
+      by Australia-based Macquarie; its own investors are not disclosed). No ownership percentages are given.
+      Puget Energy consolidated statements (USD thousands, 2025 / 2024 / 2023): net income 369,368 / 265,255 /
+      53,740; dividends paid 62,887 / 175,861 / 99,760; capital contribution from owners 0 / 292,800 / 0.
+      PSE alone: net income 458,715 / 346,148 / 131,059 (before Puget Energy's holding-company interest).

@@ -253,3 +253,34 @@ params:
         source: []
         as_of: 2026-11-04
         note: About 11,000 mi/yr x 0.25-0.35 kWh/mi at the meter; PHEVs pull the fleet average down.
+
+  context:
+    # Not used by the load model. Quoted on the website's "earned for PSE's owners" counter.
+    # tests/test_owners.py re-derives every value from the archived 10-K (S025). Dollars, not thousands.
+    pse_owners:
+      counter_start:
+        value: "2026-11-03T00:00:00-08:00"
+        unit: ISO 8601 timestamp (Pacific)
+        label: ASSUMPTION
+        source: [S003]
+        as_of: 2026-11-04
+        note: >-
+          The counter runs from 12:00 AM on Election Day (Nov 3, 2026; S003) at the 2025 net-income rate.
+          Spreading a year's profit evenly over its seconds is a simplification; actual earnings are seasonal.
+      net_income_2025:
+        value: 369368000
+        unit: USD
+        label: VERIFIED
+        source: [S025]
+        as_of: 2025
+        note: >-
+          Puget Energy consolidated net income, the profit attributable to PSE's owners (Puget Holdings),
+          whether paid out as dividends or retained in the company.
+      net_income_2024: {value: 265255000, unit: USD, label: VERIFIED, source: [S025], as_of: 2024}
+      net_income_2023: {value: 53740000, unit: USD, label: VERIFIED, source: [S025], as_of: 2023}
+      dividends_paid_2025: {value: 62887000, unit: USD, label: VERIFIED, source: [S025], as_of: 2025}
+      dividends_paid_2024: {value: 175861000, unit: USD, label: VERIFIED, source: [S025], as_of: 2024}
+      dividends_paid_2023: {value: 99760000, unit: USD, label: VERIFIED, source: [S025], as_of: 2023}
+      capital_contribution_2025: {value: 0, unit: USD, label: VERIFIED, source: [S025], as_of: 2025}
+      capital_contribution_2024: {value: 292800000, unit: USD, label: VERIFIED, source: [S025], as_of: 2024}
+      capital_contribution_2023: {value: 0, unit: USD, label: VERIFIED, source: [S025], as_of: 2023}

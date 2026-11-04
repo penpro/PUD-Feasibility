@@ -5,6 +5,10 @@
 #   2. per agency: a PDF letter, its .tex source and a ready-to-paste email, into private/records-requests/
 #      (gitignored, because it carries the requester's name and contact details from private/requester.yaml)
 # Inline markup: **bold**, *italic*, `filename`.
+#
+# Each agency's `log` records what has happened, newest last, with Pacific-time timestamps. The website's
+# "Already in motion" tracker and the status column in the .md are built from it, and the legal response
+# deadline (5 business days, RCW 42.56.520) is computed from the first entry.
 
 id: 2026-11-04_kitsap-electricity-consumption
 title: Kitsap County electricity consumption data (2022 GHG inventory)
@@ -19,6 +23,7 @@ agencies:
   - id: commerce
     priority: 1
     name: Washington State Department of Commerce
+    short: WA Dept. of Commerce
     why: Funded and managed the county GHG analyses; its consultants collected the utility data.
     address:
       - Public Disclosure Officer
@@ -33,6 +38,8 @@ agencies:
     scope: >-
       This request covers records held by the Department, including records held on its behalf by the
       contractors that prepared the analysis.
+    log:
+      - {at: "2026-11-04T14:30:00-08:00", event: Sent by email}
     email_note: >-
       Commerce's website recommends its online portal. RCW 42.56.080(2) and WAC 365-10-050(1) also provide for
       requests by email, so I am sending it here. If you would prefer that I re-file it through the portal,
@@ -41,6 +48,7 @@ agencies:
   - id: kitsap-county
     priority: 2
     name: Kitsap County
+    short: Kitsap County
     why: >-
       Its Department of Community Development published the report and may hold the data or the consultant's
       deliverables.
@@ -57,6 +65,8 @@ agencies:
     scope: >-
       This request covers records held by any County department, in particular the Department of Community
       Development.
+    log:
+      - {at: "2026-11-04T14:30:00-08:00", event: Sent by email}
     email_note: ""
 
 intro: >-

@@ -34,6 +34,7 @@ Source kinds: **primary** (the producer of the number), **secondary** (journalis
 | S023 | [eGRID2022 Summary Tables (created 2024-01-30)](https://www.epa.gov/system/files/documents/2024-01/egrid2022_summary_tables.pdf) | U.S. Environmental Protection Agency | primary | 2026-11-04 |
 | S022 | [Creative Commons Attribution 4.0 International legal code](https://creativecommons.org/licenses/by/4.0/legalcode.txt) | Creative Commons | primary | 2026-11-04 |
 | S024 | [Campaign finance for KPUD Proposition 1 (2026): committee totals and contributions](https://data.wa.gov/Politics/Contributions-to-Candidates-and-Political-Committ/kv7h-kjye) | WA Public Disclosure Commission via data.wa.gov (datasets 3h9x-7bvm and kv7h-kjye) | primary | 2026-11-04 |
+| S025 | [Puget Energy, Inc. and Puget Sound Energy, Inc. Form 10-K for fiscal year 2025 (filed 2026-02-19)](https://www.sec.gov/Archives/edgar/data/1085392/000108539226000008/psd-20251231.htm) | Puget Energy, Inc. / Puget Sound Energy, Inc. via SEC EDGAR (accession 0001085392-26-000008) | primary | 2026-11-04 |
 
 ## S001 — Exploring Electric Service in Kitsap County (web page)
 
@@ -281,3 +282,13 @@ Source kinds: **primary** (the producer of the number), **secondary** (journalis
   - `data/raw/wa_pdc_prop1/2026-11-04/metadata_committees.json` (sha256 `a961bb8f6a20…`)
   - `data/raw/wa_pdc_prop1/2026-11-04/metadata_contributions.json` (sha256 `d5fa917e7aab…`)
 - **Notes:** Socrata API queries; exact strings in scripts/fetch_campaign_finance.py (QUERIES). Committees found by the measure, not by name: jurisdiction='KITSAP PUD 01' AND election_year=2026 AND for_or_against in ('for','against'). Snapshot 2026-11-04 (reports updated through 2026-10-27): No: "Coalition to Protect Kitsap Power Sponsored by Puget Sound Energy" (PDC registration 70128; contributions before its rename appear as "Coalition to Protect Kitsap Power") raised $2,401,233.33 and spent $2,304,528.34. Puget Sound Energy gave $2,318,178.33 ($2,100,000 cash on 2026-08-20 and 2026-09-08, $218,178.33 in-kind), 96.5% of the total. Other No contributors: Edison Electric Institute $25,000, Sound View Strategies $23,055 in-kind, Northwest Regional Organizing Coalition PAC $15,000, Potelco $10,000, WA State Association of Electrical Workers $10,000. Itemized contributions sum exactly to the committee total. Yes: "Unplug PSE" (registration 70079) raised $9,055.00 (27 individual contributions, $6,055; 3 organizational, $3,000) and spent $7,252.97. Individual donors are archived only as counts and sums. Post-election reports will change these totals; rerun the script to add a snapshot.
+
+## S025 — Puget Energy, Inc. and Puget Sound Energy, Inc. Form 10-K for fiscal year 2025 (filed 2026-02-19)
+
+- **Publisher:** Puget Energy, Inc. / Puget Sound Energy, Inc. via SEC EDGAR (accession 0001085392-26-000008)
+- **Kind:** primary
+- **URL:** <https://www.sec.gov/Archives/edgar/data/1085392/000108539226000008/psd-20251231.htm>
+- **Accessed:** 2026-11-04
+- **Files:**
+  - `data/raw/sec_puget_energy_10k_fy2025/psd-20251231.htm` (sha256 `cb79804d710c…`)
+- **Notes:** Item 1: Puget Holdings, which indirectly owns all of Puget Energy (PSE's parent), "is owned by a consortium of long-term infrastructure investors including" BCIMC, AIMCo, OMERS (Canada), Ontario Teachers' Pension Plan (Canada), PGGM Vermogensbeheer (Netherlands) and Macquarie Washington Clean Energy Investment, L.P. (managed by Australia-based Macquarie; its own investors are not disclosed). No ownership percentages are given. Puget Energy consolidated statements (USD thousands, 2025 / 2024 / 2023): net income 369,368 / 265,255 / 53,740; dividends paid 62,887 / 175,861 / 99,760; capital contribution from owners 0 / 292,800 / 0. PSE alone: net income 458,715 / 346,148 / 131,059 (before Puget Energy's holding-company interest).

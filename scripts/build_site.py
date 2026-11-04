@@ -15,7 +15,7 @@ from __future__ import annotations
 import csv
 import json
 import sys
-from datetime import datetime
+from datetime import datetime, time, timedelta
 from pathlib import Path
 from urllib.parse import quote
 
@@ -30,6 +30,7 @@ from model.load import run  # noqa: E402
 
 sys.path.insert(0, str(ROOT / "scripts"))
 import fetch_campaign_finance as pdc  # noqa: E402
+import build_records_requests as brr  # noqa: E402
 
 DOCS = ROOT / "docs"
 REPO = "https://github.com/penpro/PUD-Feasibility"
@@ -52,6 +53,40 @@ def nice_date(d: datetime, with_time: bool = False) -> str:
     return s
 
 
+def records_in_motion() -> list[dict]:
+    """Records requests that have been sent, with the legal response clock, for the site's live tracker."""
+    out = []
+    for path in brr.request_files():
+        req = brr.load_request(path)
+        agencies = [(a, brr.agency_status(a)) for a in req["agencies"]]
+        agencies = [(a, st) for a, st in agencies if st]
+        if not agencies:
+            continue
+        sent = min(st["sent"] for _, st in agencies)
+        due = max(st["due"] for _, st in agencies)
+        business = {d for _, st in agencies for d in st["window"]}
+        cal, d = [], sent.date()
+        while d < due:
+            d += timedelta(days=1)
+            kind = "business" if d in business else ("weekend" if d.weekday() >= 5 else "holiday")
+            cal.append({"dow": f"{d:%a}", "day": d.day, "kind": kind,
+                        "start": datetime.combine(d, time(0, 0), brr.PACIFIC).isoformat(),
+                        "end": datetime.combine(d, time(23, 59, 59), brr.PACIFIC).isoformat()})
+        out.append({
+            "title": req["title"], "url": f"{REPO}/blob/main/docs/records-requests/{req['id']}.md",
+            "sent_at": sent.isoformat(), "sent_label": brr.when(sent),
+            "due_label": brr.day_label(due), "due_end": datetime.combine(due, time(23, 59, 59), brr.PACIFIC).isoformat(),
+            "holidays": [f"{brr.day_label(c)}" for c in sorted(
+                x for x in brr.wa_legal_holidays(due.year) | brr.wa_legal_holidays(sent.year) if sent.date() < x < due)],
+            "calendar": cal,
+            "agencies": [{"name": a.get("short", a["name"]), "status": st["last_event"], "status_at": brr.when(st["last_at"]),
+                          "replied": len(a["log"]) > 1, "tracking": st["tracking"], "due_label": brr.day_label(st["due"]),
+                          "due_end": datetime.combine(st["due"], time(23, 59, 59), brr.PACIFIC).isoformat()}
+                         for a, st in agencies],
+        })
+    return out
+
+
 def build() -> dict:
     cfg = load_config()
     r = run()
@@ -62,6 +97,12 @@ def build() -> dict:
         election = list(csv.DictReader(fh))[-1]
     run_dt = datetime.fromisoformat(election["run_datetime"])
     money = pdc.summarize(pdc.snapshots()[-1])   # Prop 1 campaign finance (S024)
+    records = records_in_motion()
+    own = lambda key: val(cfg, f"context.pse_owners.{key}")  # noqa: E731  (S025, Puget Energy 10-K)
+    owner_rate = own("net_income_2025") / (365 * 86400)
+    owners_counter = {"start": own("counter_start"), "per_second": owner_rate, "annual": own("net_income_2025"), "year": 2025}
+    net_cash_3yr = sum(own(f"dividends_paid_{y}") - own(f"capital_contribution_{y}") for y in (2023, 2024, 2025))
+    musd = lambda x: f"${x / 1e6:.1f} million"  # noqa: E731
 
     res = "load.bottom_up.residential_mwh_per_customer"
     home_kwh = {c: val(cfg, res, c) * 1000 / 12 for c in ("low", "central", "high")}
@@ -132,6 +173,17 @@ def build() -> dict:
         **{f"cents_{key}": f"{bench.loc[uid, 'res_cents_per_kwh']:.1f}" for key, uid in
            (("pse", 15500), ("jefferson", 59013), ("mason3", 15419), ("clallam", 3644),
             ("snohomish", 17470), ("penlight", 14668))},
+        # PSE's owners (Puget Energy 10-K, S025)
+        "owners_per_day": f"${own('net_income_2025') / 365 / 1e6:.2f} million",
+        "owners_per_sec": f"${owner_rate:.2f}",
+        "owners_net_income": musd(own("net_income_2025")),
+        "owners_dividends": musd(own("dividends_paid_2025")),
+        "owners_contrib_2024": musd(own("capital_contribution_2024")),
+        "owners_net_cash_3yr": musd(net_cash_3yr),
+        # records requests (docs/records-requests/*.yaml logs)
+        "rr_sent": records[0]["sent_label"] if records else "not yet",
+        "rr_due": records[0]["due_label"] if records else "not yet",
+        "rr_agencies": str(len(records[0]["agencies"])) if records else "0",
         # meta
         "as_of": nice_date(datetime.fromisoformat(str(cfg["meta"]["config_as_of"]))),
         "study_version": cfg["meta"]["study_version"],
@@ -160,7 +212,7 @@ def build() -> dict:
         url = f"{REPO}/issues/new?template={quote(ask['template'])}&title={quote(ask['issue_title'])}"
         asks.append({**ask, "why": fill(ask["why"]), "how": [fill(h) for h in ask["how"]],
                      "title": fill(ask["title"]), "issue_url": url, "links": ask.get("links", [])})
-    return {"k": k, "charts": charts, "groups": spec["groups"], "asks": asks, "repo": REPO}
+    return {"k": k, "charts": charts, "records": records, "owners_counter": owners_counter, "groups": spec["groups"], "asks": asks, "repo": REPO}
 
 
 def render_js(data: dict) -> str:

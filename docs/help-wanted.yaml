@@ -167,14 +167,14 @@ asks:
       The 2022 county climate report was built on actual electricity data from the utilities but published
       only emissions. That data would replace our best estimate with a measurement.
     how:
-      - A public records request is drafted (link below) and will be filed with the state Department of Commerce and Kitsap County.
+      - Records requests went to the state Department of Commerce and Kitsap County on {rr_sent}. By law each owes a first reply by {rr_due}.
       - If you work with either agency and can share the data, or want to help follow up, say so on the issue.
     effort: ongoing
     oq: [OQ-01, OQ-02, OQ-12]
     template: volunteer.md
     issue_title: "[Help] Records request: Kitsap kWh behind the 2022 GHG report"
     links:
-      - {text: The drafted request, url: "https://github.com/penpro/PUD-Feasibility/blob/main/docs/records-requests/2026-11-04_kitsap-electricity-consumption.md"}
+      - {text: The request as sent, url: "https://github.com/penpro/PUD-Feasibility/blob/main/docs/records-requests/2026-11-04_kitsap-electricity-consumption.md"}
 
   - id: C3
     group: records

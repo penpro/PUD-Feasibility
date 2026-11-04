@@ -58,6 +58,15 @@ window.SITE_DATA = {
   "cents_clallam": "12.1",
   "cents_snohomish": "12.1",
   "cents_penlight": "11.3",
+  "owners_per_day": "$1.01 million",
+  "owners_per_sec": "$11.71",
+  "owners_net_income": "$369.4 million",
+  "owners_dividends": "$62.9 million",
+  "owners_contrib_2024": "$292.8 million",
+  "owners_net_cash_3yr": "$45.7 million",
+  "rr_sent": "Nov 4, 2026, 2:30 PM",
+  "rr_due": "Thu, Nov 12",
+  "rr_agencies": "2",
   "as_of": "Nov 4, 2026",
   "study_version": "0.1.0"
  },
@@ -187,6 +196,103 @@ window.SITE_DATA = {
    "yes": 34935,
    "no": 53513
   }
+ },
+ "records": [
+  {
+   "title": "Kitsap County electricity consumption data (2022 GHG inventory)",
+   "url": "https://github.com/penpro/PUD-Feasibility/blob/main/docs/records-requests/2026-11-04_kitsap-electricity-consumption.md",
+   "sent_at": "2026-11-04T14:30:00-08:00",
+   "sent_label": "Nov 4, 2026, 2:30 PM",
+   "due_label": "Thu, Nov 12",
+   "due_end": "2026-11-12T23:59:59-08:00",
+   "holidays": [
+    "Wed, Nov 11"
+   ],
+   "calendar": [
+    {
+     "dow": "Thu",
+     "day": 5,
+     "kind": "business",
+     "start": "2026-11-05T00:00:00-08:00",
+     "end": "2026-11-05T23:59:59-08:00"
+    },
+    {
+     "dow": "Fri",
+     "day": 6,
+     "kind": "business",
+     "start": "2026-11-06T00:00:00-08:00",
+     "end": "2026-11-06T23:59:59-08:00"
+    },
+    {
+     "dow": "Sat",
+     "day": 7,
+     "kind": "weekend",
+     "start": "2026-11-07T00:00:00-08:00",
+     "end": "2026-11-07T23:59:59-08:00"
+    },
+    {
+     "dow": "Sun",
+     "day": 8,
+     "kind": "weekend",
+     "start": "2026-11-08T00:00:00-08:00",
+     "end": "2026-11-08T23:59:59-08:00"
+    },
+    {
+     "dow": "Mon",
+     "day": 9,
+     "kind": "business",
+     "start": "2026-11-09T00:00:00-08:00",
+     "end": "2026-11-09T23:59:59-08:00"
+    },
+    {
+     "dow": "Tue",
+     "day": 10,
+     "kind": "business",
+     "start": "2026-11-10T00:00:00-08:00",
+     "end": "2026-11-10T23:59:59-08:00"
+    },
+    {
+     "dow": "Wed",
+     "day": 11,
+     "kind": "holiday",
+     "start": "2026-11-11T00:00:00-08:00",
+     "end": "2026-11-11T23:59:59-08:00"
+    },
+    {
+     "dow": "Thu",
+     "day": 12,
+     "kind": "business",
+     "start": "2026-11-12T00:00:00-08:00",
+     "end": "2026-11-12T23:59:59-08:00"
+    }
+   ],
+   "agencies": [
+    {
+     "name": "WA Dept. of Commerce",
+     "status": "Sent by email",
+     "status_at": "Nov 4, 2026, 2:30 PM",
+     "replied": false,
+     "tracking": "",
+     "due_label": "Thu, Nov 12",
+     "due_end": "2026-11-12T23:59:59-08:00"
+    },
+    {
+     "name": "Kitsap County",
+     "status": "Sent by email",
+     "status_at": "Nov 4, 2026, 2:30 PM",
+     "replied": false,
+     "tracking": "",
+     "due_label": "Thu, Nov 12",
+     "due_end": "2026-11-12T23:59:59-08:00"
+    }
+   ]
+  }
+ ],
+ "owners_counter": {
+  "start": "2026-11-03T00:00:00-08:00",
+  "per_second": 11.712582445459157,
+  "annual": 369368000,
+  "year": 2025
  },
  "groups": [
   {
@@ -401,7 +507,7 @@ window.SITE_DATA = {
    "title": "Get the real kWh behind the county's climate report",
    "why": "The 2022 county climate report was built on actual electricity data from the utilities but published only emissions. That data would replace our best estimate with a measurement.",
    "how": [
-    "A public records request is drafted (link below) and will be filed with the state Department of Commerce and Kitsap County.",
+    "Records requests went to the state Department of Commerce and Kitsap County on Nov 4, 2026, 2:30 PM. By law each owes a first reply by Thu, Nov 12.",
     "If you work with either agency and can share the data, or want to help follow up, say so on the issue."
    ],
    "effort": "ongoing",
@@ -414,7 +520,7 @@ window.SITE_DATA = {
    "issue_title": "[Help] Records request: Kitsap kWh behind the 2022 GHG report",
    "links": [
     {
-     "text": "The drafted request",
+     "text": "The request as sent",
      "url": "https://github.com/penpro/PUD-Feasibility/blob/main/docs/records-requests/2026-11-04_kitsap-electricity-consumption.md"
     }
    ],

@@ -118,10 +118,10 @@ Wires, substations and power contracts are sized for the highest-demand hour of 
 
 The 2022 county climate report was built on actual electricity data from the utilities but published only emissions. That data would replace our best estimate with a measurement.
 
-1. A public records request is drafted (link below) and will be filed with the state Department of Commerce and Kitsap County.
+1. Records requests went to the state Department of Commerce and Kitsap County on Nov 4, 2026, 2:30 PM. By law each owes a first reply by Thu, Nov 12.
 2. If you work with either agency and can share the data, or want to help follow up, say so on the issue.
 
-- [The drafted request](https://github.com/penpro/PUD-Feasibility/blob/main/docs/records-requests/2026-11-04_kitsap-electricity-consumption.md)
+- [The request as sent](https://github.com/penpro/PUD-Feasibility/blob/main/docs/records-requests/2026-11-04_kitsap-electricity-consumption.md)
 - **[Start: open a pre-filled issue](https://github.com/penpro/PUD-Feasibility/issues/new?template=volunteer.md&title=%5BHelp%5D%20Records%20request%3A%20Kitsap%20kWh%20behind%20the%202022%20GHG%20report)**
 
 ### C3. Count the Kitsap customers of Mason PUD 3 and Peninsula Light

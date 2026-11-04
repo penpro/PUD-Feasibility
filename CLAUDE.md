@@ -29,6 +29,9 @@ that defines "correct": every number is labeled VERIFIED / ESTIMATE / UNVERIFIED
 - Records requests: wording lives in `docs/records-requests/<id>.yaml`. `python scripts/build_records_requests.py`
   regenerates the public .md block (blanks) and, from `private/requester.yaml`, a PDF letter + .tex + paste-ready
   email per agency in `private/records-requests/` (XeLaTeX via MiKTeX; Cambria for lining figures).
+  Each agency's `log:` (Pacific timestamps, newest last; optional `tracking:`) drives the site's "Already in motion"
+  tracker and the .md Status column. To record a reply: append a log entry, then run `build_records_requests.py
+  --md-only` and `build_site.py`. Deadline = 5 business days after receipt (RCW 42.56.520), WA holidays per RCW 1.16.050.
 - Tests: `python -m pytest -q`. Verify by reading the regenerated results.md and looking at the site, not just test passes.
 
 ## House rules (inherited, see D:\ClaudeMaster\CLAUDE_BIBLE.md)

@@ -23,6 +23,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from zoneinfo import ZoneInfo
+
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -71,6 +73,70 @@ def long_date(d: dt.date) -> str:
     return f"{d:%B} {d.day}, {d.year}"
 
 
+# ---------------------------------------------------------------- status and the legal response clock
+
+PACIFIC = ZoneInfo("America/Los_Angeles")
+RESPONSE_DAYS = 5   # RCW 42.56.520(1): respond "within five business days of receiving a public record request"
+
+
+def _nth_weekday(year: int, month: int, weekday: int, n: int) -> dt.date:
+    """n-th given weekday of a month (Mon=0); n=-1 for the last one."""
+    if n > 0:
+        d = dt.date(year, month, 1)
+        return d + dt.timedelta(days=(weekday - d.weekday()) % 7, weeks=n - 1)
+    d = dt.date(year + (month == 12), month % 12 + 1, 1) - dt.timedelta(days=1)
+    return d - dt.timedelta(days=(d.weekday() - weekday) % 7)
+
+
+def wa_legal_holidays(year: int) -> set[dt.date]:
+    """RCW 1.16.050(1)(b)-(l). Per subsection (5) a holiday on Sunday moves to Monday, on Saturday to Friday."""
+    mon, thu = 0, 3
+    thanksgiving = _nth_weekday(year, 11, thu, 4)
+    days = [dt.date(year, 1, 1), _nth_weekday(year, 1, mon, 3), _nth_weekday(year, 2, mon, 3),
+            _nth_weekday(year, 5, mon, -1), dt.date(year, 6, 19), dt.date(year, 7, 4),
+            _nth_weekday(year, 9, mon, 1), dt.date(year, 11, 11), thanksgiving,
+            thanksgiving + dt.timedelta(days=1), dt.date(year, 12, 25)]
+    shift = {6: 1, 5: -1}
+    return {d + dt.timedelta(days=shift.get(d.weekday(), 0)) for d in days}
+
+
+def is_business_day(d: dt.date) -> bool:
+    return d.weekday() < 5 and d not in wa_legal_holidays(d.year)
+
+
+def response_window(received: dt.datetime, n: int = RESPONSE_DAYS) -> list[dt.date]:
+    """The n business days an agency has to respond, counted from the day after receipt (Pacific time)."""
+    days, d = [], received.astimezone(PACIFIC).date()
+    while len(days) < n:
+        d += dt.timedelta(days=1)
+        if is_business_day(d):
+            days.append(d)
+    return days
+
+
+def parse_at(s: str) -> dt.datetime:
+    return dt.datetime.fromisoformat(str(s)).astimezone(PACIFIC)
+
+
+def when(t: dt.datetime) -> str:
+    return f"{t:%b} {t.day}, {t.year}, {t.hour % 12 or 12}:{t:%M} {'AM' if t.hour < 12 else 'PM'}"
+
+
+def day_label(d: dt.date) -> str:
+    return f"{d:%a}, {d:%b} {d.day}"
+
+
+def agency_status(agency: dict) -> dict | None:
+    """None until the first log entry (the send). Then: when sent, the legal window, and the latest event."""
+    log = agency.get("log") or []
+    if not log:
+        return None
+    sent = parse_at(log[0]["at"])
+    window = response_window(sent)
+    return {"sent": sent, "window": window, "due": window[-1], "last_event": log[-1]["event"],
+            "last_at": parse_at(log[-1]["at"]), "tracking": agency.get("tracking", "")}
+
+
 # ---------------------------------------------------------------- inline markup
 
 def tex_escape(s: str) -> str:
@@ -101,11 +167,16 @@ def to_text(s: str) -> str:
 
 def render_md_block(req: dict) -> str:
     L = [BEGIN, "## Where to send it", "",
-         "| Priority | Agency | Why they likely hold it | Send to |", "|---|---|---|---|"]
+         "| Priority | Agency | Why they likely hold it | Send to | Status |", "|---|---|---|---|---|"]
     for a in req["agencies"]:
         mail = ", ".join(a["address"])
+        st = agency_status(a)
+        status = "Not sent yet" if st is None else (
+            f"{st['last_event']}, {when(st['last_at'])} Pacific."
+            + (f" Tracking {st['tracking']}." if st["tracking"] else "")
+            + f" First response due by law by {day_label(st['due'])} (5 business days, RCW 42.56.520).")
         L.append(f"| {a['priority']} | **{a['name']}** | {a['why']} | Email {a['email']}, or the "
-                 f"[online portal]({a['portal']}). Mail: {mail}. |")
+                 f"[online portal]({a['portal']}). Mail: {mail}. | {status} |")
     L += ["", "Send to both at once; they are independent agencies with independent records.", "",
           "Contact details checked:"]
     L += [f"- {a['name']}: {a['checked']}" for a in req["agencies"]]
