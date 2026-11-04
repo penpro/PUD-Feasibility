@@ -11,6 +11,9 @@ anyone how to vote or what KPUD should do. PSE's strongest objections are listed
 > Not affiliated with KPUD, PSE, or any campaign. Corrections and challenges are welcome: see
 > [CONTRIBUTING.md](CONTRIBUTING.md).
 
+**Plain-English version for voters:** <https://penpro.github.io/PUD-Feasibility/> (source: [docs/index.html](docs/index.html))
+**What we need from you:** [Help wanted](docs/help-wanted.md), 20 specific asks sorted by who can help.
+
 ## Status (2026-11-04)
 
 **KPUD Proposition 1** (Nov 3, 2026), unofficial: **No 60.50% (53,513), Yes 39.50% (34,935)**, with 45.1% of
@@ -58,8 +61,14 @@ python -m model.load
 python -m pytest -q
 ```
 
+```bash
+python scripts/build_site.py
+```
+
 `verify` checks every raw file against its SHA-256. `model.load` regenerates `data/processed/load/` and
 `modules/01_load/results.md`. The tests re-derive config values from the raw EIA files and check the arithmetic.
+`build_site` regenerates the website's numbers (`docs/site-data.js`) and `docs/help-wanted.md` from the model and
+`docs/help-wanted.yaml`. A test fails if the site is out of date.
 
 Track the Prop 1 count:
 
@@ -76,7 +85,8 @@ data/processed/      model outputs
 model/config.yaml    EVERY assumption, each labeled with source and date
 model/               Python model (pandas)
 modules/0N_*/        one folder per study module: scope, data needs, results
-docs/                methodology, findings, open questions, records requests
+docs/                methodology, findings, open questions, records requests, and the
+                     GitHub Pages site (index.html + generated site-data.js)
 scripts/             source manifest and election tracker
 tests/               provenance and arithmetic checks
 ```

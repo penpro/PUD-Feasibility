@@ -1,0 +1,351 @@
+# Help wanted: the single source for the website's "Help wanted" section and docs/help-wanted.md.
+# Edit here, then run:  python scripts/build_site.py
+#
+# Text may use {placeholders} filled from the model at build time (see scripts/build_site.py, BINDS),
+# so numbers in the asks never go stale.
+# priority: top (blocks a headline number) | high | normal
+# template: an issue template in .github/ISSUE_TEMPLATE/
+
+groups:
+  - id: anyone
+    title: Anyone
+    blurb: No expertise needed. Most of these take 15–30 minutes.
+  - id: residents
+    title: Kitsap homes & businesses
+    blurb: Your own electric bills are some of the best data we can get. No names, addresses or account numbers, ever.
+  - id: records
+    title: Paper chasers
+    blurb: Public records and filings. It takes persistence, not expertise.
+  - id: experts
+    title: People who know utilities, finance or law
+    blurb: Point us to the rule, the filing or the page number.
+  - id: data
+    title: Data & code
+    blurb: Python, spreadsheets, a skeptical eye.
+
+asks:
+  # ---------------------------------------------------------------- anyone
+  - id: A1
+    group: anyone
+    priority: high
+    title: Find where the "$1.2–1.5 billion" price tag came from
+    why: >-
+      A price for buying PSE's Kitsap system keeps getting repeated, but we have not found the original
+      source. A number this big needs a paper trail before anyone should use it.
+    how:
+      - If you saw it on a mailer, ad, website, social post or at a debate, post a photo or link.
+      - Say when and where you saw it, and who it was attributed to.
+    effort: 15 min
+    oq: [OQ-07]
+    template: data-submission.md
+    issue_title: "[Data] Source of the $1.2–1.5B acquisition figure"
+
+  - id: A2
+    group: anyone
+    priority: normal
+    title: Send us campaign mailers and ads, from both sides
+    why: >-
+      Every claim made to voters is something this study should test with numbers, whoever made it.
+    how:
+      - Photograph both sides of the mailer, or link the ad.
+      - Note the date you received it. We log each claim and say which part of the study tests it.
+    effort: 5 min
+    oq: []
+    template: data-submission.md
+    issue_title: "[Data] Campaign mailer/ad: "
+
+  - id: A3
+    group: anyone
+    priority: normal
+    title: Total up the Prop 1 campaign money
+    why: >-
+      News stories say PSE spent about $2.4–2.5 million and the Yes side under $10,000. The official
+      numbers are public at the Public Disclosure Commission. We would rather cite the filings than the headlines.
+    how:
+      - On the PDC website, find the committees for and against KPUD Proposition 1.
+      - Post each committee's name, total raised, total spent, top contributors, and the links.
+    effort: 30 min
+    oq: [OQ-08]
+    template: data-submission.md
+    issue_title: "[Data] PDC campaign finance totals for KPUD Prop 1"
+    links:
+      - {text: WA Public Disclosure Commission, url: "https://www.pdc.wa.gov/"}
+
+  - id: A4
+    group: anyone
+    priority: normal
+    title: Watch a KPUD board meeting and write down the numbers
+    why: >-
+      KPUD posted meeting recordings and presentations about electric service. They may already contain
+      cost, power or customer figures we don't have.
+    how:
+      - Pick one recording or slide deck from KPUD's electric-service page.
+      - List every number mentioned (costs, megawatts, customers, BPA, timelines) with the timestamp or slide number.
+    effort: 30–60 min
+    oq: [OQ-14]
+    template: data-submission.md
+    issue_title: "[Data] Numbers from KPUD board meeting/presentation: "
+    links:
+      - {text: KPUD electric service page, url: "https://www.kpud.org/governance/exploring-electric-service-in-kitsap-county/"}
+
+  - id: A5
+    group: anyone
+    priority: normal
+    title: Look up how many cars and trucks are registered in Kitsap
+    why: >-
+      Kitsap has about {ev_count} registered plug-in vehicles. The total vehicle count tells us what share
+      that is, and lets us check our guesses about how fast EVs add to electric demand.
+    how:
+      - Find WA Department of Licensing vehicle registration counts by county (data.wa.gov).
+      - Post the Kitsap total for passenger cars and light trucks, the date, and the link.
+    effort: 20 min
+    oq: [OQ-09]
+    template: data-submission.md
+    issue_title: "[Data] Kitsap registered light-duty vehicle count"
+    links:
+      - {text: data.wa.gov, url: "https://data.wa.gov/"}
+
+  # ---------------------------------------------------------------- residents
+  - id: B1
+    group: residents
+    priority: high
+    title: Share a year of your home's electric use (no personal info)
+    why: >-
+      To compare bills fairly we need real usage patterns: homes heated by gas, by baseboard, by heat pump.
+      Averages hide the differences that matter most to your bill.
+    how:
+      - From your PSE bills or online account, list 12 months of kWh used and the bill total each month.
+      - Add your home type, heating type, rough size and town.
+      - Never post your name, address or account number. The form tells you exactly what to include.
+    effort: 15 min
+    oq: []
+    template: usage-profile.md
+    issue_title: "[Usage] Home, <heating type>, <town>"
+
+  - id: B2
+    group: residents
+    priority: top
+    title: "Businesses: share your yearly kWh and PSE rate schedule"
+    why: >-
+      How much electricity Kitsap businesses use is the biggest single unknown in our estimate. Plausible
+      values swing the county total by about {com_swing_pct}.
+    how:
+      - Post your annual kWh, your PSE rate schedule number (printed on the bill, e.g. Schedule 24, 25 or 26) and your type of business.
+      - No business name needed.
+    effort: 10 min
+    oq: [OQ-03]
+    template: usage-profile.md
+    issue_title: "[Usage] Business, Schedule <number>, <business type>"
+
+  # ---------------------------------------------------------------- records
+  - id: C1
+    group: records
+    priority: top
+    title: Find PSE's peak demand for Kitsap
+    why: >-
+      Wires, substations and power contracts are sized for the highest-demand hour of the year. Our range is
+      wide ({peak_low}–{peak_high} MW) because Kitsap's real peak has not been published.
+    how:
+      - Start with PSE's request for proposals for "non-wires alternatives" in Kitsap County, and PSE's Integrated Resource Plan.
+      - Then try a public records request to the Utilities and Transportation Commission (UTC) for Kitsap-area load studies.
+      - Comment on the issue before filing anything, so two people don't file the same request.
+    effort: 1–3 hours
+    oq: [OQ-05]
+    template: data-submission.md
+    issue_title: "[Data] PSE Kitsap-area peak demand"
+    links:
+      - {text: PSE Kitsap non-wires RFP announcement, url: "https://pse.com/press-release/details/Puget-Sound-Energy-issues-RFP-for-non-wires-alternatives-in-Kitsap-County"}
+      - {text: WA Utilities and Transportation Commission, url: "https://www.utc.wa.gov/"}
+
+  - id: C2
+    group: records
+    priority: top
+    title: Get the real kWh behind the county's climate report
+    why: >-
+      The 2022 county climate report was built on actual electricity data from the utilities but published
+      only emissions. That data would replace our best estimate with a measurement.
+    how:
+      - A public records request is drafted (link below) and will be filed with the state Department of Commerce and Kitsap County.
+      - If you work with either agency and can share the data, or want to help follow up, say so on the issue.
+    effort: ongoing
+    oq: [OQ-01, OQ-02, OQ-12]
+    template: volunteer.md
+    issue_title: "[Help] Records request: Kitsap kWh behind the 2022 GHG report"
+    links:
+      - {text: The drafted request, url: "https://github.com/penpro/PUD-Feasibility/blob/main/docs/records-requests/2026-11-04_kitsap-electricity-consumption.md"}
+
+  - id: C3
+    group: records
+    priority: normal
+    title: Count the Kitsap customers of Mason PUD 3 and Peninsula Light
+    why: >-
+      Two other utilities serve edges of Kitsap County. Their customers would not be part of a PSE buyout,
+      so we need to subtract them from county-wide numbers.
+    how:
+      - Mason PUD 3 is a public agency, so a records request works. Peninsula Light is a co-op, so just ask.
+      - We need customers and yearly kWh inside Kitsap County, homes and businesses separately if possible.
+    effort: 1 hour
+    oq: [OQ-13]
+    template: data-submission.md
+    issue_title: "[Data] Kitsap customers of Mason PUD 3 / Peninsula Light"
+
+  - id: C4
+    group: records
+    priority: high
+    title: Pull Jefferson PUD's paper trail
+    why: >-
+      Jefferson County took over from PSE in 2013, the only recent Washington example. News stories say the
+      price was $103 million and rose to about $109 million. We need the original documents, not the headlines.
+    how:
+      - Find the UTC order approving PSE's sale to Jefferson PUD.
+      - Find Jefferson PUD's audited financial statements (State Auditor's Office) and bond documents (EMMA).
+      - Post links with page numbers for the purchase price, adjustments, separation costs and financing.
+    effort: 1–2 hours
+    oq: [OQ-11]
+    template: data-submission.md
+    issue_title: "[Data] Jefferson PUD acquisition primary documents"
+    links:
+      - {text: WA State Auditor reports, url: "https://sao.wa.gov/"}
+      - {text: EMMA municipal bond documents, url: "https://emma.msrb.org/"}
+      - {text: WA Utilities and Transportation Commission, url: "https://www.utc.wa.gov/"}
+
+  - id: C5
+    group: records
+    priority: high
+    title: How many PSE customers are in Kitsap, homes vs. businesses?
+    why: >-
+      PSE says about {customers} customers in Kitsap, a rounded number from a campaign-season press release.
+      The split between homes and businesses changes the total a lot.
+    how:
+      - Look for Kitsap customer counts in PSE's UTC filings, community reports or franchise agreements with Kitsap cities.
+      - Or ask PSE directly and post the reply.
+    effort: 1 hour
+    oq: [OQ-03]
+    template: data-submission.md
+    issue_title: "[Data] PSE Kitsap customers by class"
+
+  # ---------------------------------------------------------------- experts
+  - id: D1
+    group: experts
+    priority: top
+    title: How much cheap federal hydropower could a new PUD actually get?
+    why: >-
+      This may be the biggest single factor in whether bills go up or down. PSE says a new PUD would start
+      with none. KUOW reported that public utilities can get 200 megawatts. Both can't be fully right, so we need
+      BPA's actual rules.
+    how:
+      - Find BPA's "Provider of Choice" policy and contract documents covering new public utilities.
+      - Post the rule, the amount, the timeline, and the document and page number.
+    effort: 1–2 hours
+    oq: [OQ-06]
+    template: data-submission.md
+    issue_title: "[Data] BPA Tier 1 rules for a new public utility"
+    links:
+      - {text: Bonneville Power Administration, url: "https://www.bpa.gov/"}
+
+  - id: D2
+    group: experts
+    priority: normal
+    title: Do the Navy bases still buy power straight from BPA?
+    why: >-
+      BPA's 2016 slides say the Bremerton and Bangor bases are served directly by BPA. If that is still true,
+      they are not part of any takeover, and county-wide totals overstate what a PUD would serve.
+    how:
+      - Point us to a current BPA customer list, NAVFAC contract or other document confirming it.
+    effort: 30 min
+    oq: [OQ-04]
+    template: data-submission.md
+    issue_title: "[Data] Naval Base Kitsap power supplier"
+
+  - id: D3
+    group: experts
+    priority: normal
+    title: What would bonds cost a brand-new electric PUD?
+    why: >-
+      Buying the system would be paid for with bonds. The interest rate, term and covenants drive a big part
+      of any future bill.
+    how:
+      - Point us to official statements for recent Washington PUD revenue bonds (rate, term, rating, coverage).
+      - If you work in municipal finance, tell us how a start-up utility would likely be rated.
+    effort: 1 hour
+    oq: []
+    template: data-submission.md
+    issue_title: "[Data] Revenue bond terms for a new WA electric PUD"
+    links:
+      - {text: EMMA municipal bond documents, url: "https://emma.msrb.org/"}
+
+  - id: D4
+    group: experts
+    priority: high
+    title: "Line crews and storms: what does a 130,000-customer utility need?"
+    why: >-
+      PSE says it has more than 70 employees and 50+ contractors working in Kitsap and can bring crews from
+      across the West after storms. That is a fair question for any new utility, so we want to test it with real numbers.
+    how:
+      - If you've worked at a utility, share staffing levels, crew counts, mutual-aid setups and contractor use.
+      - Or point us to PUD annual reports that publish them.
+    effort: 30–60 min
+    oq: []
+    template: data-submission.md
+    issue_title: "[Data] Utility staffing / storm-response benchmarks"
+
+  - id: D5
+    group: experts
+    priority: normal
+    title: How are utility systems valued in a buyout or condemnation?
+    why: >-
+      If PSE would not sell, state law (RCW 54.16.020) allows a court process to set a fair price. How
+      Washington courts have valued utility property shapes the cost range.
+    how:
+      - Point us to Washington cases, appraisal methods, or the costs of past condemnations, with citations.
+    effort: 1 hour
+    oq: []
+    template: data-submission.md
+    issue_title: "[Data] Utility valuation / condemnation precedent"
+
+  # ---------------------------------------------------------------- data
+  - id: E1
+    group: data
+    priority: normal
+    title: Build an hourly load shape from EIA-930
+    why: >-
+      Our monthly shape comes from billing data. Hourly grid data for PSE's area would show the true winter
+      peak pattern and how often it happens.
+    how:
+      - Download EIA-930 hourly demand for the PSEI balancing authority.
+      - Add the raw files and a reader in model/, following CONTRIBUTING.md (raw files untouched, registered in data/sources.yaml).
+    effort: a few hours
+    oq: [OQ-05]
+    template: volunteer.md
+    issue_title: "[Help] EIA-930 hourly load shape for PSEI"
+    links:
+      - {text: EIA Hourly Electric Grid Monitor, url: "https://www.eia.gov/electricity/gridmonitor/"}
+
+  - id: E2
+    group: data
+    priority: normal
+    title: Challenge our guesses
+    why: >-
+      Some inputs are labeled ASSUMPTION because nobody has measured them yet: future EV counts, how much homes
+      switch from gas to electric heat. These are the first things to question.
+    how:
+      - Pick a parameter marked ASSUMPTION in model/config.yaml.
+      - Propose a low / central / high and say what evidence supports it.
+    effort: 30 min
+    oq: []
+    template: challenge.md
+    issue_title: "[Challenge] "
+
+  - id: E3
+    group: data
+    priority: normal
+    title: Check our math
+    why: >-
+      Every number here should be reproducible from public files. If you can't reproduce one, that's a bug.
+    how:
+      - Run the four commands in the README (verify sources, run the model, run the tests).
+      - Read model/load.py. Report anything wrong, unclear or unsupported.
+    effort: 1 hour
+    oq: []
+    template: correction.md
+    issue_title: "[Correction] "

@@ -44,7 +44,7 @@ forecasts or UTC filings) is the top data priority after kWh (OQ-05).
 
 ## F-05: Load grows to roughly 2.0–4.3 TWh by 2045 (ASSUMPTION-driven)
 
-Central 2.89 TWh in 2045 (+42%): population growth (OFM), +10% per-customer electrification net of
+Central 2.89 TWh in 2045 (+41%): population growth (OFM), +10% per-customer electrification net of
 efficiency, and ~110,000 EVs (up from 10,383 registered plug-in vehicles in Oct 2026, S012). The growth
 inputs are labeled ASSUMPTION until gas-therm and vehicle-registration data replace them.
 

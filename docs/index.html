@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kitsap Public Power: The Numbers</title>
+<meta name="description" content="An independent, open-source, plain-English look at what it would take for Kitsap PUD to provide electric service instead of PSE. Not affiliated with KPUD, PSE, or any campaign.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232a78d6'/%3E%3Cpath d='M18 4 8 18h7l-2 10 10-14h-7z' fill='white'/%3E%3C/svg%3E">
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface: #fcfcfb; --card: #ffffff;
+  --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10);
+  --s1: #2a78d6; --s2: #eb6834; --claim: #c3c2b7;
+  --wash: rgba(42,120,214,0.10); --tint: #eef4fc;
+  --top: #d03b3b; --high: #ec835a; --ok: #0ca30c;
+  --focus: #2a78d6;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --card: #1a1a19;
+    --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+    --s1: #3987e5; --s2: #d95926; --claim: #52514e;
+    --wash: rgba(57,135,229,0.14); --tint: #16202c;
+    --focus: #6da7ec;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --card: #1a1a19;
+  --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+  --s1: #3987e5; --s2: #d95926; --claim: #52514e;
+  --wash: rgba(57,135,229,0.14); --tint: #16202c;
+  --focus: #6da7ec;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--page); color: var(--ink);
+  font: 18px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+a { color: var(--s1); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px;
+}
+.skip { position: absolute; left: -999px; top: 8px; background: var(--card); padding: 8px 12px; z-index: 10; }
+.skip:focus { left: 8px; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 0 16px; }
+.wide { max-width: 1080px; }
+
+header.top { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 5; }
+header.top .wrap { display: flex; align-items: center; gap: 12px; min-height: 56px; max-width: 1080px; }
+.brand { font-weight: 700; font-size: 17px; color: var(--ink); text-decoration: none; display: flex; gap: 8px; align-items: center; white-space: nowrap; }
+.brand svg { flex: none; }
+nav.jump { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; flex: 1; justify-content: flex-end; }
+nav.jump::-webkit-scrollbar { display: none; }
+nav.jump a { font-size: 15px; color: var(--ink-2); text-decoration: none; padding: 6px 10px; border-radius: 6px; white-space: nowrap; }
+nav.jump a:hover { background: var(--wash); color: var(--ink); }
+.theme-btn { flex: none; background: none; border: 1px solid var(--border); color: var(--ink-2); border-radius: 8px; width: 36px; height: 36px; cursor: pointer; font-size: 16px; }
+@media (max-width: 720px) { nav.jump { display: none; } header.top .wrap { justify-content: space-between; } }
+
+.hero { padding: 48px 0 32px; }
+.pill { display: inline-block; font-size: 14px; color: var(--ink-2); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; background: var(--surface); }
+h1 { font-size: clamp(32px, 6vw, 48px); line-height: 1.12; margin: 16px 0 12px; letter-spacing: -0.01em; }
+.lede { font-size: 21px; color: var(--ink-2); margin: 0 0 8px; }
+h2 { font-size: clamp(26px, 4.4vw, 34px); line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.005em; }
+h3 { font-size: 20px; line-height: 1.3; margin: 0 0 6px; }
+section { padding: 40px 0; border-top: 1px solid var(--border); scroll-margin-top: 64px; }
+p { margin: 0 0 14px; }
+.sub { color: var(--ink-2); }
+.small { font-size: 15px; color: var(--ink-2); }
+strong { font-weight: 650; }
+
+.short { list-style: none; padding: 0; margin: 20px 0 0; counter-reset: s; display: grid; gap: 12px; }
+.short li { counter-increment: s; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px 14px 56px; position: relative; }
+.short li::before { content: counter(s); position: absolute; left: 16px; top: 14px; width: 28px; height: 28px; border-radius: 50%; background: var(--s1); color: #fff; font-weight: 700; font-size: 15px; display: grid; place-items: center; }
+
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+.callout { background: var(--tint); border-radius: 12px; padding: 16px 18px; margin: 18px 0; }
+.callout h3 { font-size: 18px; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+
+/* Prop 1 segmented bar */
+.seg { display: flex; gap: 2px; height: 28px; margin: 16px 0 8px; }
+.seg div { border-radius: 4px; color: #fff; font-size: 14px; font-weight: 650; display: flex; align-items: center; padding-left: 10px; white-space: nowrap; overflow: hidden; cursor: default; }
+.legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 15px; color: var(--ink-2); margin: 6px 0 0; }
+.legend span::before { content: ""; display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; background: var(--c); }
+.votes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+.votes .n { font-size: 30px; font-weight: 650; line-height: 1.1; }
+
+/* who */
+.who .card h3 { display: flex; gap: 10px; align-items: center; }
+.who .tag { font-size: 13px; font-weight: 650; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--ink-2); }
+.who .in { border: 2px solid var(--s1); }
+.who .in .tag { background: var(--s1); color: #fff; border-color: transparent; }
+
+/* stats */
+.stat .label { font-size: 15px; color: var(--ink-2); }
+.stat .value { font-size: 40px; font-weight: 650; line-height: 1.1; margin: 4px 0; }
+.stat .value small { font-size: 18px; font-weight: 500; color: var(--ink-2); }
+.stat .note { font-size: 14px; color: var(--ink-2); }
+
+/* charts */
+figure { margin: 22px 0; }
+.chart { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px 12px 8px; }
+.chart-title { font-weight: 650; font-size: 17px; margin: 0 4px 2px; }
+.chart-sub { font-size: 14px; color: var(--ink-2); margin: 0 4px 6px; }
+.plot { width: 100%; }
+svg text { fill: var(--ink-2); font: 13px system-ui, -apple-system, "Segoe UI", sans-serif; }
+svg .val { fill: var(--ink); font-weight: 650; font-size: 14px; }
+svg .axis-t { fill: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+svg .gridl { stroke: var(--grid); stroke-width: 1; }
+svg .base { stroke: var(--axis); stroke-width: 1; }
+svg .s1 { fill: var(--s1); }
+svg .claim { fill: var(--claim); }
+svg .wash { fill: var(--wash); }
+svg .line { fill: none; stroke: var(--s1); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+svg .whisk { stroke: var(--ink); stroke-width: 2; stroke-linecap: round; }
+svg .ref { stroke: var(--ink-2); stroke-width: 1; }
+svg .dot { fill: var(--s1); stroke: var(--surface); stroke-width: 2; }
+svg .xhair { stroke: var(--axis); stroke-width: 1; }
+svg .hit { fill: transparent; }
+svg g.mark:hover path, svg g.mark:focus path { filter: brightness(1.12); }
+figcaption { font-size: 14px; color: var(--ink-2); margin-top: 8px; }
+details.table { margin-top: 8px; font-size: 15px; }
+details.table summary { cursor: pointer; color: var(--s1); }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 15px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--grid); }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.tip { position: fixed; pointer-events: none; z-index: 20; background: var(--card); color: var(--ink); border: 1px solid var(--border);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12); border-radius: 8px; padding: 8px 10px; font-size: 14px; line-height: 1.35; display: none; max-width: 260px; }
+.tip .row { display: flex; gap: 8px; align-items: baseline; }
+.tip .key { width: 12px; height: 2px; background: var(--s1); align-self: center; flex: none; }
+.tip b { font-size: 15px; }
+.tip .lab { color: var(--ink-2); }
+
+/* bill flow */
+.flow { display: grid; grid-template-columns: repeat(3, 1fr) auto 1fr; gap: 10px; align-items: stretch; margin: 18px 0; }
+.flow .card { padding: 16px; }
+.flow .card h3 { font-size: 17px; }
+.flow .eq { display: grid; place-items: center; font-size: 28px; color: var(--ink-2); }
+.flow .bill { border: 2px solid var(--s1); }
+.flow .mod { font-size: 13px; color: var(--ink-2); margin-top: 6px; }
+@media (max-width: 760px) { .flow { grid-template-columns: 1fr; } .flow .eq { transform: rotate(90deg); height: 24px; } }
+
+/* arguments */
+.sides { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 760px) { .sides { grid-template-columns: 1fr; } }
+.arg { padding: 14px 16px; margin-bottom: 10px; }
+.arg .claim-t { font-weight: 600; margin-bottom: 6px; }
+.arg .test { font-size: 15px; color: var(--ink-2); }
+.arg .test b { color: var(--ink); }
+.side-h { font-size: 15px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 10px; }
+
+/* help */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
+.filters button { font: inherit; font-size: 15px; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: var(--card); color: var(--ink); cursor: pointer; }
+.filters button[aria-pressed="true"] { background: var(--s1); color: #fff; border-color: transparent; }
+.asks { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+.ask { display: flex; flex-direction: column; gap: 8px; }
+.ask .meta { display: flex; flex-wrap: wrap; gap: 6px; font-size: 13px; color: var(--ink-2); }
+.badge { display: inline-flex; align-items: center; gap: 5px; font-weight: 650; font-size: 13px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); }
+.badge.top::before, .badge.high::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--top); }
+.badge.high::before { background: var(--high); }
+.ask h3 { font-size: 18px; }
+.ask p { font-size: 16px; margin: 0; color: var(--ink-2); }
+.ask ol { margin: 0; padding-left: 20px; font-size: 16px; }
+.ask ol li { margin-bottom: 4px; }
+.ask .links { font-size: 15px; display: flex; flex-direction: column; gap: 2px; }
+.ask .go { margin-top: auto; display: inline-block; text-align: center; background: var(--s1); color: #fff; text-decoration: none; font-weight: 650; padding: 10px 14px; border-radius: 10px; font-size: 16px; }
+.ask .go:hover { filter: brightness(1.08); }
+.oq { font-size: 12px; padding: 1px 6px; border-radius: 4px; background: var(--wash); color: var(--ink-2); text-decoration: none; }
+
+/* labels */
+.labels { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.lab-chip { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.03em; padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border); margin-bottom: 6px; }
+
+details.faq { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; margin-bottom: 10px; }
+details.faq summary { cursor: pointer; font-weight: 600; }
+details.faq p { margin: 10px 0 0; }
+
+footer { border-top: 1px solid var(--border); padding: 28px 0 48px; font-size: 15px; color: var(--ink-2); }
+footer a { color: var(--ink-2); }
+</style>
+</head>
+<body>
+<a class="skip" href="#short">Skip to the short version</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Kitsap Public Power: The Numbers, back to top">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--s1)"/><path d="M18 4 8 18h7l-2 10 10-14h-7z" fill="#fff"/></svg>
+      Kitsap Public Power: The Numbers
+    </a>
+    <nav class="jump" aria-label="Sections">
+      <a href="#vote">Prop 1</a><a href="#how-much">How much power</a><a href="#bills">Your bill</a>
+      <a href="#arguments">Arguments</a><a href="#help">Help wanted</a><a href="#faq">FAQ</a>
+    </nav>
+    <button class="theme-btn" id="theme" type="button" aria-label="Switch light or dark mode" title="Light / dark">◐</button>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap hero">
+  <span class="pill">Independent · Open source · Not affiliated with KPUD, PSE, or any campaign</span>
+  <h1>Could Kitsap run its own electric utility?</h1>
+  <p class="lede">The numbers behind the Kitsap PUD question, in plain English, with every source public.</p>
+  <p class="small">Updated <span data-k="as_of"></span> · Early results: we've started with how much electricity Kitsap uses. Costs and bills come next.</p>
+  <noscript><p class="callout">This page needs JavaScript to show its numbers and charts. Everything is also readable on <a href="https://github.com/penpro/PUD-Feasibility">GitHub</a>.</p></noscript>
+</div>
+
+<section id="short"><div class="wrap">
+  <h2>The short version</h2>
+  <ol class="short">
+    <li><strong>No leads in the first Prop 1 count, <span data-k="no_pct"></span> to <span data-k="yes_pct"></span>.</strong> About <span data-k="turnout_pct"></span> of registered voters had been counted. Results are certified Nov 24.</li>
+    <li><strong>A takeover would cover PSE's roughly <span data-k="customers"></span> Kitsap customers.</strong> It would not include the Navy bases at Bremerton and Bangor; according to BPA, they buy power directly from the federal government.</li>
+    <li><strong>Those customers use about <span data-k="central_bkwh"></span> billion kWh of electricity a year</strong> (likely range <span data-k="low_bkwh"></span>–<span data-k="high_bkwh"></span> billion). The <span data-k="findenergy_bkwh"></span> billion figure going around is a statewide average, not a Kitsap number.</li>
+    <li><strong>Kitsap uses the most power in winter.</strong> In the highest-demand hour, the system needs roughly twice its average power.</li>
+    <li><strong>No public study yet shows whether bills would go up or down.</strong> It depends on three things: how much cheap federal hydropower a new utility could get, what it would pay for PSE's local equipment, and what it costs to run. That's what this project works out next.</li>
+    <li><strong>You can help.</strong> We need specific documents and data. Most items take 15–30 minutes. <a href="#help">See the list</a>.</li>
+  </ol>
+</div></section>
+
+<section id="vote"><div class="wrap">
+  <h2>What was Prop 1?</h2>
+  <p>Kitsap Public Utility District (KPUD) already runs water, wastewater and fiber internet. Prop 1 asked voters whether KPUD may <strong>buy or build an electric system</strong>. A "yes" would not have changed anyone's power company or rates by itself. KPUD said it would first do a feasibility study, estimated at $300,000–$500,000.</p>
+  <div class="card" style="margin-top:18px">
+    <div class="chart-title">Prop 1 results so far</div>
+    <div class="chart-sub"><span data-k="count_status"></span> · count from <span data-k="count_time"></span> · <span data-k="turnout_pct"></span> of registered voters counted</div>
+    <div class="seg" id="seg" role="img"></div>
+    <div class="legend"><span style="--c:var(--s1)">Yes</span><span style="--c:var(--s2)">No</span></div>
+    <div class="votes">
+      <div><div class="small">Yes</div><div class="n"><span data-k="yes_pct"></span></div><div class="small"><span data-k="yes_votes"></span> votes</div></div>
+      <div><div class="small">No</div><div class="n"><span data-k="no_pct"></span></div><div class="small"><span data-k="no_votes"></span> votes</div></div>
+    </div>
+  </div>
+  <p class="small" style="margin-top:12px">Source: <a href="https://www.kitsap.gov/auditor/Documents/results.html">Kitsap County Auditor</a>. More ballots are counted after election night; the county certifies results on Nov 24, 2026.</p>
+  <div class="callout">
+    <h3>If "No" holds</h3>
+    <p style="margin:0">KPUD says its own study "would not move forward." This independent project keeps going either way, because the cost questions don't go away.</p>
+  </div>
+</div></section>
+
+<section id="who"><div class="wrap">
+  <h2>Who powers Kitsap today?</h2>
+  <p>Four utilities sell electricity in Kitsap County. A Kitsap PUD takeover would involve only one of them.</p>
+  <div class="grid2 who">
+    <div class="card in"><h3>Puget Sound Energy <span class="tag">The takeover question</span></h3><p class="small" style="margin:0">A private, investor-owned company. Serves most Kitsap homes and businesses, about <span data-k="customers"></span> customers by PSE's count.</p></div>
+    <div class="card"><h3>Bonneville Power Administration</h3><p class="small" style="margin:0">The federal power agency. According to BPA, it sells directly to the Navy bases at Bremerton and Bangor. Those would <strong>not</strong> be part of a takeover.</p></div>
+    <div class="card"><h3>Peninsula Light Co.</h3><p class="small" style="margin:0">A member-owned co-op. Serves a small part of Kitsap. Exactly how many Kitsap customers is <a href="#help">one of our open questions</a>.</p></div>
+    <div class="card"><h3>Mason County PUD 3</h3><p class="small" style="margin:0">A public utility district. Also serves a small part of Kitsap. Customer count is an open question too.</p></div>
+  </div>
+  <p class="small" style="margin-top:12px">Sources: U.S. Energy Information Administration utility list for Kitsap County (2025); BPA presentation, 2016.</p>
+</div></section>
+
+<section id="how-much"><div class="wrap">
+  <h2>How much electricity are we talking about?</h2>
+  <p>PSE's Kitsap customers use about <strong><span data-k="central_bkwh"></span> billion kilowatt-hours (kWh) a year</strong>. Your bill counts kWh too. Two independent ways of estimating it land within about 10% of each other.</p>
+  <div class="grid3">
+    <div class="card stat"><div class="label">Typical home</div><div class="value">~<span data-k="home_kwh_month"></span> <small>kWh/month</small></div><div class="note">Our estimate. PSE-wide average: <span data-k="pse_home_kwh_month"></span>.</div></div>
+    <div class="card stat"><div class="label">Average demand</div><div class="value"><span data-k="avg_mw"></span> <small>MW</small></div><div class="note">Spread over every hour of the year.</div></div>
+    <div class="card stat"><div class="label">Highest hour of the year</div><div class="value">~<span data-k="peak_central"></span> <small>MW</small></div><div class="note">Range <span data-k="peak_low"></span>–<span data-k="peak_high"></span>. Our least certain number.</div></div>
+  </div>
+
+  <figure>
+    <div class="chart">
+      <div class="chart-title">Yearly electricity use, PSE's Kitsap customers</div>
+      <div class="chart-sub">Billion kWh per year</div>
+      <div class="plot" id="chart-energy" role="img" aria-label="Bar chart. The figure you may have seen: 3.24 billion kWh. This study's estimate: 2.04 billion kWh, likely range 1.74 to 2.60."></div>
+    </div>
+    <figcaption>The line with end caps across our bar shows the likely range. Sources: FindEnergy; Kitsap County 2022 climate inventory; EIA; this study's model.</figcaption>
+    <details class="table"><summary>Show the numbers</summary><table id="tbl-energy"></table></details>
+  </figure>
+
+  <div class="callout">
+    <h3>Why the 3.2 billion figure is wrong for Kitsap</h3>
+    <p>It comes from a website that takes <strong>Washington's average use per person (<span data-k="state_pc_mwh"></span> MWh)</strong> and multiplies it by Kitsap's population. It shows the same per-person number for every county we checked. Washington's average includes data centers, paper mills and farm irrigation, which Kitsap doesn't have. The result is about <span data-k="findenergy_pct_over"></span> higher than our estimate for PSE's Kitsap customers.</p>
+    <p style="margin:0">You may also have heard "Kitsap needs around <span data-k="kuow_mw"></span> megawatts." That fits the <strong>highest-demand hour</strong> (our range: <span data-k="peak_low"></span>–<span data-k="peak_high"></span> MW), not average use (about <span data-k="avg_mw"></span> MW).</p>
+  </div>
+  <p class="small"><strong>Quick units:</strong> 1 kWh is what your bill counts. 1 megawatt (MW) = 1,000 kW of power at one moment. 1 billion kWh = 1 terawatt-hour (TWh).</p>
+</div></section>
+
+<section id="seasons"><div class="wrap">
+  <h2>Kitsap uses the most electricity in winter</h2>
+  <p>In <span data-k="winter_peak_month"></span>, demand runs about <strong><span data-k="winter_pct"></span> above</strong> the yearly average. In <span data-k="low_month"></span> it's about <span data-k="low_month_pct"></span> below. That's heating. It matters because solar panels make the least power in exactly those winter months, and because wires and power contracts have to be sized for the cold snaps.</p>
+  <figure>
+    <div class="chart">
+      <div class="chart-title">Average demand by month</div>
+      <div class="chart-sub">Megawatts, estimated for PSE's Kitsap customers</div>
+      <div class="plot" id="chart-monthly" role="img" aria-label="Column chart of average demand by month, highest in winter and lowest in early summer and September."></div>
+    </div>
+    <figcaption>Shape based on PSE's monthly sales across its whole system, 2022–2025 (EIA). Kitsap is likely a bit more winter-heavy than PSE overall.</figcaption>
+    <details class="table"><summary>Show the numbers</summary><table id="tbl-monthly"></table></details>
+  </figure>
+</div></section>
+
+<section id="growth"><div class="wrap">
+  <h2>Use will probably grow</h2>
+  <p>By <span data-k="proj_year"></span>, our middle estimate is about <strong><span data-k="proj_central_twh"></span> billion kWh a year</strong> (<span data-k="proj_growth_pct"></span> more than today). That comes from more people, more homes switching to electric heat, and more electric cars: about <span data-k="proj_evs"></span>, compared with <span data-k="ev_count"></span> plug-in vehicles registered in Kitsap today. The range is wide (<span data-k="proj_low_twh"></span>–<span data-k="proj_high_twh"></span>) because some of these inputs are guesses. <a href="#help">Challenge them.</a></p>
+  <figure>
+    <div class="chart">
+      <div class="chart-title">Projected yearly use</div>
+      <div class="chart-sub">Billion kWh per year · line = middle estimate, shading = low to high</div>
+      <div class="plot" id="chart-growth" role="img" aria-label="Line chart of projected yearly electricity use from 2025 to 2045, rising from about 2.0 to about 2.9 billion kWh, with a widening range."></div>
+    </div>
+    <details class="table"><summary>Show the numbers</summary><table id="tbl-growth"></table></details>
+  </figure>
+</div></section>
+
+<section id="bills"><div class="wrap">
+  <h2>Would bills go up or down?</h2>
+  <p><strong>Not known yet.</strong> We haven't found any public study that answers it, from either side. A public utility's bill comes down to three things:</p>
+  <div class="flow" aria-label="Power, plus purchase, plus running costs, equals your bill">
+    <div class="card"><h3>⚡ Power</h3><p class="small" style="margin:0">How much cheap federal hydropower (BPA) a new Kitsap PUD could get, and the price of the rest.</p><div class="mod">Part 2 · not started</div></div>
+    <div class="card"><h3>🏗️ Purchase</h3><p class="small" style="margin:0">What it would cost to buy PSE's local poles, wires and substations, plus interest on the loans.</p><div class="mod">Parts 3–4 · not started</div></div>
+    <div class="card"><h3>👷 Running it</h3><p class="small" style="margin:0">Line crews, trucks, storm response, billing and customer service.</p><div class="mod">Part 5 · not started</div></div>
+    <div class="eq" aria-hidden="true">=</div>
+    <div class="card bill"><h3>🧾 Your bill</h3><p class="small" style="margin:0">Compared side by side with PSE, at the same usage.</p><div class="mod">Part 6 · not started</div></div>
+  </div>
+  <div class="callout">
+    <h3>For context only: average home electricity price, 2025</h3>
+    <table aria-label="Average residential revenue per kWh, 2025">
+      <thead><tr><th>Utility</th><th class="num">¢ per kWh</th></tr></thead>
+      <tbody>
+        <tr><td>Puget Sound Energy (all areas)</td><td class="num"><span data-k="cents_pse"></span></td></tr>
+        <tr><td>Mason County PUD 3</td><td class="num"><span data-k="cents_mason3"></span></td></tr>
+        <tr><td>Jefferson County PUD</td><td class="num"><span data-k="cents_jefferson"></span></td></tr>
+        <tr><td>Clallam County PUD</td><td class="num"><span data-k="cents_clallam"></span></td></tr>
+        <tr><td>Snohomish County PUD</td><td class="num"><span data-k="cents_snohomish"></span></td></tr>
+        <tr><td>Peninsula Light Co.</td><td class="num"><span data-k="cents_penlight"></span></td></tr>
+      </tbody>
+    </table>
+    <p class="small" style="margin:8px 0 6px"><strong>Why this doesn't settle it:</strong></p>
+    <ul class="small" style="margin:0; padding-left:20px">
+      <li>These public utilities have had cheap federal power for decades. A brand-new one might not get as much.</li>
+      <li>Jefferson's price already includes paying off its 2013 purchase from PSE, but each case is different.</li>
+      <li>These are averages (total home revenue ÷ kWh), not bills, and home sizes and heating differ.</li>
+    </ul>
+    <p class="small" style="margin:8px 0 0">Source: U.S. Energy Information Administration, Form 861 (2025).</p>
+  </div>
+</div></section>
+
+<section id="arguments"><div class="wrap wide">
+  <h2>The arguments, and how we'll test them</h2>
+  <p>Both sides have made claims that can be checked with numbers. Each one gets a direct test here. None is waved away.</p>
+  <div class="sides">
+    <div>
+      <div class="side-h">Concerns raised by PSE</div>
+      <div class="card arg"><div class="claim-t">"KPUD has no public plan to pay for, run or power a utility for 130,000+ customers."</div><div class="test"><b>Test:</b> this project is building those numbers in public, one part at a time.</div></div>
+      <div class="card arg"><div class="claim-t">"A new PUD would lose access to cheap federal hydropower and start with none."</div><div class="test"><b>Test:</b> BPA's actual rules for new public utilities (Part 2; help wanted D1).</div></div>
+      <div class="card arg"><div class="claim-t">"Buying PSE's system would be very expensive. In Jefferson County, supporters estimated $47 million and it cost $109 million."</div><div class="test"><b>Test:</b> value Kitsap's equipment from PSE's own regulatory filings, and get Jefferson's original documents (Part 3; C4).</div></div>
+      <div class="card arg"><div class="claim-t">"KPUD has never run an electric utility, let alone one this size."</div><div class="test"><b>Test:</b> staffing and cost benchmarks from utilities of similar size (Part 5; D4).</div></div>
+      <div class="card arg"><div class="claim-t">"PSE has 70+ employees and 50+ contractors in Kitsap and can bring crews from across the West after storms."</div><div class="test"><b>Test:</b> crew sizing, mutual-aid agreements and federal outage records for PSE vs. public utilities (Part 5).</div></div>
+      <div class="card arg"><div class="claim-t">"Leaving PSE would not lower prices."</div><div class="test"><b>Test:</b> side-by-side bills at the same usage, including loan payments and power-price risk (Part 6).</div></div>
+    </div>
+    <div>
+      <div class="side-h">Points raised by supporters</div>
+      <div class="card arg"><div class="claim-t">"PSE rates are rising fast." PSE has asked for residential increases of about 30% over three years, as reported by Axios and KUOW.</div><div class="test"><b>Test:</b> the bill comparison uses PSE's filed and approved increases from the state regulator (Part 6).</div></div>
+      <div class="card arg"><div class="claim-t">"Public utilities get first call on cheap federal hydropower." BPA must give preference to public utilities.</div><div class="test"><b>Test:</b> the same BPA question as PSE's concern above, from the other side (Part 2; D1).</div></div>
+      <div class="card arg"><div class="claim-t">"A PUD is run by locally elected commissioners, in public meetings, under public-records law."</div><div class="test"><b>Test:</b> that's not a dollar question. We note it, and voters weigh it.</div></div>
+      <p class="small">Sources: PSE press release (July 28, 2026); KUOW (Oct 30, 2026); Axios (Oct 29, 2026); KPUD Fact Publication (Aug 2026). Know a claim we missed, from either side? <a href="#help">Send it (A2).</a></p>
+    </div>
+  </div>
+</div></section>
+
+<section id="help"><div class="wrap wide">
+  <h2>Help wanted</h2>
+  <p>This is an open-source study: anyone can add to it. Here is exactly what we need, sorted by who can help. Each button opens a short, pre-filled form on GitHub. Posting needs a free GitHub account.</p>
+  <p class="small"><strong>Privacy:</strong> everything posted on GitHub is public. Never post a name, address, account number or anything else that identifies you or someone else.</p>
+  <div class="filters" id="filters" role="group" aria-label="Filter by who can help"></div>
+  <div class="asks" id="asks"></div>
+  <p class="small" style="margin-top:16px">Starting something big, like a records request? Open an <a id="volunteer-link" href="#">"I'll take this on"</a> issue first so two people don't do the same work. Full list: <a id="help-md" href="#">help-wanted list on GitHub</a>.</p>
+</div></section>
+
+<section id="trust"><div class="wrap">
+  <h2>How to read our numbers</h2>
+  <p>Every number in this study carries one of four labels, and links to where it came from.</p>
+  <div class="labels">
+    <div class="card"><span class="lab-chip">VERIFIED</span><p class="small" style="margin:0">Straight from the original source: a government agency, utility filing, or the county.</p></div>
+    <div class="card"><span class="lab-chip">ESTIMATE</span><p class="small" style="margin:0">We calculated it. The math is public and anyone can rerun it.</p></div>
+    <div class="card"><span class="lab-chip">UNVERIFIED</span><p class="small" style="margin:0">A claim we haven't traced to an original source. We only test these; we never build on them.</p></div>
+    <div class="card"><span class="lab-chip">ASSUMPTION</span><p class="small" style="margin:0">Our best guess, with reasons. These are the first things to challenge.</p></div>
+  </div>
+  <p class="small" style="margin-top:14px">Everything on this page is an <strong>estimate</strong> unless it says otherwise. Details: <a class="repo-link" data-path="/blob/main/docs/methodology.md" href="#">how we did it</a> · <a class="repo-link" data-path="/blob/main/docs/findings.md" href="#">findings so far</a> · <a class="repo-link" data-path="/blob/main/data/SOURCES.md" href="#">every source</a> · <a class="repo-link" data-path="/blob/main/modules/01_load/results.md" href="#">full load results</a></p>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>Questions</h2>
+  <details class="faq"><summary>Who made this? Is it for or against public power?</summary><p>It's an independent, open-source project, not affiliated with Kitsap PUD, PSE or any campaign. It isn't for or against. It answers "what would it cost, and what would bills look like," and tests claims from both sides the same way.</p></details>
+  <details class="faq"><summary>Prop 1 looks like it's failing. Why keep going?</summary><p>If "No" holds, KPUD's own study stops. The underlying questions don't: PSE's rate increases, future proposals, and other communities weighing the same choice. Public, checkable numbers help whatever comes next.</p></details>
+  <details class="faq"><summary>Can I trust these numbers?</summary><p>Don't take our word for it. Every number is labeled, sourced and reproducible from public files, and the code that produces it is public. If you find a mistake, <a href="#help">report it (E3)</a>. Corrections are part of the project.</p></details>
+  <details class="faq"><summary>What's a kWh, a megawatt, a terawatt-hour?</summary><p>A <strong>kWh</strong> (kilowatt-hour) is the unit on your bill. A <strong>megawatt</strong> (MW) is 1,000 kilowatts of power at one moment; utilities size wires and power contracts in MW. A <strong>terawatt-hour</strong> (TWh) is a billion kWh, the scale of a whole county's yearly use.</p></details>
+  <details class="faq"><summary>Why does peak demand matter so much?</summary><p>Power lines, substations and some power contracts have to handle the single highest-demand hour of the year, usually a cold winter evening. Average use tells you how much energy to buy; the peak tells you how big the system has to be. We don't have Kitsap's real peak yet (help wanted C1).</p></details>
+  <details class="faq"><summary>Where does "<span data-k="central_bkwh"></span> billion kWh" come from?</summary><p>Two independent methods. One works backward from the county's own 2022 climate inventory, which was built on utility data. The other multiplies PSE's customer count by how much homes and businesses use at similar nearby utilities. They land within about 10% of each other. A public records request for the county's underlying data would replace the estimate with a measurement.</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p>Data as of <span data-k="as_of"></span> · Study version <span data-k="study_version"></span> · <a class="repo-link" data-path="" href="#">Source on GitHub</a></p>
+  <p>Code: MIT license. Text and processed data: CC BY 4.0. You can reuse anything here with credit. Not affiliated with Kitsap PUD, Puget Sound Energy or any campaign.</p>
+</div></footer>
+
+<div class="tip" id="tip" role="status" aria-live="polite"></div>
+<script src="site-data.js"></script>
+<script>
+(function () {
+  "use strict";
+  var D = window.SITE_DATA;
+  if (!D) { console.error("site-data.js missing"); return; }
+  var NS = "http://www.w3.org/2000/svg";
+
+  // ---- theme toggle (per-viewer convenience only)
+  var root = document.documentElement;
+  try { var saved = localStorage.getItem("theme"); if (saved) root.setAttribute("data-theme", saved); } catch (e) {}
+  document.getElementById("theme").addEventListener("click", function () {
+    var dark = root.getAttribute("data-theme") ? root.getAttribute("data-theme") === "dark"
+      : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var next = dark ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("theme", next); } catch (e) {}
+  });
+
+  // ---- bound numbers
+  document.querySelectorAll("[data-k]").forEach(function (el) {
+    var v = D.k[el.getAttribute("data-k")];
+    if (v === undefined) { console.error("missing SITE_DATA key: " + el.getAttribute("data-k")); el.textContent = "—"; }
+    else el.textContent = v;
+  });
+  document.querySelectorAll(".repo-link").forEach(function (a) { a.href = D.repo + a.getAttribute("data-path"); });
+  document.getElementById("volunteer-link").href = D.repo + "/issues/new?template=volunteer.md&title=" + encodeURIComponent("[Help] I'll take on ");
+  document.getElementById("help-md").href = D.repo + "/blob/main/docs/help-wanted.md";
+
+  // ---- helpers
+  function el(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function txt(x, y, s, cls, anchor, parent) {
+    var t = el("text", { x: x, y: y, "class": cls || "", "text-anchor": anchor || "start" }, parent);
+    t.textContent = s; return t;
+  }
+  function fmt(x, d) { return x.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d }); }
+  var tip = document.getElementById("tip");
+  function showTip(rows, x, y) {
+    tip.textContent = "";
+    rows.forEach(function (r) {
+      var row = document.createElement("div"); row.className = "row";
+      if (r.key) { var k = document.createElement("span"); k.className = "key"; k.style.background = r.key; row.appendChild(k); }
+      var b = document.createElement("b"); b.textContent = r.value; row.appendChild(b);
+      var l = document.createElement("span"); l.className = "lab"; l.textContent = r.label; row.appendChild(l);
+      tip.appendChild(row);
+    });
+    tip.style.display = "block";
+    var w = tip.offsetWidth, h = tip.offsetHeight;
+    var left = Math.min(Math.max(8, x + 14), window.innerWidth - w - 8);
+    var top = y - h - 12 < 8 ? y + 16 : y - h - 12;
+    tip.style.left = left + "px"; tip.style.top = top + "px";
+  }
+  function hideTip() { tip.style.display = "none"; }
+  function bindTip(node, rowsFn) {
+    node.setAttribute("tabindex", "0");
+    node.addEventListener("pointermove", function (e) { showTip(rowsFn(), e.clientX, e.clientY); });
+    node.addEventListener("pointerleave", hideTip);
+    node.addEventListener("focus", function () { var r = node.getBoundingClientRect(); showTip(rowsFn(), r.left + r.width / 2, r.top); });
+    node.addEventListener("blur", hideTip);
+  }
+  function hbar(x0, y, w, h, r) { // rounded data-end, square at baseline
+    r = Math.min(r, w / 2, h / 2);
+    return "M" + x0 + "," + y + "H" + (x0 + w - r) + "A" + r + "," + r + " 0 0 1 " + (x0 + w) + "," + (y + r) +
+      "V" + (y + h - r) + "A" + r + "," + r + " 0 0 1 " + (x0 + w - r) + "," + (y + h) + "H" + x0 + "Z";
+  }
+  function vbar(x, yb, w, hgt, r) {
+    r = Math.min(r, w / 2, hgt);
+    var yt = yb - hgt;
+    return "M" + x + "," + yb + "V" + (yt + r) + "A" + r + "," + r + " 0 0 1 " + (x + r) + "," + yt +
+      "H" + (x + w - r) + "A" + r + "," + r + " 0 0 1 " + (x + w) + "," + (yt + r) + "V" + yb + "Z";
+  }
+  function fillTable(id, head, rows) {
+    var t = document.getElementById(id); t.textContent = "";
+    var tr = document.createElement("tr");
+    head.forEach(function (h, i) { var th = document.createElement("th"); th.textContent = h; if (i) th.className = "num"; tr.appendChild(th); });
+    var thead = document.createElement("thead"); thead.appendChild(tr); t.appendChild(thead);
+    var tb = document.createElement("tbody");
+    rows.forEach(function (r) {
+      var tr2 = document.createElement("tr");
+      r.forEach(function (c, i) { var td = document.createElement("td"); td.textContent = c; if (i) td.className = "num"; tr2.appendChild(td); });
+      tb.appendChild(tr2);
+    });
+    t.appendChild(tb);
+  }
+
+  // ---- Prop 1 segmented bar
+  (function () {
+    var e = D.charts.election, tot = e.yes + e.no, seg = document.getElementById("seg");
+    seg.setAttribute("aria-label", "Yes " + D.k.yes_pct + ", No " + D.k.no_pct);
+    [["Yes", e.yes, "var(--s1)", D.k.yes_pct], ["No", e.no, "var(--s2)", D.k.no_pct]].forEach(function (p) {
+      var d = document.createElement("div");
+      d.style.width = (100 * p[1] / tot) + "%"; d.style.background = p[2];
+      d.textContent = p[3];
+      bindTip(d, function () { return [{ value: p[3], label: p[0] + " · " + fmt(p[1], 0) + " votes", key: p[2] }]; });
+      seg.appendChild(d);
+    });
+  })();
+
+  // ---- Chart: yearly energy (horizontal bars + range)
+  function drawEnergy(host) {
+    var W = host.clientWidth, rowH = 64, padL = 8, padR = 120, top = 8, H = top + rowH * 2 + 28;
+    if (W < 360) padR = 96;
+    host.textContent = "";
+    var svg = el("svg", { width: W, height: H, viewBox: "0 0 " + W + " " + H }, host);
+    var max = 3.5, x = function (v) { return padL + (W - padL - padR) * v / max; };
+    var yAxis = top + rowH * 2;
+    [0, 1, 2, 3].forEach(function (t) {
+      el("line", { x1: x(t), x2: x(t), y1: top, y2: yAxis, "class": t ? "gridl" : "base" }, svg);
+      txt(x(t), yAxis + 18, t === 0 ? "0" : t + "B kWh", "axis-t", t === 0 ? "start" : "middle", svg);
+    });
+    D.charts.energy.forEach(function (d, i) {
+      var y = top + i * rowH, barY = y + 24, bh = 22;
+      txt(padL, y + 16, d.label, "", "start", svg);
+      var g = el("g", { "class": "mark", role: "img", "aria-label": d.label + ": " + fmt(d.value, 2) + " billion kWh" }, svg);
+      el("rect", { x: padL, y: y, width: W - padL, height: rowH, "class": "hit" }, g);
+      el("path", { d: hbar(x(0), barY, x(d.value) - x(0), bh, 4), "class": d.kind === "claim" ? "claim" : "s1" }, g);
+      var labelX = x(d.value) + 8;
+      if (d.kind === "estimate") {
+        var cy = barY + bh / 2;
+        el("line", { x1: x(d.low), x2: x(d.high), y1: cy, y2: cy, "class": "whisk" }, g);
+        el("line", { x1: x(d.low), x2: x(d.low), y1: cy - 7, y2: cy + 7, "class": "whisk" }, g);
+        el("line", { x1: x(d.high), x2: x(d.high), y1: cy - 7, y2: cy + 7, "class": "whisk" }, g);
+        labelX = x(d.high) + 8;
+      }
+      txt(labelX, barY + 16, fmt(d.value, 2) + "B", "val", "start", g);
+      bindTip(g, function () {
+        var rows = [{ value: fmt(d.value, 2) + " billion kWh", label: d.label, key: d.kind === "claim" ? "var(--claim)" : "var(--s1)" }];
+        if (d.low) rows.push({ value: fmt(d.low, 2) + "–" + fmt(d.high, 2), label: "likely range" });
+        return rows;
+      });
+    });
+    fillTable("tbl-energy", ["", "Billion kWh/yr"], D.charts.energy.map(function (d) {
+      return [d.label, d.low ? fmt(d.value, 2) + " (range " + fmt(d.low, 2) + "–" + fmt(d.high, 2) + ")" : fmt(d.value, 2)];
+    }));
+  }
+
+  // ---- Chart: monthly columns
+  function drawMonthly(host) {
+    var data = D.charts.monthly, W = host.clientWidth, H = 276, padL = 40, padR = 8, top = 42, bottom = 28;
+    host.textContent = "";
+    var svg = el("svg", { width: W, height: H, viewBox: "0 0 " + W + " " + H }, host);
+    var peakVal = Math.max.apply(null, data.map(function (d) { return d.avg_mw; }));
+    var max = Math.ceil(peakVal * 1.08 / 100) * 100, plotH = H - top - bottom, yb = top + plotH;
+    var y = function (v) { return yb - plotH * v / max; };
+    var ticks = []; for (var t0 = 0; t0 <= max; t0 += 100) ticks.push(t0);
+    ticks.forEach(function (t) {
+      el("line", { x1: padL, x2: W - padR, y1: y(t), y2: y(t), "class": t ? "gridl" : "base" }, svg);
+      txt(padL - 6, y(t) + 4, String(t), "axis-t", "end", svg);
+    });
+    txt(padL - 6, top - 10, "MW", "axis-t", "end", svg);
+    var band = (W - padL - padR) / data.length, bw = Math.min(24, band * 0.62);
+    var hi = 0, lo = 0;
+    data.forEach(function (d, i) { if (d.avg_mw > data[hi].avg_mw) hi = i; if (d.avg_mw < data[lo].avg_mw) lo = i; });
+    var avg = D.charts.monthly_avg_mw;
+    data.forEach(function (d, i) {
+      var cx = padL + band * i + band / 2;
+      var g = el("g", { "class": "mark", role: "img", "aria-label": d.month + ": " + fmt(d.avg_mw, 0) + " MW" }, svg);
+      el("rect", { x: padL + band * i, y: top, width: band, height: plotH, "class": "hit" }, g);
+      el("path", { d: vbar(cx - bw / 2, yb, bw, yb - y(d.avg_mw), 4), "class": "s1" }, g);
+      if (i === hi || i === lo) txt(cx, y(d.avg_mw) - 6, fmt(d.avg_mw, 0), "val", "middle", g);
+      var lab = band < 34 ? d.month.charAt(0) : d.month;
+      txt(cx, yb + 18, lab, "axis-t", "middle", svg);
+      bindTip(g, function () {
+        var pct = Math.round((d.ratio - 1) * 100);
+        return [{ value: fmt(d.avg_mw, 0) + " MW", label: d.month + " average", key: "var(--s1)" },
+                { value: (pct >= 0 ? "+" : "") + pct + "%", label: "vs. yearly average" }];
+      });
+    });
+    el("line", { x1: padL, x2: W - padR, y1: y(avg), y2: y(avg), "class": "ref" }, svg);
+    var keyT = txt(W - padR, 14, "Yearly average " + fmt(avg, 0) + " MW", "", "end", svg);
+    var kw = keyT.getComputedTextLength ? keyT.getComputedTextLength() : 150;
+    el("line", { x1: W - padR - kw - 26, x2: W - padR - kw - 8, y1: 10, y2: 10, "class": "ref" }, svg);
+    fillTable("tbl-monthly", ["Month", "Average MW", "vs. yearly average", "Million kWh"], data.map(function (d) {
+      var pct = Math.round((d.ratio - 1) * 100);
+      return [d.month, fmt(d.avg_mw, 0), (pct >= 0 ? "+" : "") + pct + "%", fmt(d.mwh / 1000, 0)];
+    }));
+  }
+
+  // ---- Chart: projection (line + range band, crosshair)
+  function drawGrowth(host) {
+    var data = D.charts.projection, W = host.clientWidth, H = 260, padL = 40, padR = W < 420 ? 64 : 110, top = 20, bottom = 28;
+    host.textContent = "";
+    var svg = el("svg", { width: W, height: H, viewBox: "0 0 " + W + " " + H }, host);
+    var max = 5, plotH = H - top - bottom, yb = top + plotH;
+    var x0 = data[0].year, x1 = data[data.length - 1].year;
+    var x = function (v) { return padL + (W - padL - padR) * (v - x0) / (x1 - x0); };
+    var y = function (v) { return yb - plotH * v / max; };
+    [0, 1, 2, 3, 4, 5].forEach(function (t) {
+      el("line", { x1: padL, x2: W - padR, y1: y(t), y2: y(t), "class": t ? "gridl" : "base" }, svg);
+      txt(padL - 6, y(t) + 4, t + "B", "axis-t", "end", svg);
+    });
+    data.forEach(function (d) { txt(x(d.year), yb + 18, String(d.year), "axis-t", "middle", svg); });
+    var band = "M" + data.map(function (d) { return x(d.year) + "," + y(d.high); }).join("L") +
+      "L" + data.slice().reverse().map(function (d) { return x(d.year) + "," + y(d.low); }).join("L") + "Z";
+    el("path", { d: band, "class": "wash" }, svg);
+    el("path", { d: "M" + data.map(function (d) { return x(d.year) + "," + y(d.central); }).join("L"), "class": "line" }, svg);
+    var last = data[data.length - 1];
+    el("circle", { cx: x(last.year), cy: y(last.central), r: 5, "class": "dot" }, svg);
+    txt(x(last.year) + 10, y(last.central) + 5, fmt(last.central, 1) + "B", "val", "start", svg);
+    txt(x(last.year) + 10, y(last.high) + 4, "high " + fmt(last.high, 1), "axis-t", "start", svg);
+    txt(x(last.year) + 10, y(last.low) + 4, "low " + fmt(last.low, 1), "axis-t", "start", svg);
+    var xh = el("line", { x1: 0, x2: 0, y1: top, y2: yb, "class": "xhair", visibility: "hidden" }, svg);
+    var mk = el("circle", { r: 5, "class": "dot", visibility: "hidden" }, svg);
+    var hit = el("rect", { x: padL, y: top, width: W - padL - padR, height: plotH, "class": "hit", tabindex: 0,
+      role: "img", "aria-label": "Projection. Use left and right arrow keys to move between years." }, svg);
+    var idx = 0;
+    function show(i, cx, cy) {
+      idx = i; var d = data[i];
+      xh.setAttribute("x1", x(d.year)); xh.setAttribute("x2", x(d.year)); xh.setAttribute("visibility", "visible");
+      mk.setAttribute("cx", x(d.year)); mk.setAttribute("cy", y(d.central)); mk.setAttribute("visibility", "visible");
+      showTip([{ value: fmt(d.central, 2) + "B kWh", label: d.year + " middle estimate", key: "var(--s1)" },
+               { value: fmt(d.low, 2) + "–" + fmt(d.high, 2), label: "low to high" }], cx, cy);
+    }
+    function hide() { xh.setAttribute("visibility", "hidden"); mk.setAttribute("visibility", "hidden"); hideTip(); }
+    hit.addEventListener("pointermove", function (e) {
+      var r = svg.getBoundingClientRect(), px = e.clientX - r.left, best = 0;
+      data.forEach(function (d, i) { if (Math.abs(x(d.year) - px) < Math.abs(x(data[best].year) - px)) best = i; });
+      show(best, e.clientX, e.clientY);
+    });
+    hit.addEventListener("pointerleave", hide);
+    hit.addEventListener("focus", function () { var r = svg.getBoundingClientRect(); show(idx, r.left + x(data[idx].year), r.top + y(data[idx].central)); });
+    hit.addEventListener("blur", hide);
+    hit.addEventListener("keydown", function (e) {
+      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+      e.preventDefault();
+      var i = Math.max(0, Math.min(data.length - 1, idx + (e.key === "ArrowRight" ? 1 : -1)));
+      var r = svg.getBoundingClientRect(); show(i, r.left + x(data[i].year), r.top + y(data[i].central));
+    });
+    fillTable("tbl-growth", ["Year", "Low", "Middle", "High"], data.map(function (d) {
+      return [String(d.year), fmt(d.low, 2), fmt(d.central, 2), fmt(d.high, 2)];
+    }));
+  }
+
+  var charts = [["chart-energy", drawEnergy], ["chart-monthly", drawMonthly], ["chart-growth", drawGrowth]];
+  function drawAll() { charts.forEach(function (c) { var h = document.getElementById(c[0]); if (h.clientWidth) c[1](h); }); }
+  drawAll();
+  if (window.ResizeObserver) {
+    var last = 0;
+    new ResizeObserver(function () {
+      var w = document.getElementById("chart-energy").clientWidth;
+      if (Math.abs(w - last) > 2) { last = w; drawAll(); }
+    }).observe(document.getElementById("chart-energy"));
+  }
+
+  // ---- Help wanted
+  var groups = [{ id: "all", title: "All" }].concat(D.groups);
+  var rank = { top: 0, high: 1, normal: 2 };
+  var current = "all";
+  var fbox = document.getElementById("filters"), abox = document.getElementById("asks");
+  groups.forEach(function (g) {
+    var b = document.createElement("button"); b.type = "button"; b.textContent = g.title;
+    b.setAttribute("aria-pressed", g.id === current ? "true" : "false");
+    b.addEventListener("click", function () {
+      current = g.id;
+      fbox.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      renderAsks();
+    });
+    fbox.appendChild(b);
+  });
+  function renderAsks() {
+    abox.textContent = "";
+    var list = D.asks.filter(function (a) { return current === "all" || a.group === current; })
+      .sort(function (a, b) { return rank[a.priority] - rank[b.priority] || (a.id < b.id ? -1 : 1); });
+    list.forEach(function (a) {
+      var c = document.createElement("article"); c.className = "card ask";
+      var meta = document.createElement("div"); meta.className = "meta";
+      if (a.priority !== "normal") {
+        var bd = document.createElement("span"); bd.className = "badge " + a.priority;
+        bd.textContent = a.priority === "top" ? "Most needed" : "High priority"; meta.appendChild(bd);
+      }
+      var ef = document.createElement("span"); ef.className = "badge"; ef.textContent = "⏱ " + a.effort; meta.appendChild(ef);
+      var gid = document.createElement("span"); gid.className = "badge"; gid.textContent = a.id; meta.appendChild(gid);
+      c.appendChild(meta);
+      var h = document.createElement("h3"); h.textContent = a.title; c.appendChild(h);
+      var p = document.createElement("p"); p.textContent = a.why; c.appendChild(p);
+      var ol = document.createElement("ol");
+      a.how.forEach(function (s) { var li = document.createElement("li"); li.textContent = s; ol.appendChild(li); });
+      c.appendChild(ol);
+      if (a.links.length || a.oq.length) {
+        var lk = document.createElement("div"); lk.className = "links";
+        a.links.forEach(function (l) { var x = document.createElement("a"); x.href = l.url; x.textContent = l.text + " ↗"; x.rel = "noopener"; lk.appendChild(x); });
+        if (a.oq.length) {
+          var q = document.createElement("div");
+          a.oq.forEach(function (id) {
+            var o = document.createElement("a"); o.className = "oq"; o.textContent = id; o.title = "Open question " + id;
+            o.href = D.repo + "/blob/main/docs/open-questions.md"; q.appendChild(o); q.appendChild(document.createTextNode(" "));
+          });
+          lk.appendChild(q);
+        }
+        c.appendChild(lk);
+      }
+      var go = document.createElement("a"); go.className = "go"; go.href = a.issue_url; go.rel = "noopener";
+      go.textContent = "I can help → open on GitHub"; c.appendChild(go);
+      abox.appendChild(c);
+    });
+  }
+  renderAsks();
+})();
+</script>
+</body>
+</html>

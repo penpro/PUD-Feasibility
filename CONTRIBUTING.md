@@ -3,6 +3,9 @@
 This study is only useful if people on every side of the debate can check it. Challenges are as
 welcome as data.
 
+**Not sure where to start?** [docs/help-wanted.md](docs/help-wanted.md) lists 20 specific things we need,
+from 5-minute tasks to records requests, each with a pre-filled issue link.
+
 ## Three ways to contribute
 
 ### 1. Submit data
@@ -52,10 +55,14 @@ python -m model.load
 ```
 
 ```bash
+python scripts/build_site.py
+```
+
+```bash
 python -m pytest -q
 ```
 
-All three must pass, and the regenerated results must be committed along with the change.
+All of these must pass, and the regenerated results (including `docs/site-data.js`) must be committed along with the change.
 
 ## License of contributions
 
