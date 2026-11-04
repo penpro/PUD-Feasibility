@@ -1,0 +1,255 @@
+# Kitsap Public Power Feasibility Study: every model assumption, in one file.
+#
+# Each parameter under `params:` must carry:
+#   label    VERIFIED   = taken directly from a primary source
+#            ESTIMATE   = derived by us; `note` shows the method
+#            UNVERIFIED = a claim we have not traced to a primary source; used only to test it
+#            ASSUMPTION = modeler judgment; `note` gives the reasoning; challenge these first
+#   unit, source (IDs in data/sources.yaml), as_of, and either `value`,
+#   `low/central/high` (the parameter's own low/central/high, NOT "low load"), or `points`.
+# model/common.py refuses to run if any of this is missing.
+# Values derived from EIA files are re-derived by tests/test_config.py and must match.
+
+meta:
+  study_version: 0.1.0
+  config_as_of: 2026-11-04
+
+settings:
+  base_year: 2025                 # EIA-861 2025 is the latest annual data (released Oct 2026)
+  projection_years: [2025, 2030, 2035, 2040, 2045]
+  central_rule: >-
+    Where a Kitsap-specific value is unknown, central = midpoint of PSE system-wide (S010; urban,
+    largely gas-heated suburbs) and Jefferson PUD (S010; former PSE peninsula territory with little
+    gas service). Kitsap is assumed to sit between them. Applied to residential and commercial use
+    per customer, loss fraction and load factor.
+
+params:
+  load:
+    ghg_inventory_2022:
+      electricity_residential:
+        value: 571860
+        unit: tCO2e
+        label: VERIFIED
+        source: [S006]
+        as_of: 2022
+        note: Table 2, "total" framework, utility-specific factors.
+      electricity_commercial: {value: 253480, unit: tCO2e, label: VERIFIED, source: [S006], as_of: 2022}
+      electricity_industrial: {value: 2996, unit: tCO2e, label: VERIFIED, source: [S006], as_of: 2022}
+      electricity_total: {value: 828336, unit: tCO2e, label: VERIFIED, source: [S006], as_of: 2022}
+      electricity_location_based:
+        value: 219570
+        unit: tCO2e
+        label: VERIFIED
+        source: [S006]
+        as_of: 2022
+        note: eGRID regional factor, reported "for informational purposes"; the factor itself is not published.
+      population: {value: 280900, unit: persons, label: VERIFIED, source: [S006], as_of: 2022}
+
+    pse_carbon_intensity:
+      ci_2022mix_total:
+        value: 122.59
+        unit: gCO2e/MJ
+        label: VERIFIED
+        source: [S007]
+        as_of: 2022
+        note: Upstream 13.34 + production-to-consumption 109.25. Commerce 2022 Fuel Mix Disclosure basis.
+      ci_2022mix_production_to_consumption: {value: 109.25, unit: gCO2e/MJ, label: VERIFIED, source: [S007], as_of: 2022}
+      ci_2021mix_total:
+        value: 135.03
+        unit: gCO2e/MJ
+        label: VERIFIED
+        source: [S008]
+        as_of: 2021
+        note: Updated 2021-fuel-mix value (CFS compliance year 2023).
+      ci_2021mix_production_to_consumption: {value: 119.78, unit: gCO2e/MJ, label: VERIFIED, source: [S008], as_of: 2021}
+      ci_2023mix_total: {value: 102.08, unit: gCO2e/MJ, label: VERIFIED, source: [S009], as_of: 2023}
+      ci_2023mix_production_to_consumption: {value: 90.29, unit: gCO2e/MJ, label: VERIFIED, source: [S009], as_of: 2023}
+
+    ghg_backcalc_ef:
+      low: 90.29
+      central: 109.25
+      high: 135.03
+      unit: gCO2e/MJ
+      label: ESTIMATE
+      source: [S006, S007, S008, S009]
+      as_of: 2022
+      note: >-
+        S006 does not say which PSE factor it applied, only "utility- and year-specific" factors from
+        Ecology's CFS calculations with T&D "included". Plausible choices: three fuel-mix years
+        (2021/2022/2023) x lifecycle total or production-to-consumption only. Central = 2022 mix,
+        production-to-consumption (matches the inventory year; that component includes T&D; community
+        protocols normally leave out upstream fuel-cycle emissions). Low/high = the smallest and largest
+        factors in that matrix. A HIGHER factor implies LOWER kWh. Assumes all inventory electricity
+        was PSE-served at one factor (OQ-02). Pin this down with records request item 4.
+
+    egrid2022:
+      nwpp_co2e_lb_per_mwh:
+        value: 605.9
+        unit: lb CO2e/MWh
+        label: VERIFIED
+        source: [S023]
+        as_of: 2022
+        note: NWPP (WECC Northwest) subregion total output emission rate.
+      wa_state_co2e_lb_per_mwh:
+        value: 186.0
+        unit: lb CO2e/MWh
+        label: VERIFIED
+        source: [S023]
+        as_of: 2022
+        note: Washington state total output emission rate (generation located in WA).
+      nwpp_grid_gross_loss: {value: 0.051, unit: fraction, label: VERIFIED, source: [S023], as_of: 2022}
+
+    findenergy_claim:
+      kitsap_total_mwh:
+        value: 3236601
+        unit: MWh/yr
+        label: UNVERIFIED
+        source: [S014]
+        as_of: 2026-11-04
+        note: Third-party; method undisclosed. Tested and rejected as a Kitsap measurement (see load module).
+      kitsap_population: {value: 277673, unit: persons, label: UNVERIFIED, source: [S014], as_of: 2026-11-04, note: As shown on the FindEnergy page.}
+      wa_total_mwh: {value: 90752364, unit: MWh/yr, label: UNVERIFIED, source: [S015], as_of: 2026-11-04, note: Statewide "Total Consumption" on FindEnergy.}
+      wa_per_capita_mwh: {value: 11.66, unit: MWh/person-yr, label: UNVERIFIED, source: [S015], as_of: 2026-11-04, note: Identical value shown on every WA county page checked.}
+
+    kuow_claim_mw:
+      value: 370
+      unit: MW
+      label: UNVERIFIED
+      source: [S016]
+      as_of: 2026-10-30
+      note: '"Kitsap needs around 370 megawatts". It does not say average or peak, and no source is given. Tested against both.'
+
+    bottom_up:
+      pse_kitsap_customers:
+        low: 125000
+        central: 130000
+        high: 135000
+        unit: customers
+        label: ESTIMATE
+        source: [S018]
+        as_of: 2026-07-28
+        note: >-
+          Central = PSE's own stated count ("our 130,000 customers in Kitsap"), a rounded figure in an
+          advocacy release. A +/-5,000 band covers rounding and scope (e.g. whether some non-Kitsap
+          accounts are included). Replace with a PSE- or UTC-sourced count (OQ-03).
+      residential_customer_share:
+        low: 0.87
+        central: 0.89
+        high: 0.91
+        unit: fraction of customers
+        label: ASSUMPTION
+        source: [S010]
+        as_of: 2025
+        note: >-
+          PSE system-wide 0.8825, Jefferson 0.8923, Mason 3 0.9337 (S010). Kitsap PSE territory is
+          assumed slightly more residential than PSE's system. Industrial customers are counted in
+          the commercial remainder (negligible count).
+      residential_mwh_per_customer:
+        low: 10.3539
+        central: 11.1035
+        high: 13.4944
+        unit: MWh/customer-yr
+        label: ESTIMATE
+        source: [S010]
+        as_of: 2025
+        note: >-
+          Low = PSE system-wide 2025. High = Mason PUD 3 (serves part of Kitsap). Central = PSE/Jefferson
+          midpoint (settings.central_rule). Clallam (14.90) and Peninsula Light (14.69) are higher still
+          and are not used as bounds: less gas service, colder climate.
+      commercial_mwh_per_customer:
+        low: 29.7437
+        central: 45.1202
+        high: 60.4967
+        unit: MWh/customer-yr
+        label: ESTIMATE
+        source: [S010]
+        as_of: 2025
+        note: >-
+          Low = Jefferson PUD; high = PSE system-wide (includes large Eastside commercial loads); central
+          = midpoint. Peninsula Light (518) is excluded because it books small commercial as residential.
+      industrial_uplift:
+        value: 0.003630
+        unit: fraction of residential+commercial energy
+        label: ESTIMATE
+        source: [S006]
+        as_of: 2022
+        note: Industrial / (residential + commercial) electricity emissions = 2,996 / 825,340 (same factor cancels).
+
+    losses:
+      low: 0.0350
+      central: 0.0374
+      high: 0.0557
+      unit: fraction of system input energy
+      label: ESTIMATE
+      source: [S010]
+      as_of: 2025
+      note: Jefferson 0.0350, PSE system 0.0398, Mason 3 0.0557 (losses / (retail + delivery + losses)). Central = PSE/Jefferson midpoint.
+
+    load_factor:
+      low: 0.4268
+      central: 0.5148
+      high: 0.6028
+      unit: average MW / annual peak MW
+      label: ESTIMATE
+      source: [S010]
+      as_of: 2025
+      note: >-
+        Jefferson 0.4268 (winter-peaking, electric heat), PSE system 0.6028 (EIA 2025 winter peak 4,629 MW).
+        Central = midpoint. 2025 observed peaks, not weather-normalized design peaks (OQ-05). A LOWER
+        load factor means a HIGHER peak.
+
+    population_projection:
+      points: {2022: 280900, 2030: 297608, 2040: 317694, 2050: 335268}
+      unit: persons
+      label: VERIFIED
+      source: [S006]
+      as_of: 2025-06-30
+      note: OFM Growth Management Act "Middle" series as reported in S006 Table 5; geometric interpolation between points.
+
+    growth:
+      per_customer_change_by_2045:
+        low: -0.05
+        central: 0.10
+        high: 0.25
+        unit: fractional change vs 2025, excluding EVs
+        label: ASSUMPTION
+        source: []
+        as_of: 2026-11-04
+        note: >-
+          Net of efficiency (low) vs. building electrification from gas furnaces to heat pumps and
+          new-construction electric codes (high). Placeholder until Kitsap gas therms by sector are
+          obtained (records request item 5) and converted at heat-pump efficiency.
+      ev_stock_2026:
+        value: 10383
+        unit: registered plug-in vehicles
+        label: VERIFIED
+        source: [S012]
+        as_of: 2026-10-14
+        note: 8,011 BEV + 2,335 PHEV (PSE) + 36 (no known utility) + 1 (PSE/Tacoma). Treated as already embedded in the 2025 base load.
+      ev_stock_2035:
+        low: 30000
+        central: 50000
+        high: 75000
+        unit: registered plug-in vehicles
+        label: ASSUMPTION
+        source: []
+        as_of: 2026-11-04
+        note: Linear from 2026 count. Kitsap has an estimated ~200k-250k light-duty vehicles (unsourced; OQ-09).
+      ev_stock_2045:
+        low: 60000
+        central: 110000
+        high: 160000
+        unit: registered plug-in vehicles
+        label: ASSUMPTION
+        source: []
+        as_of: 2026-11-04
+        note: Linear between 2035 and 2045.
+      kwh_per_ev_year:
+        low: 2800
+        central: 3300
+        high: 3800
+        unit: kWh/vehicle-yr
+        label: ASSUMPTION
+        source: []
+        as_of: 2026-11-04
+        note: About 11,000 mi/yr x 0.25-0.35 kWh/mi at the meter; PHEVs pull the fleet average down.

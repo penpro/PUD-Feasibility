@@ -1,0 +1,7 @@
+fuel_mix_year,component,ef_gco2e_per_mj,total_mwh_2022,implied_location_factor_lb_per_mwh
+2021,lifecycle total,135.03,1704016.3914,284.075
+2021,production-to-consumption,119.78,1920966.2158,251.9922
+2022,lifecycle total,122.59,1876933.9533,257.9038
+2022,production-to-consumption,109.25,2106117.4676,229.8392
+2023,lifecycle total,102.08,2254049.1118,214.755
+2023,production-to-consumption,90.29,2548381.1422,189.9513

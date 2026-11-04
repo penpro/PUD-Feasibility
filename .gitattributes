@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Raw source files must stay byte-for-byte identical to what was downloaded,
+# or their SHA-256 hashes in data/raw/MANIFEST.sha256 stop matching.
+data/raw/** -text

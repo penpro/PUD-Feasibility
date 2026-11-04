@@ -1,0 +1,4 @@
+load_case,residential_customers,commercial_customers,residential_mwh,commercial_mwh,industrial_mwh,total_mwh,in_pse_kitsap_customers,in_residential_customer_share,in_residential_mwh_per_customer,in_commercial_mwh_per_customer,avg_mw
+low,113750.0,11250.0,1177756.125,334616.625,5489.9131,1517862.6631,125000.0,0.91,10.3539,29.7437,173.272
+central,115700.0,14300.0,1284674.95,645218.86,7005.5145,1936899.3245,130000.0,0.89,11.1035,45.1202,221.1072
+high,117450.0,17550.0,1584917.28,1061717.085,9607.2827,2656241.6477,135000.0,0.87,13.4944,60.4967,303.2239

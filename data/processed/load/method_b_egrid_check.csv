@@ -1,0 +1,5 @@
+egrid_basis,rate_lb_per_mwh,implied_total_mwh,pse_factor_this_would_require_gco2e_per_mj
+NWPP subregion,605.9,798924.5971,288.0038
+NWPP incl. grid gross loss,638.4615,758179.4427,303.4814
+Washington state,186.0,2602518.3516,88.4118
+Washington state incl. NWPP gross loss,195.9958,2469789.9157,93.1631

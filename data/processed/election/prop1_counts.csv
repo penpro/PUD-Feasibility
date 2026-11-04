@@ -1,0 +1,2 @@
+run_datetime,official,registered_voters,ballots_tabulated,turnout,yes,no,yes_pct,no_pct,undervotes,overvotes,snapshot
+2026-11-03T20:02,False,204242,92136,0.4511,34935,53513,39.50%,60.50%,3683,5,data/raw/election_2026/results_2026-11-03_2002.html

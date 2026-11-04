@@ -1,0 +1,296 @@
+# Source registry: the single place where every source is recorded.
+#
+#   Edit THIS file, then run:  python scripts/sources.py build
+#   That regenerates data/SOURCES.md and data/raw/MANIFEST.sha256, and fails if
+#   any file in data/raw/ is not claimed by a source below (or a claimed file is missing).
+#
+# Fields
+#   id         stable ID cited from model/config.yaml and docs (never reuse an ID)
+#   kind       primary | secondary | third-party | advocacy
+#              primary     = the agency/utility that produced the number (EIA, Ecology, BPA, county)
+#              secondary   = journalism reporting someone else's number
+#              third-party = aggregator/commercial site with undisclosed method
+#              advocacy    = a party to the debate speaking for itself (PSE, campaign committees)
+#   files      paths under data/raw/ (globs allowed). Empty = not archived (see archive_note)
+#   archive_note  why there is no local copy (copyrighted news, commercial site, fetch blocked)
+
+sources:
+  - id: S001
+    title: "Exploring Electric Service in Kitsap County (web page)"
+    publisher: Kitsap Public Utility District
+    kind: primary
+    url: https://www.kpud.org/governance/exploring-electric-service-in-kitsap-county/
+    accessed: 2026-11-04
+    files: [data/raw/kpud_electric_page/exploring-electric-service_2026-11-04.html]
+    notes: >-
+      Board committed to a comprehensive feasibility study if Prop 1 passes; says no decision
+      has been made to provide electric service. The $300k-$500k study cost is NOT on this page;
+      it is in the Fact Publication (S002).
+
+  - id: S002
+    title: "KPUD Proposition 1 Fact Publication (dated 08.2026)"
+    publisher: Kitsap Public Utility District
+    kind: primary
+    url: https://www.kpud.org/wp-content/uploads/FINAL-KPUD-Prop-1-Fact-Publication.pdf
+    accessed: 2026-11-04
+    files: [data/raw/kpud_fact_publication/FINAL-KPUD-Prop-1-Fact-Publication.pdf]
+    notes: >-
+      p.3: feasibility study "estimated to cost between $300,000 and $500,000"; of four electric
+      authority measures in WA in 2008 and 2012, one was approved. p.2: a "No" vote means the
+      study "would not move forward." p.4: no power source selected; BPA named as one option;
+      condemnation authority under RCW 54.16.020; Jefferson PUD took "approximately five years."
+      Note: p.2 misstates the election date as November 4, 2026 (it was November 3).
+
+  - id: S003
+    title: "KPUD Resolution No. 26-07-28A (ballot proposition, adopted 2026-07-28)"
+    publisher: Kitsap PUD Board of Commissioners (hosted by Kitsap County Auditor)
+    kind: primary
+    url: https://www.kitsap.gov/auditor/Documents/KPUD%20Resolution%20GE%202026.pdf
+    accessed: 2026-11-04
+    files: [data/raw/kpud_resolution_2026/KPUD_Resolution_GE_2026.pdf]
+    notes: Ballot text under RCW 54.08.070.
+
+  - id: S004
+    title: "November 3, 2026 General Election results (unofficial, cumulative report snapshots)"
+    publisher: Kitsap County Auditor
+    kind: primary
+    url: https://www.kitsap.gov/auditor/Documents/results.html
+    accessed: 2026-11-04
+    files: [data/raw/election_2026/results_*.html]
+    notes: >-
+      One snapshot per published count, named by the report's own run date/time. Parsed by
+      scripts/fetch_election_results.py into data/processed/election/prop1_counts.csv.
+
+  - id: S005
+    title: "Elections page (count schedule and canvassing board dates)"
+    publisher: Kitsap County Auditor
+    kind: primary
+    url: https://www.kitsap.gov/auditor/Pages/Elections.aspx
+    accessed: 2026-11-04
+    files: [data/raw/election_2026/auditor_elections_page_2026-11-04.html]
+    notes: >-
+      "Next results will be posted by 5 p.m., Wednesday, November 4." Canvassing board meets
+      Nov 23, 2026 (challenged ballots) and certifies Nov 24, 2026 at 9 a.m.
+
+  - id: S006
+    title: "Kitsap County 2022 Greenhouse Gas Emissions Analysis (V3.5.1)"
+    publisher: WA Department of Commerce, Growth Management Services; consultants Cascadia Consulting Group, WSP, Fehr & Peers, Kim Lungren Associates
+    kind: primary
+    url: https://www.kitsap.gov/dcd/PEP%20Documents/CountyGHGAnalysisReport_Kitsap_20250630.pdf
+    accessed: 2026-11-04
+    files: [data/raw/kitsap_ghg_2022/CountyGHGAnalysisReport_Kitsap_20250630.pdf]
+    notes: >-
+      Table 2 (p.11): electricity 828,336 tCO2e = residential 571,860 + commercial 253,480 +
+      industrial 2,996. p.12: location-based (eGRID) electricity = 219,570 tCO2e. Table 5 (p.13):
+      population 2022 280,900; 2030 297,608; 2040 317,694; 2050 335,268 (OFM GMA "Middle").
+      Methods (A-5): consumption "procured directly from the utilities that provide service to
+      each county"; utility-specific factors from Ecology's Clean Fuel Standard calculations.
+      The report does NOT name PSE as the data supplier and does NOT publish kWh.
+
+  - id: S007
+    title: "Utility-Specific Carbon Intensity of Electricity, Clean Fuel Standard, for 2024 (2022 Fuel Mix Disclosure basis)"
+    publisher: WA Department of Ecology (publication 24-14-014)
+    kind: primary
+    url: https://apps.ecology.wa.gov/publications/documents/2414014.pdf
+    accessed: 2026-11-04
+    files: [data/raw/ecology_cfs_ci_2024/ecology_pub_2414014.pdf]
+    notes: >-
+      Puget Sound Energy (ELCWAPSE2024): upstream 13.34, production-to-consumption 109.25,
+      total 122.59 gCO2e/MJ, computed from Commerce's 2022 Fuel Mix Disclosure. Mason County
+      PUD 3: 6.34. Statewide average grid: 63.39. Table headers say gCO2e/MJ; body text says
+      "per ... kWh". We treat it as /MJ, the CFS convention (see docs/methodology.md).
+
+  - id: S008
+    title: "Draft Utility-Specific Carbon Intensity for 2024 and updated 2023 values (2021 fuel mix)"
+    publisher: WA Department of Ecology (publication 23-14-030)
+    kind: primary
+    url: https://apps.ecology.wa.gov/publications/documents/2314030.pdf
+    accessed: 2026-11-04
+    files: [data/raw/ecology_cfs_ci_2023/ecology_pub_2314030.pdf]
+    notes: >-
+      PSE draft 2024 (2022 mix) total 122.76; PSE updated 2023 value (2021 mix): upstream 15.25,
+      production-to-consumption 119.78, total 135.03 gCO2e/MJ.
+
+  - id: S009
+    title: "Utility-Specific Carbon Intensity of Electricity, Clean Fuel Standard, for 2025 (2023 fuel mix)"
+    publisher: WA Department of Ecology (publication 25-14-008)
+    kind: primary
+    url: https://apps.ecology.wa.gov/publications/documents/2514008.pdf
+    accessed: 2026-11-04
+    files: [data/raw/ecology_cfs_ci_2025/ecology_pub_2514008.pdf]
+    notes: PSE (ELCWAPSE2025) total 102.08 gCO2e/MJ. Context only; not used for 2022 back-calculation.
+
+  - id: S010
+    title: "Form EIA-861 Annual Electric Power Industry Report, 2025 data (final release)"
+    publisher: U.S. Energy Information Administration
+    kind: primary
+    url: https://www.eia.gov/electricity/data/eia861/zip/f8612025.zip
+    accessed: 2026-11-04
+    files: [data/raw/eia861_2025/*.xlsx]
+    notes: >-
+      Relevant workbooks extracted unmodified from f8612025.zip (sheet files dated 2026-10-07).
+      Service_Territory lists four utilities in Kitsap County: Puget Sound Energy, Bonneville
+      Power Administration, Peninsula Light Company, PUD No 3 of Mason County. Sales_Ult_Cust
+      gives customers/MWh/revenue by class per utility (PSE = utility 15500; Part A bundled,
+      Part C delivery-only). Operational_Data gives peaks and losses.
+
+  - id: S011
+    title: "Form EIA-861M monthly sales to ultimate customers, 2022-2025"
+    publisher: U.S. Energy Information Administration
+    kind: primary
+    url: https://www.eia.gov/electricity/data/eia861m/
+    accessed: 2026-11-04
+    files: [data/raw/eia861m/sales_ult_cust_*.xlsx]
+    notes: >-
+      Files from https://www.eia.gov/electricity/data/eia861m/archive/xls/sales_ult_cust_YYYY.xlsx.
+      Monthly billed sales; PSE is reported, small PUDs are not. Billing-cycle lag shifts the
+      shape by roughly half a month.
+
+  - id: S012
+    title: "Electric Vehicle Population Data (WA DOL registrations), Kitsap County aggregates"
+    publisher: WA Department of Licensing via data.wa.gov (dataset f6w7-q2d2)
+    kind: primary
+    url: https://data.wa.gov/Transportation/Electric-Vehicle-Population-Data/f6w7-q2d2
+    accessed: 2026-11-04
+    files: [data/raw/wa_dol_ev_population/*.json]
+    notes: >-
+      Socrata API queries (base https://data.wa.gov/resource/f6w7-q2d2.json):
+      [1] $select=ev_type,electric_utility,count(*)&$where=county='Kitsap'&$group=ev_type,electric_utility;
+      [2] $select=model_year,count(*)&$where=county='Kitsap'&$group=model_year;
+      [3] dataset metadata from https://data.wa.gov/api/views/f6w7-q2d2.json.
+      Rows last updated 2026-10-14. Kitsap: 8,011 BEV + 2,335 PHEV attributed to PSE, 36 with no
+      known utility, 1 split PSE/Tacoma, 10,383 total. DOL attributes no Kitsap EVs to Peninsula
+      Light or Mason PUD 3, so its utility mapping is coarse.
+
+  - id: S013
+    title: "Navy Region NW UESC Highlights (Federal Utility Partnership Working Group, Nov 2-3, 2016)"
+    publisher: Bonneville Power Administration (D. Lee and M. Huber), hosted by U.S. DOE
+    kind: primary
+    url: https://www.energy.gov/sites/default/files/2016/11/f34/fupwg_fall16_lee_huber.pdf
+    accessed: 2026-11-04
+    files: [data/raw/fupwg_2016_pse_navy/fupwg_fall16_lee_huber.pdf]
+    notes: >-
+      Slide 14: "Bremerton and Bangor are direct served by BPA." Dated 2016; current status needs
+      reconfirmation, but EIA-861 2025 (S010) still lists BPA as a retail supplier in Kitsap County.
+
+  - id: S014
+    title: "Kitsap County, WA: Electric Rates, Bills & Providers"
+    publisher: FindEnergy (commercial aggregator)
+    kind: third-party
+    url: https://findenergy.com/wa/kitsap-county-electricity/
+    accessed: 2026-11-04
+    files: []
+    archive_note: Commercial site; not redistributed. Values transcribed in notes.
+    notes: >-
+      "Total Consumption 3,236,601 MWh", "Consumption per Capita 11.66 MWh", population 277,673.
+      The same 11.66 MWh per capita appears on FindEnergy's Washington, Kittitas and Jefferson
+      county pages, so the county figure is a statewide per-capita value times county population,
+      not a measurement of Kitsap load.
+
+  - id: S015
+    title: "Washington Electricity Rates & Average Electricity Bills"
+    publisher: FindEnergy (commercial aggregator)
+    kind: third-party
+    url: https://findenergy.com/wa/
+    accessed: 2026-11-04
+    files: []
+    archive_note: Commercial site; not redistributed. Values transcribed in notes.
+    notes: 'Statewide "Total Consumption" 90,752,364 MWh / 11.66 MWh per capita.'
+
+  - id: S016
+    title: "Kitsap to vote on energy measure, as PSE pours millions into campaign against it"
+    publisher: KUOW (David Kroman and Hans Anderson), 2026-10-30
+    kind: secondary
+    url: https://www.kuow.org/topics/soundside/2026-10-30/kitsap-to-vote-on-energy-measure-as-pse-pours-millions-into-campaign-against-it
+    accessed: 2026-11-04
+    files: []
+    archive_note: Copyrighted journalism; link only.
+    notes: >-
+      Reporter's text: "Kitsap needs around 370 megawatts" (does not say average or peak; no
+      source given); "Public utilities can get 200 megawatts of tier 1 rate power"; PSE investors
+      put "nearly $2.5 million" into the No campaign; Yes side raised "less than $10,000." KPUD GM
+      Angela Bennink (paraphrased): an acquisition would likely need a voter-approved bond.
+
+  - id: S017
+    title: "Kitsap County will vote on public power amid rising bills"
+    publisher: Axios Seattle, 2026-10-29
+    kind: secondary
+    url: https://www.axios.com/local/seattle/2026/10/29/kitsap-county-proposition-1-pud-pse-electric-rates-washington-
+    accessed: 2026-11-04
+    files: []
+    archive_note: Copyrighted journalism; direct fetch returned HTTP 403, so content is known only from search excerpts.
+    notes: Reported (citing the Seattle Times) that PSE spent $2.4 million opposing Prop 1. Not read in full.
+
+  - id: S018
+    title: "Kitsap voters deserve facts before being asked to approve a blank check (press release, 2026-07-28)"
+    publisher: Puget Sound Energy
+    kind: advocacy
+    url: https://www.pse.com/press-release/details/Kitsap-voters-deserve-facts-before-being-asked-to-approve-a-blank-check
+    accessed: 2026-11-04
+    files: []
+    archive_note: Corporate copyright; link only.
+    notes: >-
+      PSE's own figures: "our 130,000 customers in Kitsap"; more than 70 PSE employees working in
+      Kitsap daily plus more than 50 Potelco contractor employees (34 line workers); Jefferson
+      proponents estimated $47M and final cost was $109M; PSE power supply costs "around $2 billion
+      a year". Argues KPUD has no public plan for funding, operations, power supply or storm
+      response and would start with no BPA power. Gives no Kitsap acquisition cost estimate.
+
+  - id: S019
+    title: "KPUD places public power authority measure on November ballot"
+    publisher: Bainbridge Island Review (Tyler Shuey), 2026-07-29
+    kind: secondary
+    url: https://www.bainbridgereview.com/2026/07/29/kpud-places-public-power-authority-measure-on-november-ballot/
+    accessed: 2026-11-04
+    files: []
+    archive_note: Copyrighted journalism; link only.
+    notes: >-
+      Reports PSE's claims (Jefferson $109M; 130,000 customers). Contains no $1.2B or $1.5B
+      valuation; that figure remains unsourced (see docs/open-questions.md OQ-07).
+
+  - id: S020
+    title: "Jefferson PUD acquisition coverage, 2008-2013 (Peninsula Daily News, multiple articles)"
+    publisher: Peninsula Daily News
+    kind: secondary
+    url: https://www.peninsuladailynews.com/news/jefferson-pud-signs-pact-to-become-electrical-provider-expected-to-complete-switch-in-2013/
+    accessed: 2026-11-04
+    files: []
+    archive_note: Copyrighted journalism; link only. Facts were taken from search excerpts and have not been checked against primary filings.
+    notes: >-
+      2008 Jefferson Prop 1 passed with about 54% (8,092 Yes / 6,903 No, election-night count).
+      $103M purchase agreement (2010), later adjusted to about $109M. About 18,000 customers.
+      Service began April 1, 2013. Most of the purchase was financed through USDA Rural Utilities
+      Service. Related: https://www.peninsuladailynews.com/news/puget-sound-energy-to-give-back-more-of-proceeds-from-jefferson-county-sale-but-only-to-current-customers
+      Primary sources to pull: WUTC sale-approval order, Jefferson PUD audited financials.
+
+  - id: S021
+    title: "Public power vote in 2008 set up PUD's 10th anniversary in 2023"
+    publisher: Port Townsend Leader
+    kind: secondary
+    url: https://ptleader.com/stories/public-power-vote-in-2008-set-up-puds-10th-anniversary-in-2023,115666
+    accessed: 2026-11-04
+    files: []
+    archive_note: Copyrighted journalism; link only.
+    notes: Background on Jefferson PUD's 2008 vote and 2013 start of service. Not yet read in full.
+
+  - id: S023
+    title: "eGRID2022 Summary Tables (created 2024-01-30)"
+    publisher: U.S. Environmental Protection Agency
+    kind: primary
+    url: https://www.epa.gov/system/files/documents/2024-01/egrid2022_summary_tables.pdf
+    accessed: 2026-11-04
+    files: [data/raw/epa_egrid2022/egrid2022_summary_tables.pdf]
+    notes: >-
+      Table 1, NWPP (WECC Northwest): CO2e total output rate 605.9 lb/MWh, grid gross loss 5.1%.
+      Table 3, Washington: CO2e total output rate 186.0 lb/MWh. Used to cross-check S006's
+      location-based electricity figure (219,570 tCO2e).
+
+  - id: S022
+    title: "Creative Commons Attribution 4.0 International legal code"
+    publisher: Creative Commons
+    kind: primary
+    url: https://creativecommons.org/licenses/by/4.0/legalcode.txt
+    accessed: 2026-11-04
+    files: []
+    archive_note: Stored at repo root as LICENSE-CC-BY-4.0.txt, not under data/raw/.
+    notes: License text for docs and processed data.

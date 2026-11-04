@@ -1,0 +1,6 @@
+case,retail_mwh,basis,avg_mw_at_meter
+low,1741340.06,"B low (largest PSE factor: 2021 mix, lifecycle), population-scaled",198.78
+central,2044573.91,mean of B central and C central,233.4
+high,2604199.23,"B high (smallest PSE factor: 2023 mix, production-to-consumption), population-scaled",297.28
+stress_low,1517862.66,"C, every input at its low-load end",173.27
+stress_high,2656241.65,"C, every input at its high-load end",303.22

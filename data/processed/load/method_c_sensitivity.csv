@@ -1,0 +1,5 @@
+parameter,param_low,param_high,total_mwh_at_param_low,total_mwh_at_param_high,swing_mwh,swing_pct_of_central
+commercial_mwh_per_customer,29.7437,60.4967,1716217.1958,2157581.4533,441364.2575,0.2279
+residential_mwh_per_customer,10.3539,13.4944,1849855.7793,2214530.611,364674.8317,0.1883
+residential_customer_share,0.87,0.91,2025663.7941,1848134.8549,177528.9392,0.0917
+pse_kitsap_customers,125000.0,135000.0,1862403.1967,2011395.4524,148992.2557,0.0769
