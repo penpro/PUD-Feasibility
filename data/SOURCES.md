@@ -33,6 +33,7 @@ Source kinds: **primary** (the producer of the number), **secondary** (journalis
 | S021 | [Public power vote in 2008 set up PUD's 10th anniversary in 2023](https://ptleader.com/stories/public-power-vote-in-2008-set-up-puds-10th-anniversary-in-2023,115666) | Port Townsend Leader | secondary | 2026-11-04 |
 | S023 | [eGRID2022 Summary Tables (created 2024-01-30)](https://www.epa.gov/system/files/documents/2024-01/egrid2022_summary_tables.pdf) | U.S. Environmental Protection Agency | primary | 2026-11-04 |
 | S022 | [Creative Commons Attribution 4.0 International legal code](https://creativecommons.org/licenses/by/4.0/legalcode.txt) | Creative Commons | primary | 2026-11-04 |
+| S024 | [Campaign finance for KPUD Proposition 1 (2026): committee totals and contributions](https://data.wa.gov/Politics/Contributions-to-Candidates-and-Political-Committ/kv7h-kjye) | WA Public Disclosure Commission via data.wa.gov (datasets 3h9x-7bvm and kv7h-kjye) | primary | 2026-11-04 |
 
 ## S001 — Exploring Electric Service in Kitsap County (web page)
 
@@ -201,7 +202,7 @@ Source kinds: **primary** (the producer of the number), **secondary** (journalis
 - **URL:** <https://www.kuow.org/topics/soundside/2026-10-30/kitsap-to-vote-on-energy-measure-as-pse-pours-millions-into-campaign-against-it>
 - **Accessed:** 2026-11-04
 - **Files:** none archived. Copyrighted journalism; link only.
-- **Notes:** Reporter's text: "Kitsap needs around 370 megawatts" (does not say average or peak; no source given); "Public utilities can get 200 megawatts of tier 1 rate power"; PSE investors put "nearly $2.5 million" into the No campaign; Yes side raised "less than $10,000." KPUD GM Angela Bennink (paraphrased): an acquisition would likely need a voter-approved bond.
+- **Notes:** Reporter's text: "Kitsap needs around 370 megawatts" (does not say average or peak; no source given); "Public utilities can get 200 megawatts of tier 1 rate power"; PSE investors put "nearly $2.5 million" into the No campaign; Yes side raised "less than $10,000" (PDC, S024: PSE $2,318,178; No committee $2,401,233; Yes $9,055). KPUD GM Angela Bennink (paraphrased): an acquisition would likely need a voter-approved bond.
 
 ## S017 — Kitsap County will vote on public power amid rising bills
 
@@ -210,7 +211,7 @@ Source kinds: **primary** (the producer of the number), **secondary** (journalis
 - **URL:** <https://www.axios.com/local/seattle/2026/10/29/kitsap-county-proposition-1-pud-pse-electric-rates-washington->
 - **Accessed:** 2026-11-04
 - **Files:** none archived. Copyrighted journalism; direct fetch returned HTTP 403, so content is known only from search excerpts.
-- **Notes:** Reported (citing the Seattle Times) that PSE spent $2.4 million opposing Prop 1. Not read in full.
+- **Notes:** Reported (citing the Seattle Times) that PSE spent $2.4 million opposing Prop 1. Not read in full. PDC filings (S024): $2.40M is the No committee's total; PSE's own contribution was $2,318,178.
 
 ## S018 — Kitsap voters deserve facts before being asked to approve a blank check (press release, 2026-07-28)
 
@@ -266,3 +267,17 @@ Source kinds: **primary** (the producer of the number), **secondary** (journalis
 - **Accessed:** 2026-11-04
 - **Files:** none archived. Stored at repo root as LICENSE-CC-BY-4.0.txt, not under data/raw/.
 - **Notes:** License text for docs and processed data.
+
+## S024 — Campaign finance for KPUD Proposition 1 (2026): committee totals and contributions
+
+- **Publisher:** WA Public Disclosure Commission via data.wa.gov (datasets 3h9x-7bvm and kv7h-kjye)
+- **Kind:** primary
+- **URL:** <https://data.wa.gov/Politics/Contributions-to-Candidates-and-Political-Committ/kv7h-kjye>
+- **Accessed:** 2026-11-04
+- **Files:**
+  - `data/raw/wa_pdc_prop1/2026-11-04/committees.json` (sha256 `803767bd623e…`)
+  - `data/raw/wa_pdc_prop1/2026-11-04/contributions_by_category.json` (sha256 `435bcc90dd3a…`)
+  - `data/raw/wa_pdc_prop1/2026-11-04/contributions_no.json` (sha256 `47b6cf93d05f…`)
+  - `data/raw/wa_pdc_prop1/2026-11-04/metadata_committees.json` (sha256 `a961bb8f6a20…`)
+  - `data/raw/wa_pdc_prop1/2026-11-04/metadata_contributions.json` (sha256 `d5fa917e7aab…`)
+- **Notes:** Socrata API queries; exact strings in scripts/fetch_campaign_finance.py (QUERIES). Committees found by the measure, not by name: jurisdiction='KITSAP PUD 01' AND election_year=2026 AND for_or_against in ('for','against'). Snapshot 2026-11-04 (reports updated through 2026-10-27): No: "Coalition to Protect Kitsap Power Sponsored by Puget Sound Energy" (PDC registration 70128; contributions before its rename appear as "Coalition to Protect Kitsap Power") raised $2,401,233.33 and spent $2,304,528.34. Puget Sound Energy gave $2,318,178.33 ($2,100,000 cash on 2026-08-20 and 2026-09-08, $218,178.33 in-kind), 96.5% of the total. Other No contributors: Edison Electric Institute $25,000, Sound View Strategies $23,055 in-kind, Northwest Regional Organizing Coalition PAC $15,000, Potelco $10,000, WA State Association of Electrical Workers $10,000. Itemized contributions sum exactly to the committee total. Yes: "Unplug PSE" (registration 70079) raised $9,055.00 (27 individual contributions, $6,055; 3 organizational, $3,000) and spent $7,252.97. Individual donors are archived only as counts and sums. Post-election reports will change these totals; rerun the script to add a snapshot.

@@ -1,0 +1,839 @@
+{
+  "id" : "kv7h-kjye",
+  "name" : "Contributions to Candidates and Political Committees",
+  "assetType" : "dataset",
+  "attribution" : "Public Disclosure Commission",
+  "attributionLink" : "http://pdc.wa.gov",
+  "averageRating" : 0,
+  "category" : "Politics",
+  "createdAt" : 1481901178,
+  "description" : "This dataset contains cash and in-kind contributions, (including unpaid loans) made to Washington State Candidates and Political Committees for the last 10 years as reported to the PDC on forms C3, C4, Schedule C and their electronic filing equivalents. It does not include loans which have been paid or forgiven, pledges or any expenditures.\r\n\r\nFor candidates, the number of years is determined by the year of the election, not necessarily the year the contribution was reported. For political committees, the number of years is determined by the calendar year of the reporting period.\r\n\r\nCandidates and political committees choosing to file under \"mini reporting\" are not included in this dataset. See WAC 390-16-105 for information regarding eligibility.\r\n\r\nThis dataset is a best-effort by the PDC to provide a complete set of records as described herewith and may contain incomplete or incorrect information. The PDC provides access to the original reports for the purpose of record verification.\r\n\r\nDescriptions attached to this dataset do not constitute legal definitions; please consult RCW 42.17A and WAC Title 390 for legal definitions and additional information political finance disclosure requirements.\r\n\r\nCONDITION OF RELEASE: This publication constitutes a list of individuals prepared by the Washington State Public Disclosure Commission and may not be used for commercial purposes. This list is provided on the condition and with the understanding that the persons receiving it agree to this statutorily imposed limitation on its use. See\r\nRCW 42.56.070(9) and AGO 1975 No. 15.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 31438,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "iconUrl" : "fileId:65eec0ce-ceee-4a00-84ea-69bdb29b50eb",
+  "licenseId" : "PUBLIC_DOMAIN",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 42590532,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1790037715,
+  "publicationGroup" : 13953750,
+  "publicationStage" : "published",
+  "resourceName" : "contributions_to_candidates_and_political_committees",
+  "rowIdentifierColumnId" : 646676012,
+  "rowsUpdatedAt" : 1793832062,
+  "rowsUpdatedBy" : "u89u-rx5w",
+  "tableId" : 20631159,
+  "totalTimesRated" : 0,
+  "viewCount" : 56282,
+  "viewLastModified" : 1790037715,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1560238297,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 7751963,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1560238297,
+    "targetAudience" : "public",
+    "workflowId" : 2106,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "6hhm-htpq",
+      "displayName" : "Washington Public Disclosure Commission"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 646676012,
+    "name" : "id",
+    "dataTypeName" : "text",
+    "description" : "PDC internal identifier that corresponds to a single contribution or correction record. When combined with the origin value, this number uniquely identifies a single row.",
+    "fieldName" : "id",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584493,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "right"
+    }
+  }, {
+    "id" : 646676013,
+    "name" : "report_number",
+    "dataTypeName" : "text",
+    "description" : "PDC identifier used for tracking the individual form C3, C4 or C4 schedule C. Multiple contributions or corrections will correspond to the same report number when they were reported to the PDC at the same time. The report number is unique to the report it represents. When a report is amended, a new report number is assigned that supersedes the original version of the amended report and the original report records are not included in this dataset.",
+    "fieldName" : "report_number",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584494,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676014,
+    "name" : "origin",
+    "dataTypeName" : "text",
+    "description" : "The form, schedule or section where the record was reported. Please see https://www.pdc.wa.gov/learn/forms for a list of forms and instructions.\n\nAUB (Form C3, schedule AU, auction buyer);\nAUD (Form C3, schedule AU, auction donor);\nC.1 (Form C4, schedule C1 correction);\nC3 (Form C3 cash contribution);\nC3.1A (Form C3, anonymous contributions);\nC3.1B (Form C3, candidate personal funds);\nC3.1D (Form C3, miscellaneous receipts)\nC3.1E (Form C3, small contributions);\nC4 (Form C4, in-kind contribution);\n\n",
+    "fieldName" : "origin",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584813,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676015,
+    "name" : "committee_id",
+    "dataTypeName" : "text",
+    "description" : "The unique identifier of a committee. For a continuing committee, this id will be the same for all the years that the committee is registered. Single year committees and candidate committees will have a unique id for each year even though the candidate or committee organization might be the same across years. Surplus accounts will have a single committee id across all years.",
+    "fieldName" : "committee_id",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 127691378,
+    "format" : { }
+  }, {
+    "id" : 646676016,
+    "name" : "fund_id",
+    "dataTypeName" : "number",
+    "description" : "The unique identifier for all reporting and finance records associated with a single campaign. This can be used to correlate records across different datasets. For candidates and single-year committees, the fund_id is the same for everything reported for that campaign. For continuing political committees, their reporting is annual, and they have a unique fund_id for each reporting year.",
+    "fieldName" : "fund_id",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 162316319,
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 646676017,
+    "name" : "filer_id",
+    "dataTypeName" : "text",
+    "description" : "The unique id assigned to a candidate or political committee. The filer id is consistent across election years with the exception that an individual running for a second office in the same election year will receive a second filer id. There is no correlation between the two filer ids. For a candidate and single-election-year committee such as a ballot committee, the combination of filer_id and election_year uniquely identifies a campaign.",
+    "fieldName" : "filer_id",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584495,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676018,
+    "name" : "type",
+    "dataTypeName" : "text",
+    "description" : "Indicates if this record is for a candidate or a political committee. In the case of a political committee, it may be either a continuing political committee, party committee or single election year committee.",
+    "fieldName" : "type",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584496,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676019,
+    "name" : "filer_name",
+    "dataTypeName" : "text",
+    "description" : "The candidate or committee name as reported on the form C1 candidate or committee registration form. The name will be consistent across all records for the same filer id and election year but may differ across years due to candidates or committees changing their name.",
+    "fieldName" : "filer_name",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584497,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676020,
+    "name" : "office",
+    "dataTypeName" : "text",
+    "description" : "The office sought by the candidate. Does not apply to political committees.",
+    "fieldName" : "office",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584498,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676021,
+    "name" : "legislative_district",
+    "dataTypeName" : "text",
+    "description" : "The Washington State legislative district. This field only applies to candidates where the office is \"state senator\" or \"state representative.\"",
+    "fieldName" : "legislative_district",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584499,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676022,
+    "name" : "position",
+    "dataTypeName" : "text",
+    "description" : "The position associated with an office. This field typically applies to judicial and local office that have multiple positions or seats. This field does not apply to political committees.",
+    "fieldName" : "position",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584500,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676023,
+    "name" : "party",
+    "dataTypeName" : "text",
+    "description" : "The political party as declared by the candidate or committee on their form C1 registration. Contains only \"Major parties\" as recognized by Washington State law.",
+    "fieldName" : "party",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584501,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676024,
+    "name" : "ballot_number",
+    "dataTypeName" : "text",
+    "description" : "If the committee is a Statewide Ballot Initiative Committee a ballot number will appear once a ballot number is assigned by the Secretary of State. Local Ballot Initiatives will not have a ballot number. This field will contain a number only if the Secretary of State issues a number. ",
+    "fieldName" : "ballot_number",
+    "position" : 13,
+    "renderTypeName" : "text",
+    "tableColumnId" : 43195308,
+    "width" : 100,
+    "format" : { }
+  }, {
+    "id" : 646676025,
+    "name" : "for_or_against",
+    "dataTypeName" : "text",
+    "description" : "Ballot initiative committees are formed to either support or oppose an initiative. This field represents whether a committee “supports” (for) or “opposes” (against) a ballot initiative. ",
+    "fieldName" : "for_or_against",
+    "position" : 14,
+    "renderTypeName" : "text",
+    "tableColumnId" : 43195327,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676026,
+    "name" : "jurisdiction",
+    "dataTypeName" : "text",
+    "description" : "\t\nThe political jurisdiction associated with the office of a candidate.",
+    "fieldName" : "jurisdiction",
+    "position" : 15,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584502,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676027,
+    "name" : "jurisdiction_county",
+    "dataTypeName" : "text",
+    "description" : "The county associated with the jurisdiction of a candidate. Multi-county jurisdictions as reported as the primary county. This field will be empty for political committees and when a candidate jurisdiction is statewide.",
+    "fieldName" : "jurisdiction_county",
+    "position" : 16,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584504,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676028,
+    "name" : "jurisdiction_type",
+    "dataTypeName" : "text",
+    "description" : "The type of jurisdiction this office is: Statewide, Local, etc.",
+    "fieldName" : "jurisdiction_type",
+    "position" : 17,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41585281,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676029,
+    "name" : "election_year",
+    "dataTypeName" : "number",
+    "description" : "The election year in the case of candidates and single election committees. The reporting year in the case of continuing political committees.",
+    "fieldName" : "election_year",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 41584505,
+    "width" : 100,
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676030,
+    "name" : "amount",
+    "dataTypeName" : "number",
+    "description" : "The amount of the cash or in-kind contribution. On corrections records, this field is the amount of the adjustment.",
+    "fieldName" : "amount",
+    "position" : 19,
+    "renderTypeName" : "number",
+    "tableColumnId" : 41584506,
+    "width" : 100,
+    "format" : {
+      "precisionStyle" : "standard",
+      "humane" : "false",
+      "currencyStyle" : "USD",
+      "align" : "right"
+    }
+  }, {
+    "id" : 646676031,
+    "name" : "cash_or_in_kind",
+    "dataTypeName" : "text",
+    "description" : "What kind of contribution this is, if known.",
+    "fieldName" : "cash_or_in_kind",
+    "position" : 20,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41585319,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676032,
+    "name" : "receipt_date",
+    "dataTypeName" : "calendar_date",
+    "description" : "The date that the contribution was received.",
+    "fieldName" : "receipt_date",
+    "position" : 21,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 41584507,
+    "width" : 100,
+    "format" : {
+      "view" : "date",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676033,
+    "name" : "description",
+    "dataTypeName" : "text",
+    "description" : "The reported description of the transaction. This field does not apply to cash contributions. Not all in-kind contributions and corrections will contain a description. In the case of corrections, the PDC has added a notation regarding the amounts reported on the form Schedule C. A C3 contains not only detailed contributions it also contains none detailed cash - this column will contain the descriptions: 'Anonymous - Cash'; 'Candidates Personal Funds - Does not include candidate loans'; 'Miscellaneous Receipts', 'Contributions of $100 or less contributed by: ____ persons'. As part of inflationary rule changes the dollar amount increased on April 1, 2023 from $25 or less to $150 or less.",
+    "fieldName" : "description",
+    "position" : 22,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584508,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676034,
+    "name" : "memo",
+    "dataTypeName" : "text",
+    "description" : "The optional memo field associated with the transaction. In most cases this field will be blank.",
+    "fieldName" : "memo",
+    "position" : 23,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584509,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676035,
+    "name" : "primary_general",
+    "dataTypeName" : "text",
+    "description" : "Candidates subject to contribution limits must specify whether a contribution is designated for the primary or the general election. Contributions to candidates not subject to limits, political committees and continuing political committees apply to the full election cycle.",
+    "fieldName" : "primary_general",
+    "position" : 24,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584510,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676036,
+    "name" : "code",
+    "dataTypeName" : "text",
+    "description" : "When a contribution is received, the code field denotes the type of entity that made the contribution. These types are determined by the filer. The field values correspond to the selected code: A: Anonymous; B: Business; C: PAC; I: Individual; L: Caucus; O: Other; P: Bona Fide Party; S: Self Pers. Fund; T: Minor Party; U: Union.",
+    "fieldName" : "code",
+    "position" : 25,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584511,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676037,
+    "name" : "contributor_category",
+    "dataTypeName" : "text",
+    "description" : "Indicates if the contributor is an \"Individual\" or \"Organization\". When a contribution is received, the code field denotes the type of entity that made the contribution. These types are determined by the filer. The field values correspond to the selected code: A: Anonymous; B: Business; C: PAC; I: Individual; L: Caucus; O: Other; P: Bona Fide Party; S: Self Pers. Fund; T: Minor Party; U: Union. Codes B, C, F, L, O, P, M and U are assigned the category \"Organization\" and all others are assigned the category \"Individual\".",
+    "fieldName" : "contributor_category",
+    "position" : 26,
+    "renderTypeName" : "text",
+    "tableColumnId" : 110416097,
+    "format" : { }
+  }, {
+    "id" : 646676038,
+    "name" : "contributor_name",
+    "dataTypeName" : "text",
+    "description" : "The name of the individual or organization making the contribution as reported. The names appearing here have not been normalized and the same entity may be represented by different names in the dataset. This field currently applies to contributions where the aggregate total of all contributions from this contributor to this candidate or committee exceeds $100 for the election cycle (calendar year for continuing committees).  As part of inflationary rule changes the dollar amount increased on April 1, 2023 from $25 to $100.",
+    "fieldName" : "contributor_name",
+    "position" : 27,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584512,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676039,
+    "name" : "contributor_address",
+    "dataTypeName" : "text",
+    "description" : "The street address of the individual or organization making the contribution. Refer to the contributor name field for more information on when this information is required.",
+    "fieldName" : "contributor_address",
+    "position" : 28,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584513,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676040,
+    "name" : "contributor_city",
+    "dataTypeName" : "text",
+    "description" : "The city of the individual or organization making the contribution. Refer to the contributor name field for more information on when this information is required.",
+    "fieldName" : "contributor_city",
+    "position" : 29,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584514,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676041,
+    "name" : "contributor_state",
+    "dataTypeName" : "text",
+    "description" : "The state of the individual or organization making the contribution. Contributions from outside the United States may contain foreign postal region codes in this field. Refer to the contributor name field for more information on when this information is required.",
+    "fieldName" : "contributor_state",
+    "position" : 30,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584515,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676042,
+    "name" : "contributor_zip",
+    "dataTypeName" : "text",
+    "description" : "The US zip code of the individual or organization making the contribution. Contributions from outside the United States may contain foreign postal codes in this field. Refer to the contributor name field for more information on when this information is required.",
+    "fieldName" : "contributor_zip",
+    "position" : 31,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584516,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676043,
+    "name" : "contributor_occupation",
+    "dataTypeName" : "text",
+    "description" : "The occupation of the contributor. This field currently applies to contributions by individuals and only when an individual gives a campaign or committee more than $250 in the aggregate for the election cycle (calendar year for continuing political committees). As part of inflationary rule changes the dollar amount increased on April 1, 2023 from $100 in the aggregate to $250 in the aggregate.",
+    "fieldName" : "contributor_occupation",
+    "position" : 32,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584518,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676044,
+    "name" : "contributor_employer_name",
+    "dataTypeName" : "text",
+    "description" : "The name of the contributor's employer. The names appearing here have not been normalized and the same entity may be represented by different names in the dataset. Refer to the contributor occupation field to see when this field applies.",
+    "fieldName" : "contributor_employer_name",
+    "position" : 33,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584519,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676045,
+    "name" : "contributor_employer_city",
+    "dataTypeName" : "text",
+    "description" : "City of the contributor's employer. Refer to the contributor occupation field to see when this field applies.",
+    "fieldName" : "contributor_employer_city",
+    "position" : 34,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584520,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676046,
+    "name" : "contributor_employer_state",
+    "dataTypeName" : "text",
+    "description" : "State of the contributor's employer. Refer to the contributor occupation field to see when this field applies.",
+    "fieldName" : "contributor_employer_state",
+    "position" : 35,
+    "renderTypeName" : "text",
+    "tableColumnId" : 41584521,
+    "width" : 100,
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676047,
+    "name" : "url",
+    "dataTypeName" : "url",
+    "description" : "A link to a PDF version of the original report as it was filed to the PDC.",
+    "fieldName" : "url",
+    "position" : 36,
+    "renderTypeName" : "url",
+    "tableColumnId" : 41597296,
+    "width" : 100,
+    "format" : {
+      "align" : "left"
+    },
+    "subColumnTypes" : [ "url", "description" ]
+  }, {
+    "id" : 646676048,
+    "name" : "contributor_location",
+    "dataTypeName" : "point",
+    "description" : "The geocoded location of the contributor as reported. The quality of the geocoded location is dependent on how many of the address fields are available and is calculated using a third-party service. The PDC has not verified the results of the geocoding. Please refer to the recipient_name field for more information regarding address fields.",
+    "fieldName" : "contributor_location",
+    "position" : 37,
+    "renderTypeName" : "point",
+    "tableColumnId" : 110423465,
+    "width" : 100,
+    "format" : {
+      "view" : "address_coords",
+      "align" : "left"
+    }
+  }, {
+    "id" : 646676049,
+    "name" : "row_checksum",
+    "dataTypeName" : "text",
+    "description" : "A checksum to track whether any data has changed in the row.",
+    "fieldName" : "row_checksum",
+    "position" : 38,
+    "renderTypeName" : "text",
+    "tableColumnId" : 172202149,
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "Public Domain"
+  },
+  "metadata" : {
+    "rdfSubject" : "id",
+    "sidebar" : {
+      "width" : 496
+    },
+    "custom_fields" : {
+      "Temporal" : {
+        "Posting Frequency" : "Daily",
+        "Period of Time" : "Last 10 years. See description"
+      }
+    },
+    "filterCondition" : {
+      "metadata" : {
+        "advanced" : true,
+        "unifiedVersion" : 2
+      },
+      "children" : [ {
+        "metadata" : {
+          "tableColumnId" : {
+            "13953750" : 41584493
+          },
+          "operator" : "EQUALS"
+        },
+        "type" : "operator",
+        "value" : "OR"
+      } ],
+      "type" : "operator",
+      "value" : "AND"
+    },
+    "rowIdentifier" : 646676012,
+    "rowLabel" : "Cash or in-kind contribution or correction",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "79jf-2se2",
+    "createdAt" : 1738620373,
+    "displayName" : "PDC-IT",
+    "screenName" : "PDC-IT",
+    "type" : "team",
+    "members" : [ {
+      "id" : "prrr-ps5v",
+      "createdAt" : 1492022136,
+      "displayName" : "Bill King",
+      "screenName" : "Bill King",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "ux2g-av4t",
+      "createdAt" : 1724340944,
+      "displayName" : "David Metzler",
+      "screenName" : "David Metzler",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "7ufr-e4xv",
+      "createdAt" : 1707850431,
+      "displayName" : "Dillon Ching",
+      "screenName" : "Dillon Ching",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "y884-6s37",
+      "createdAt" : 1493835524,
+      "displayName" : "James Gutholm (PDC)",
+      "profileImageUrlLarge" : "/api/users/y884-6s37/profile_images/LARGE",
+      "profileImageUrlMedium" : "/api/users/y884-6s37/profile_images/THUMB",
+      "profileImageUrlSmall" : "/api/users/y884-6s37/profile_images/TINY",
+      "screenName" : "James Gutholm (PDC)",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "qkg5-hqnb",
+      "createdAt" : 1720717790,
+      "displayName" : "Jim Coleman",
+      "screenName" : "Jim Coleman",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "beqm-ecd8",
+      "createdAt" : 1738698255,
+      "displayName" : "Lindy Myers",
+      "screenName" : "Lindy Myers",
+      "teamId" : 1705846,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "wbgp-mrig",
+      "createdAt" : 1707850470,
+      "displayName" : "michael.dailey",
+      "screenName" : "michael.dailey",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "v65d-qje9",
+      "createdAt" : 1787266185,
+      "displayName" : "Nick Holmquist",
+      "screenName" : "Nick Holmquist",
+      "teamId" : 1705846,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "6u2g-9ajj",
+      "createdAt" : 1724341154,
+      "displayName" : "Sravya Yandamuri",
+      "screenName" : "Sravya Yandamuri",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "u89u-rx5w",
+      "createdAt" : 1701793082,
+      "displayName" : "WA Public Disclosure Commission",
+      "profileImageUrlLarge" : "/api/users/u89u-rx5w/profile_images/LARGE",
+      "profileImageUrlMedium" : "/api/users/u89u-rx5w/profile_images/THUMB",
+      "profileImageUrlSmall" : "/api/users/u89u-rx5w/profile_images/TINY",
+      "screenName" : "WA Public Disclosure Commission",
+      "teamId" : 1705846,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    } ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "79jf-2se2",
+    "createdAt" : 1738620373,
+    "displayName" : "PDC-IT",
+    "screenName" : "PDC-IT",
+    "type" : "team",
+    "members" : [ {
+      "id" : "prrr-ps5v",
+      "createdAt" : 1492022136,
+      "displayName" : "Bill King",
+      "screenName" : "Bill King",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "ux2g-av4t",
+      "createdAt" : 1724340944,
+      "displayName" : "David Metzler",
+      "screenName" : "David Metzler",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "7ufr-e4xv",
+      "createdAt" : 1707850431,
+      "displayName" : "Dillon Ching",
+      "screenName" : "Dillon Ching",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "y884-6s37",
+      "createdAt" : 1493835524,
+      "displayName" : "James Gutholm (PDC)",
+      "profileImageUrlLarge" : "/api/users/y884-6s37/profile_images/LARGE",
+      "profileImageUrlMedium" : "/api/users/y884-6s37/profile_images/THUMB",
+      "profileImageUrlSmall" : "/api/users/y884-6s37/profile_images/TINY",
+      "screenName" : "James Gutholm (PDC)",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "qkg5-hqnb",
+      "createdAt" : 1720717790,
+      "displayName" : "Jim Coleman",
+      "screenName" : "Jim Coleman",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "beqm-ecd8",
+      "createdAt" : 1738698255,
+      "displayName" : "Lindy Myers",
+      "screenName" : "Lindy Myers",
+      "teamId" : 1705846,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "wbgp-mrig",
+      "createdAt" : 1707850470,
+      "displayName" : "michael.dailey",
+      "screenName" : "michael.dailey",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "v65d-qje9",
+      "createdAt" : 1787266185,
+      "displayName" : "Nick Holmquist",
+      "screenName" : "Nick Holmquist",
+      "teamId" : 1705846,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "6u2g-9ajj",
+      "createdAt" : 1724341154,
+      "displayName" : "Sravya Yandamuri",
+      "screenName" : "Sravya Yandamuri",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "u89u-rx5w",
+      "createdAt" : 1701793082,
+      "displayName" : "WA Public Disclosure Commission",
+      "profileImageUrlLarge" : "/api/users/u89u-rx5w/profile_images/LARGE",
+      "profileImageUrlMedium" : "/api/users/u89u-rx5w/profile_images/THUMB",
+      "profileImageUrlSmall" : "/api/users/u89u-rx5w/profile_images/TINY",
+      "screenName" : "WA Public Disclosure Commission",
+      "teamId" : 1705846,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    } ]
+  },
+  "tags" : [ "political finance", "elections", "contributions", "campaign", "political committee" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

@@ -1,0 +1,5333 @@
+{
+  "id" : "3h9x-7bvm",
+  "name" : "Campaign Finance Summary",
+  "assetType" : "dataset",
+  "attribution" : "Public Disclosure Commission",
+  "attributionLink" : "http://www.pdc.wa.gov",
+  "averageRating" : 0,
+  "category" : "Politics",
+  "createdAt" : 1498170767,
+  "description" : "This data set contains a summary of information about candidate campaigns and political committees by election year. For candidate campaigns and single-year/election committees, a single record is provided that covers all activity of the campaign for the given election year. Information for continuing political committees is summarized by calendar/reporting year. The data set covers that prior 16 years plus the current election year. The data are compiled from the campaign reports deposit (C3), campaign summary reports (C4), campaign registrations (C1/C1pc) and candidate declarations and elections data provided to the PDC by the Washington Secretary of State. Records are updated in near real-time, typically less than 2 minutes from the time the campaign submits new data.\n\nThis dataset is a best-effort by the PDC to provide a complete set of records as described herewith. The PDC provides access to the original reports for the purpose of record verification.\n\nDescriptions attached to this dataset do not constitute legal definitions; please consult RCW 42.17A and WAC Title 390 for legal definitions and additional information regarding political finance disclosure requirements.\n\nCONDITION OF RELEASE: This publication and or referenced documents constitutes a list of individuals prepared by the Washington State Public Disclosure Commission and may not be used for commercial purposes. This list is provided on the condition and with the understanding that the persons receiving it agree to this statutorily imposed limitation on its use. See RCW 42.56.070(9) and AGO 1975 No. 15.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 15817,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "iconUrl" : "fileId:05aa48c5-2083-4503-a20f-867cd53c437e",
+  "licenseId" : "PUBLIC_DOMAIN",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 42623326,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1790881836,
+  "publicationGroup" : 14281283,
+  "publicationStage" : "published",
+  "resourceName" : "candidate_campaign_finance_summary",
+  "rowIdentifierColumnId" : 647763552,
+  "rowsUpdatedAt" : 1793832062,
+  "rowsUpdatedBy" : "u89u-rx5w",
+  "tableId" : 20645960,
+  "totalTimesRated" : 0,
+  "viewCount" : 16329,
+  "viewLastModified" : 1790881836,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1559761675,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 7771478,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1559761675,
+    "targetAudience" : "public",
+    "workflowId" : 2106,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "6hhm-htpq",
+      "displayName" : "Washington Public Disclosure Commission"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 647763552,
+    "name" : "id",
+    "dataTypeName" : "text",
+    "description" : "PDC internal identifier that corresponds to a candidate or Political committee record in an election year. ",
+    "fieldName" : "id",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 49214852,
+    "width" : 124,
+    "cachedContents" : {
+      "non_null" : "57831",
+      "largest" : "co-2030-41494",
+      "null" : "0",
+      "top" : [ {
+        "item" : "ca-2009-14080",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14081",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14082",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14083",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14084",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14085",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14086",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14087",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14088",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14089",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14090",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14091",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14092",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14093",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14094",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14095",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14096",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14097",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14098",
+        "count" : "1"
+      }, {
+        "item" : "ca-2009-14079",
+        "count" : "1"
+      } ],
+      "smallest" : "ca-2009-14079",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763553,
+    "name" : "filer_id",
+    "dataTypeName" : "text",
+    "description" : "The unique id assigned to a candidate or political committee. The filer id is consistent across election years with the exception that an individual running for a second office in the same election year will receive a second filer id. There is no correlation between the two. For a candidate and single-election-year committee such as a ballot committee, the combination of filer_id and election_year uniquely identifies a campaign.",
+    "fieldName" : "filer_id",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 49214853,
+    "width" : 113,
+    "cachedContents" : {
+      "non_null" : "57831",
+      "largest" : "ZWOLW--500",
+      "null" : "0",
+      "top" : [ {
+        "item" : "DEMORI 001",
+        "count" : "34"
+      }, {
+        "item" : "ENTEHI 105",
+        "count" : "28"
+      }, {
+        "item" : "SPOKRCC204",
+        "count" : "22"
+      }, {
+        "item" : "AMALTS 016",
+        "count" : "21"
+      }, {
+        "item" : "MACHNP 772",
+        "count" : "19"
+      }, {
+        "item" : "HNTBH  105",
+        "count" : "19"
+      }, {
+        "item" : "WELLFC 402",
+        "count" : "19"
+      }, {
+        "item" : "1STDDN 011",
+        "count" : "18"
+      }, {
+        "item" : "20THLD 579",
+        "count" : "18"
+      }, {
+        "item" : "20THLDN531",
+        "count" : "18"
+      }, {
+        "item" : "11THRE 057",
+        "count" : "18"
+      }, {
+        "item" : "14THLD 908",
+        "count" : "18"
+      }, {
+        "item" : "1199NP 119",
+        "count" : "18"
+      }, {
+        "item" : "18THLDE685",
+        "count" : "18"
+      }, {
+        "item" : "18THLD 674",
+        "count" : "18"
+      }, {
+        "item" : "17THLDN682",
+        "count" : "18"
+      }, {
+        "item" : "19THLD 527",
+        "count" : "18"
+      }, {
+        "item" : "16THLD 362",
+        "count" : "18"
+      }, {
+        "item" : "11THDR 126",
+        "count" : "18"
+      }, {
+        "item" : "15THLD 930",
+        "count" : "18"
+      } ],
+      "smallest" : "10THDDN257",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763554,
+    "name" : "filer_type",
+    "dataTypeName" : "text",
+    "description" : "This column designates if this is a candidate committee (CA) or a political committee (CO).",
+    "fieldName" : "filer_type",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 53989570,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "57831",
+      "largest" : "OS",
+      "null" : "0",
+      "top" : [ {
+        "item" : "CA",
+        "count" : "36837"
+      }, {
+        "item" : "CO",
+        "count" : "19954"
+      }, {
+        "item" : "OS",
+        "count" : "1040"
+      } ],
+      "smallest" : "CA",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763555,
+    "name" : "registered",
+    "dataTypeName" : "calendar_date",
+    "description" : "The date the campaign first submitted a registration. Candidates may not have a date registered if they have declared their candidacy with the Secretary of State  or submitted a financial affairs statement indicating their candidacy and have not submitted their registration.   ",
+    "fieldName" : "registered",
+    "position" : 4,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 151612390,
+    "cachedContents" : {
+      "non_null" : "28029",
+      "largest" : "2026-11-03T00:00:00.000",
+      "null" : "29802",
+      "top" : [ {
+        "item" : "2023-05-22T00:00:00.000",
+        "count" : "166"
+      }, {
+        "item" : "2025-05-12T00:00:00.000",
+        "count" : "137"
+      }, {
+        "item" : "2021-05-27T00:00:00.000",
+        "count" : "136"
+      }, {
+        "item" : "2021-06-03T00:00:00.000",
+        "count" : "135"
+      }, {
+        "item" : "2019-05-11T00:00:00.000",
+        "count" : "134"
+      }, {
+        "item" : "2021-05-28T00:00:00.000",
+        "count" : "130"
+      }, {
+        "item" : "2023-05-26T00:00:00.000",
+        "count" : "128"
+      }, {
+        "item" : "2025-05-19T00:00:00.000",
+        "count" : "115"
+      }, {
+        "item" : "2015-06-22T00:00:00.000",
+        "count" : "109"
+      }, {
+        "item" : "2025-05-07T00:00:00.000",
+        "count" : "107"
+      }, {
+        "item" : "2025-05-21T00:00:00.000",
+        "count" : "106"
+      }, {
+        "item" : "2023-05-18T00:00:00.000",
+        "count" : "104"
+      }, {
+        "item" : "2023-05-23T00:00:00.000",
+        "count" : "104"
+      }, {
+        "item" : "2025-05-23T00:00:00.000",
+        "count" : "102"
+      }, {
+        "item" : "2023-06-02T00:00:00.000",
+        "count" : "96"
+      }, {
+        "item" : "2025-05-13T00:00:00.000",
+        "count" : "87"
+      }, {
+        "item" : "2019-06-24T00:00:00.000",
+        "count" : "86"
+      }, {
+        "item" : "2025-05-16T00:00:00.000",
+        "count" : "86"
+      }, {
+        "item" : "2025-05-06T00:00:00.000",
+        "count" : "85"
+      }, {
+        "item" : "2021-06-04T00:00:00.000",
+        "count" : "84"
+      } ],
+      "smallest" : "1899-12-31T00:00:00.000",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763556,
+    "name" : "declared",
+    "dataTypeName" : "calendar_date",
+    "description" : "The date the candidate campaign declared their candidacy with the Secretary of State. This field only applies to candidate campaigns. ",
+    "fieldName" : "declared",
+    "position" : 5,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 151612389,
+    "cachedContents" : {
+      "non_null" : "17126",
+      "largest" : "2026-10-14T00:00:00.000",
+      "null" : "40705",
+      "top" : [ {
+        "item" : "2023-05-15T00:00:00.000",
+        "count" : "1753"
+      }, {
+        "item" : "2025-05-05T00:00:00.000",
+        "count" : "1711"
+      }, {
+        "item" : "2021-05-17T00:00:00.000",
+        "count" : "1374"
+      }, {
+        "item" : "2019-05-13T00:00:00.000",
+        "count" : "898"
+      }, {
+        "item" : "2026-05-04T00:00:00.000",
+        "count" : "706"
+      }, {
+        "item" : "2025-05-09T00:00:00.000",
+        "count" : "671"
+      }, {
+        "item" : "2023-05-19T00:00:00.000",
+        "count" : "670"
+      }, {
+        "item" : "2022-05-16T00:00:00.000",
+        "count" : "664"
+      }, {
+        "item" : "2023-05-16T00:00:00.000",
+        "count" : "606"
+      }, {
+        "item" : "2024-05-06T00:00:00.000",
+        "count" : "583"
+      }, {
+        "item" : "2019-05-17T00:00:00.000",
+        "count" : "564"
+      }, {
+        "item" : "2025-05-08T00:00:00.000",
+        "count" : "559"
+      }, {
+        "item" : "2023-05-18T00:00:00.000",
+        "count" : "542"
+      }, {
+        "item" : "2025-05-06T00:00:00.000",
+        "count" : "523"
+      }, {
+        "item" : "2023-05-17T00:00:00.000",
+        "count" : "501"
+      }, {
+        "item" : "2021-05-21T00:00:00.000",
+        "count" : "486"
+      }, {
+        "item" : "2025-05-07T00:00:00.000",
+        "count" : "470"
+      }, {
+        "item" : "2019-05-20T00:00:00.000",
+        "count" : "462"
+      }, {
+        "item" : "2021-05-20T00:00:00.000",
+        "count" : "416"
+      }, {
+        "item" : "2021-05-18T00:00:00.000",
+        "count" : "380"
+      } ],
+      "smallest" : "2019-05-13T00:00:00.000",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763557,
+    "name" : "withdrew",
+    "dataTypeName" : "calendar_date",
+    "description" : "The date of withdrawl when a  candidate withdraws their candidacy.",
+    "fieldName" : "withdrew",
+    "position" : 6,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 151612388,
+    "cachedContents" : {
+      "non_null" : "77",
+      "largest" : "2026-05-29T00:00:00.000",
+      "null" : "57754",
+      "top" : [ {
+        "item" : "2025-05-13T00:00:00.000",
+        "count" : "33"
+      }, {
+        "item" : "2025-05-12T00:00:00.000",
+        "count" : "8"
+      }, {
+        "item" : "2023-05-23T00:00:00.000",
+        "count" : "6"
+      }, {
+        "item" : "2024-05-14T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2025-05-09T00:00:00.000",
+        "count" : "4"
+      }, {
+        "item" : "2026-05-13T00:00:00.000",
+        "count" : "3"
+      }, {
+        "item" : "2025-05-07T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2023-05-22T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2022-05-24T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2025-05-06T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2025-05-08T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2019-05-17T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2026-05-29T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2019-06-26T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2021-07-02T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2021-07-28T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2021-08-19T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2023-05-26T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2023-10-10T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2024-05-07T00:00:00.000",
+        "count" : "1"
+      } ],
+      "smallest" : "2019-05-17T00:00:00.000",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763558,
+    "name" : "discontinued",
+    "dataTypeName" : "calendar_date",
+    "description" : "The date the candidate campaign discontinued their campaign.",
+    "fieldName" : "discontinued",
+    "position" : 7,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 151612387,
+    "cachedContents" : {
+      "non_null" : "250",
+      "largest" : "2026-06-30T00:00:00.000",
+      "null" : "57581",
+      "top" : [ {
+        "item" : "2021-06-03T00:00:00.000",
+        "count" : "6"
+      }, {
+        "item" : "2023-06-12T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2021-05-28T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2025-05-22T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2021-07-26T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2025-05-23T00:00:00.000",
+        "count" : "4"
+      }, {
+        "item" : "2023-06-16T00:00:00.000",
+        "count" : "4"
+      }, {
+        "item" : "2021-06-02T00:00:00.000",
+        "count" : "4"
+      }, {
+        "item" : "2021-06-04T00:00:00.000",
+        "count" : "4"
+      }, {
+        "item" : "2025-06-20T00:00:00.000",
+        "count" : "3"
+      }, {
+        "item" : "2021-06-23T00:00:00.000",
+        "count" : "3"
+      }, {
+        "item" : "2023-06-14T00:00:00.000",
+        "count" : "3"
+      }, {
+        "item" : "2023-06-27T00:00:00.000",
+        "count" : "3"
+      }, {
+        "item" : "2025-06-11T00:00:00.000",
+        "count" : "3"
+      }, {
+        "item" : "2023-05-31T00:00:00.000",
+        "count" : "3"
+      }, {
+        "item" : "2021-07-28T00:00:00.000",
+        "count" : "3"
+      }, {
+        "item" : "2023-06-02T00:00:00.000",
+        "count" : "3"
+      }, {
+        "item" : "2024-05-14T00:00:00.000",
+        "count" : "3"
+      }, {
+        "item" : "2021-07-21T00:00:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2021-07-08T00:00:00.000",
+        "count" : "2"
+      } ],
+      "smallest" : "2018-09-30T00:00:00.000",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763559,
+    "name" : "filing_type",
+    "dataTypeName" : "text",
+    "description" : "This field indicated the type of campaign finance reports being filed. \"Electronic\" indicates that all reports are filed electronically and all of the fields containing financial data are correctly calculated from the filed reports. \"Paper\" indicates that all campaign finance reports have been filed on paper and all of the fields containing financial data will be empty. \"Mixed\" indicates that one or more reports are filed on paper and all of the fields containing financial data are potentially incorrect. For both paper and mixed, please consult the individual reports in our \"Imaged documents and reports data set to determine the campaign finance details. An empty value indicates that no campaign finance (C3 or C4) reports have been filed)",
+    "fieldName" : "filing_type",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 54974232,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "23230",
+      "largest" : "Paper",
+      "null" : "34601",
+      "top" : [ {
+        "item" : "Electronic",
+        "count" : "22067"
+      }, {
+        "item" : "Paper",
+        "count" : "869"
+      }, {
+        "item" : "Mixed",
+        "count" : "294"
+      } ],
+      "smallest" : "Electronic",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763560,
+    "name" : "receipt_date",
+    "dataTypeName" : "calendar_date",
+    "description" : "The postmark date of the relevant candidate C1  or political committee C1pc registration. A political committee is not required to submit a new or amended C1pc every year. It is possible that a C1pc may be several years old if there are no updates to report.",
+    "fieldName" : "receipt_date",
+    "position" : 9,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 49215342,
+    "width" : 192,
+    "cachedContents" : {
+      "non_null" : "47983",
+      "largest" : "2026-11-03T00:00:00.000",
+      "null" : "9848",
+      "top" : [ {
+        "item" : "2007-01-30T00:00:00.000",
+        "count" : "201"
+      }, {
+        "item" : "2019-05-11T00:00:00.000",
+        "count" : "197"
+      }, {
+        "item" : "2023-05-22T00:00:00.000",
+        "count" : "166"
+      }, {
+        "item" : "2025-05-12T00:00:00.000",
+        "count" : "142"
+      }, {
+        "item" : "2021-05-28T00:00:00.000",
+        "count" : "136"
+      }, {
+        "item" : "2021-06-03T00:00:00.000",
+        "count" : "136"
+      }, {
+        "item" : "2021-05-27T00:00:00.000",
+        "count" : "136"
+      }, {
+        "item" : "2023-05-26T00:00:00.000",
+        "count" : "128"
+      }, {
+        "item" : "2007-02-11T00:00:00.000",
+        "count" : "127"
+      }, {
+        "item" : "2025-05-19T00:00:00.000",
+        "count" : "115"
+      }, {
+        "item" : "2015-06-22T00:00:00.000",
+        "count" : "109"
+      }, {
+        "item" : "2007-01-22T00:00:00.000",
+        "count" : "109"
+      }, {
+        "item" : "2025-05-07T00:00:00.000",
+        "count" : "107"
+      }, {
+        "item" : "2025-05-21T00:00:00.000",
+        "count" : "106"
+      }, {
+        "item" : "2023-05-23T00:00:00.000",
+        "count" : "104"
+      }, {
+        "item" : "2025-05-23T00:00:00.000",
+        "count" : "104"
+      }, {
+        "item" : "2023-05-18T00:00:00.000",
+        "count" : "104"
+      }, {
+        "item" : "2023-06-02T00:00:00.000",
+        "count" : "100"
+      }, {
+        "item" : "2007-01-08T00:00:00.000",
+        "count" : "93"
+      }, {
+        "item" : "2017-06-04T00:00:00.000",
+        "count" : "89"
+      } ],
+      "smallest" : "1899-12-31T00:00:00.000",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "view" : "date",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763561,
+    "name" : "election_year",
+    "dataTypeName" : "number",
+    "description" : "The year of the election for a candidate or the calendar year that a political committee is registered for.",
+    "fieldName" : "election_year",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 49214855,
+    "width" : 174,
+    "cachedContents" : {
+      "non_null" : "57831",
+      "largest" : "2030",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2025",
+        "count" : "5794"
+      }, {
+        "item" : "2023",
+        "count" : "5546"
+      }, {
+        "item" : "2021",
+        "count" : "4371"
+      }, {
+        "item" : "2019",
+        "count" : "4083"
+      }, {
+        "item" : "2017",
+        "count" : "3618"
+      }, {
+        "item" : "2015",
+        "count" : "3532"
+      }, {
+        "item" : "2013",
+        "count" : "3268"
+      }, {
+        "item" : "2011",
+        "count" : "3262"
+      }, {
+        "item" : "2009",
+        "count" : "3060"
+      }, {
+        "item" : "2026",
+        "count" : "2691"
+      }, {
+        "item" : "2024",
+        "count" : "2524"
+      }, {
+        "item" : "2018",
+        "count" : "2438"
+      }, {
+        "item" : "2022",
+        "count" : "2399"
+      }, {
+        "item" : "2020",
+        "count" : "2289"
+      }, {
+        "item" : "2014",
+        "count" : "2136"
+      }, {
+        "item" : "2016",
+        "count" : "2093"
+      }, {
+        "item" : "2010",
+        "count" : "2090"
+      }, {
+        "item" : "2012",
+        "count" : "1941"
+      }, {
+        "item" : "2008",
+        "count" : "273"
+      }, {
+        "item" : "2007",
+        "count" : "237"
+      } ],
+      "smallest" : "2007",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "right"
+    }
+  }, {
+    "id" : 647763562,
+    "name" : "candidate_committee_status",
+    "dataTypeName" : "text",
+    "description" : "The status of a campaign at a point in time: Candidate declared – indicates that a candidate formally declared their candidacy during declaration week in May. Candidate registered - indicates that the candidate submitted their candidate registration to the PDC. Candidate withdrew – indicates that a candidate formally declared and then formally withdrew their declaration in May. Candidate discontinued campaign – indicates that the candidate registered their campaign, may or may not have raised money, did not formally withdraw, and stopped campaigning. Candidate deceased – indicates that the candidate died after registration.",
+    "fieldName" : "candidate_committee_status",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 50183580,
+    "width" : 172,
+    "cachedContents" : {
+      "non_null" : "33477",
+      "largest" : "Candidate withdrew",
+      "null" : "24354",
+      "top" : [ {
+        "item" : "Candidate declared",
+        "count" : "16849"
+      }, {
+        "item" : "Candidate registered",
+        "count" : "15469"
+      }, {
+        "item" : "Candidate discontinued campaign",
+        "count" : "888"
+      }, {
+        "item" : "Candidate withdrew",
+        "count" : "230"
+      }, {
+        "item" : "Candidate deceased",
+        "count" : "41"
+      } ],
+      "smallest" : "Candidate deceased",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763563,
+    "name" : "filer_name",
+    "dataTypeName" : "text",
+    "description" : "The candidate name as reported on the form C1 candidate registration or the political committee name as reported on the C1pc registration. The name will be consistent across all records for the same filer id and election year but may differ across years due to candidates or committees changing their name.",
+    "fieldName" : "filer_name",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 49214856,
+    "width" : 198,
+    "cachedContents" : {
+      "non_null" : "57831",
+      "largest" : "ZWICKER RICHARD D (RICH ZWICKER)",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Adams County Democrats",
+        "count" : "20"
+      }, {
+        "item" : "HNTB Holdings Ltd. Political Action Committee",
+        "count" : "19"
+      }, {
+        "item" : "SERVICE EMPLOYEES INTERNATIONAL UNION WA STATE COUNCIL PAC",
+        "count" : "19"
+      }, {
+        "item" : "Machinists Non Partisan Political League",
+        "count" : "19"
+      }, {
+        "item" : "DEMOCRAT, REPUBLICAN, INDEPENDENT VOTER EDUCATION",
+        "count" : "19"
+      }, {
+        "item" : "Wells Fargo and Company Employee PAC (aka Wells Fargo Employee PAC)",
+        "count" : "19"
+      }, {
+        "item" : "21ST LEGISLATIVE DISTRICT REPUBLICAN PARTY (21st LD GOP)",
+        "count" : "18"
+      }, {
+        "item" : "20TH LEG DIST REPUB COMM",
+        "count" : "18"
+      }, {
+        "item" : "22ND LEG DIST REPUB ORG COMM (22nd LD)",
+        "count" : "18"
+      }, {
+        "item" : "19th Legislative District Democrats",
+        "count" : "18"
+      }, {
+        "item" : "11TH LEGISLATIVE DISTRICT REPUBLICANS",
+        "count" : "18"
+      }, {
+        "item" : "20th LD Democratic Committee (20th LDDC)",
+        "count" : "18"
+      }, {
+        "item" : "14TH LEGISLATIVE DISTRICT DEMOCRATIC PARTY",
+        "count" : "18"
+      }, {
+        "item" : "21ST LEGISLATIVE DEMOCRATS - VICTORY FUND (21ST DEM VI)",
+        "count" : "18"
+      }, {
+        "item" : "11TH LEGISLATIVE DISTRICT DEMOCRATS",
+        "count" : "18"
+      }, {
+        "item" : "1ST LEG DIST REPUBLICANS",
+        "count" : "18"
+      }, {
+        "item" : "17th Legislative District Democrats (17th LD Dems)",
+        "count" : "18"
+      }, {
+        "item" : "10TH DISTRICT DEMOCRATS",
+        "count" : "18"
+      }, {
+        "item" : "15th Legislative Democratic Central Committee",
+        "count" : "18"
+      }, {
+        "item" : "18TH LEG DIST DEMO CENT COMM NON EXEMPT (18THLDCC)",
+        "count" : "18"
+      } ],
+      "smallest" : "10TH DISTRICT DEMOCRATS",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763564,
+    "name" : "committee_acronym",
+    "dataTypeName" : "text",
+    "description" : "If a political committee is known by an abbreviation it is placed in this column. This acronym is optional. An example would be the WA Education Association, whose acronym is WEA.",
+    "fieldName" : "committee_acronym",
+    "position" : 13,
+    "renderTypeName" : "text",
+    "tableColumnId" : 53989709,
+    "width" : 125,
+    "cachedContents" : {
+      "non_null" : "4847",
+      "largest" : "ZG PAC",
+      "null" : "52984",
+      "top" : [ {
+        "item" : "KCDCC",
+        "count" : "54"
+      }, {
+        "item" : "CCRCC",
+        "count" : "39"
+      }, {
+        "item" : "LCRCC",
+        "count" : "37"
+      }, {
+        "item" : "CCDCC",
+        "count" : "36"
+      }, {
+        "item" : "SCDCC",
+        "count" : "36"
+      }, {
+        "item" : "BCRP",
+        "count" : "36"
+      }, {
+        "item" : "KCRP",
+        "count" : "36"
+      }, {
+        "item" : "CCDW",
+        "count" : "34"
+      }, {
+        "item" : "SCYD",
+        "count" : "27"
+      }, {
+        "item" : "38th LDD",
+        "count" : "27"
+      }, {
+        "item" : "TCYD",
+        "count" : "20"
+      }, {
+        "item" : "26th LDRC",
+        "count" : "18"
+      }, {
+        "item" : "40th LD Dems",
+        "count" : "18"
+      }, {
+        "item" : "28THLDRC",
+        "count" : "18"
+      }, {
+        "item" : "24th LD Dem",
+        "count" : "18"
+      }, {
+        "item" : "22nd LD",
+        "count" : "18"
+      }, {
+        "item" : "16th LD Democrats",
+        "count" : "18"
+      }, {
+        "item" : "41ST LD DEMS",
+        "count" : "18"
+      }, {
+        "item" : "21st LD GOP",
+        "count" : "18"
+      }, {
+        "item" : "21ST DEM VI",
+        "count" : "18"
+      } ],
+      "smallest" : "12LDKCGOP",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763565,
+    "name" : "committee_address",
+    "dataTypeName" : "text",
+    "description" : "The street address of the committee. For candidates, this is the address provided for the candidate committee, not necessarily the address of the candidate.",
+    "fieldName" : "committee_address",
+    "position" : 14,
+    "renderTypeName" : "text",
+    "tableColumnId" : 50216007,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "49020",
+      "largest" : "wneville.iv@gmail.com",
+      "null" : "8811",
+      "top" : [ {
+        "item" : "PO BOX 9100",
+        "count" : "361"
+      }, {
+        "item" : "PO Box 21961",
+        "count" : "180"
+      }, {
+        "item" : "PO Box 27113",
+        "count" : "148"
+      }, {
+        "item" : "PO Box 9100",
+        "count" : "142"
+      }, {
+        "item" : "975 Carpenter Rd NE Ste 101",
+        "count" : "133"
+      }, {
+        "item" : "401 2nd Ave S Ste 303",
+        "count" : "87"
+      }, {
+        "item" : "PO Box 1283",
+        "count" : "84"
+      }, {
+        "item" : "603 STEWART ST #819",
+        "count" : "81"
+      }, {
+        "item" : "PO Box 7437",
+        "count" : "80"
+      }, {
+        "item" : "603 STEWART STREET SUITE 819",
+        "count" : "78"
+      }, {
+        "item" : "218 MAIN STREET, PMB 412",
+        "count" : "77"
+      }, {
+        "item" : "P.O. Box 27113",
+        "count" : "71"
+      }, {
+        "item" : "PO Box 205",
+        "count" : "68"
+      }, {
+        "item" : "PO BOX 4897",
+        "count" : "62"
+      }, {
+        "item" : "401 2nd Avenue South, Suite 303",
+        "count" : "57"
+      }, {
+        "item" : "119 1ST AVE S STE 320",
+        "count" : "54"
+      }, {
+        "item" : "603 STEWART STREET #819",
+        "count" : "51"
+      }, {
+        "item" : "PO BOX 21961",
+        "count" : "48"
+      }, {
+        "item" : "119 1ST AVENUE SOUTH, SUITE 320",
+        "count" : "47"
+      }, {
+        "item" : "2518 S Brandon Ct",
+        "count" : "45"
+      } ],
+      "smallest" : "?",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763566,
+    "name" : "committee_city",
+    "dataTypeName" : "text",
+    "description" : "The city of the committee. For candidates, this is the address provided for the candidate committee, not necessarily the address of the candidate.",
+    "fieldName" : "committee_city",
+    "position" : 15,
+    "renderTypeName" : "text",
+    "tableColumnId" : 50216008,
+    "width" : 169,
+    "cachedContents" : {
+      "non_null" : "49022",
+      "largest" : "ZILLAH",
+      "null" : "8809",
+      "top" : [ {
+        "item" : "SEATTLE",
+        "count" : "3790"
+      }, {
+        "item" : "Seattle",
+        "count" : "2035"
+      }, {
+        "item" : "OLYMPIA",
+        "count" : "1386"
+      }, {
+        "item" : "TACOMA",
+        "count" : "1031"
+      }, {
+        "item" : "SPOKANE",
+        "count" : "972"
+      }, {
+        "item" : "VANCOUVER",
+        "count" : "949"
+      }, {
+        "item" : "Olympia",
+        "count" : "808"
+      }, {
+        "item" : "BELLINGHAM",
+        "count" : "664"
+      }, {
+        "item" : "BELLEVUE",
+        "count" : "656"
+      }, {
+        "item" : "Spokane",
+        "count" : "555"
+      }, {
+        "item" : "Vancouver",
+        "count" : "479"
+      }, {
+        "item" : "Tacoma",
+        "count" : "459"
+      }, {
+        "item" : "EVERETT",
+        "count" : "442"
+      }, {
+        "item" : "YAKIMA",
+        "count" : "405"
+      }, {
+        "item" : "Bellevue",
+        "count" : "344"
+      }, {
+        "item" : "PUYALLUP",
+        "count" : "320"
+      }, {
+        "item" : "FEDERAL WAY",
+        "count" : "313"
+      }, {
+        "item" : "Bellingham",
+        "count" : "303"
+      }, {
+        "item" : "Everett",
+        "count" : "295"
+      }, {
+        "item" : "SPOKANE VALLEY",
+        "count" : "294"
+      } ],
+      "smallest" : "100 NELSON STREET",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763567,
+    "name" : "committee_county",
+    "dataTypeName" : "text",
+    "description" : "The county of the committee. For candidates, this is the address provided for the candidate committee, not necessarily the address of the candidate.",
+    "fieldName" : "committee_county",
+    "position" : 16,
+    "renderTypeName" : "text",
+    "tableColumnId" : 50216009,
+    "width" : 174,
+    "cachedContents" : {
+      "non_null" : "37024",
+      "largest" : "YAKIMA",
+      "null" : "20807",
+      "top" : [ {
+        "item" : "KING",
+        "count" : "6633"
+      }, {
+        "item" : "PIERCE",
+        "count" : "2918"
+      }, {
+        "item" : "SNOHOMISH",
+        "count" : "2893"
+      }, {
+        "item" : "SPOKANE",
+        "count" : "1658"
+      }, {
+        "item" : "CLARK",
+        "count" : "1615"
+      }, {
+        "item" : "YAKIMA",
+        "count" : "1364"
+      }, {
+        "item" : "WHATCOM",
+        "count" : "1317"
+      }, {
+        "item" : "KITSAP",
+        "count" : "1177"
+      }, {
+        "item" : "SKAGIT",
+        "count" : "1161"
+      }, {
+        "item" : "THURSTON",
+        "count" : "1153"
+      }, {
+        "item" : "BENTON",
+        "count" : "961"
+      }, {
+        "item" : "GRANT",
+        "count" : "957"
+      }, {
+        "item" : "GRAYS HARBOR",
+        "count" : "939"
+      }, {
+        "item" : "LEWIS",
+        "count" : "904"
+      }, {
+        "item" : "CLALLAM",
+        "count" : "831"
+      }, {
+        "item" : "COWLITZ",
+        "count" : "825"
+      }, {
+        "item" : "CHELAN",
+        "count" : "781"
+      }, {
+        "item" : "MASON",
+        "count" : "662"
+      }, {
+        "item" : "OKANOGAN",
+        "count" : "658"
+      }, {
+        "item" : "WHITMAN",
+        "count" : "613"
+      } ],
+      "smallest" : "ADAMS",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763568,
+    "name" : "committee_state",
+    "dataTypeName" : "text",
+    "description" : "The state of the committee. For candidates, this is the address provided for the candidate committee, not necessarily the address of the candidate.",
+    "fieldName" : "committee_state",
+    "position" : 17,
+    "renderTypeName" : "text",
+    "tableColumnId" : 50216010,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "37249",
+      "largest" : "WY",
+      "null" : "20582",
+      "top" : [ {
+        "item" : "WA",
+        "count" : "32222"
+      }, {
+        "item" : "Washington",
+        "count" : "2499"
+      }, {
+        "item" : "Wa",
+        "count" : "615"
+      }, {
+        "item" : "DC",
+        "count" : "499"
+      }, {
+        "item" : "wa",
+        "count" : "284"
+      }, {
+        "item" : "CA",
+        "count" : "133"
+      }, {
+        "item" : "OR",
+        "count" : "97"
+      }, {
+        "item" : "WASHINGTON",
+        "count" : "68"
+      }, {
+        "item" : "VA",
+        "count" : "58"
+      }, {
+        "item" : "MD",
+        "count" : "55"
+      }, {
+        "item" : "WA - WASHINGTON",
+        "count" : "55"
+      }, {
+        "item" : "NY",
+        "count" : "45"
+      }, {
+        "item" : "TX",
+        "count" : "45"
+      }, {
+        "item" : "IL",
+        "count" : "43"
+      }, {
+        "item" : "washington",
+        "count" : "35"
+      }, {
+        "item" : "OH",
+        "count" : "33"
+      }, {
+        "item" : "United States",
+        "count" : "31"
+      }, {
+        "item" : "MN",
+        "count" : "28"
+      }, {
+        "item" : "WASHINGTON (WA)",
+        "count" : "26"
+      }, {
+        "item" : "ID",
+        "count" : "23"
+      } ],
+      "smallest" : "01-2589",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763569,
+    "name" : "committee_zip",
+    "dataTypeName" : "text",
+    "description" : "The zip code of the committee. For candidates, this is the address provided for the candidate committee, not necessarily the address of the candidate.",
+    "fieldName" : "committee_zip",
+    "position" : 18,
+    "renderTypeName" : "text",
+    "tableColumnId" : 50216011,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "49020",
+      "largest" : "WA98620",
+      "null" : "8811",
+      "top" : [ {
+        "item" : "98501",
+        "count" : "833"
+      }, {
+        "item" : "98109",
+        "count" : "677"
+      }, {
+        "item" : "98507",
+        "count" : "675"
+      }, {
+        "item" : "98101",
+        "count" : "651"
+      }, {
+        "item" : "98102",
+        "count" : "516"
+      }, {
+        "item" : "98104",
+        "count" : "475"
+      }, {
+        "item" : "98111",
+        "count" : "466"
+      }, {
+        "item" : "98584",
+        "count" : "419"
+      }, {
+        "item" : "98632",
+        "count" : "378"
+      }, {
+        "item" : "98362",
+        "count" : "364"
+      }, {
+        "item" : "98926",
+        "count" : "339"
+      }, {
+        "item" : "99362",
+        "count" : "335"
+      }, {
+        "item" : "98371",
+        "count" : "319"
+      }, {
+        "item" : "99301",
+        "count" : "312"
+      }, {
+        "item" : "99352",
+        "count" : "308"
+      }, {
+        "item" : "98837",
+        "count" : "305"
+      }, {
+        "item" : "98401",
+        "count" : "298"
+      }, {
+        "item" : "98250",
+        "count" : "293"
+      }, {
+        "item" : "98277",
+        "count" : "283"
+      }, {
+        "item" : "98383",
+        "count" : "276"
+      } ],
+      "smallest" : "02108",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763570,
+    "name" : "committee_email",
+    "dataTypeName" : "text",
+    "description" : "The email address of the committee. For candidates, this is the email address provided for the candidate committee, not necessarily the email address of the candidate.",
+    "fieldName" : "committee_email",
+    "position" : 19,
+    "renderTypeName" : "text",
+    "tableColumnId" : 50216012,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "44856",
+      "largest" : "zzorrozua@hotmail.com",
+      "null" : "12975",
+      "top" : [ {
+        "item" : "PHIL@SEATTLECFO.COM",
+        "count" : "320"
+      }, {
+        "item" : "JAY@BLUEWAVEPOLITICS.COM",
+        "count" : "201"
+      }, {
+        "item" : "JEFFDAVIS@MADISONCORP.BIZ",
+        "count" : "135"
+      }, {
+        "item" : "info@enterprisewashington.org",
+        "count" : "133"
+      }, {
+        "item" : "info@argo.us",
+        "count" : "126"
+      }, {
+        "item" : "HEATHER@CLARKECOMPANY.NET",
+        "count" : "112"
+      }, {
+        "item" : "INFO@ARGO.US",
+        "count" : "107"
+      }, {
+        "item" : "phil@seattlecfo.com",
+        "count" : "96"
+      }, {
+        "item" : "COMPLIANCE@BLUEWAVEPOLITICS.COM",
+        "count" : "90"
+      }, {
+        "item" : "COLLEENMORSE@EARTHLINK.NET",
+        "count" : "77"
+      }, {
+        "item" : "compliance@bluewavepolitics.com",
+        "count" : "77"
+      }, {
+        "item" : "INFO@ARGOSTRATEGIES.COM",
+        "count" : "76"
+      }, {
+        "item" : "accounting@fusewashington.org",
+        "count" : "70"
+      }, {
+        "item" : "GSMORSE@GMAIL.COM",
+        "count" : "66"
+      }, {
+        "item" : "ARTC@BIAW.COM",
+        "count" : "54"
+      }, {
+        "item" : "lora@bluewavepolitics.com",
+        "count" : "53"
+      }, {
+        "item" : "ALF@WSMA.ORG",
+        "count" : "51"
+      }, {
+        "item" : "LCHILDERS2B@CHARTER.NET",
+        "count" : "44"
+      }, {
+        "item" : "outsourcing@aristotle.com",
+        "count" : "42"
+      }, {
+        "item" : "NIC@PROGRESSIVESTRATEGIESNW.COM",
+        "count" : "39"
+      } ],
+      "smallest" : "?",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "email"
+    }
+  }, {
+    "id" : 647763571,
+    "name" : "candidate_email",
+    "dataTypeName" : "text",
+    "description" : "The candidate’s personal e-mail. This email may be the same as the candidate’s committee email.",
+    "fieldName" : "candidate_email",
+    "position" : 20,
+    "renderTypeName" : "text",
+    "tableColumnId" : 49214867,
+    "width" : 280,
+    "cachedContents" : {
+      "non_null" : "33069",
+      "largest" : "zzzapspeed@hotmail.com",
+      "null" : "24762",
+      "top" : [ {
+        "item" : "compliance@bluewavepolitics.com",
+        "count" : "18"
+      }, {
+        "item" : "lchilders2b@charter.net",
+        "count" : "18"
+      }, {
+        "item" : "linda@currie-mclain.com",
+        "count" : "15"
+      }, {
+        "item" : "phil@seattlecfo.com",
+        "count" : "14"
+      }, {
+        "item" : "cowlover0824@yahoo.com",
+        "count" : "13"
+      }, {
+        "item" : "mark@partyofcommons.com",
+        "count" : "13"
+      }, {
+        "item" : "votestrom@gmail.com",
+        "count" : "11"
+      }, {
+        "item" : "tina.orwall@gmail.com",
+        "count" : "11"
+      }, {
+        "item" : "chad@magendanz.com",
+        "count" : "10"
+      }, {
+        "item" : "plharris@comcast.net",
+        "count" : "9"
+      }, {
+        "item" : "jcfitzgibbon@gmail.com",
+        "count" : "9"
+      }, {
+        "item" : "goodspaceguy42@yahoo.com",
+        "count" : "9"
+      }, {
+        "item" : "wjhirt2014@gmail.com",
+        "count" : "9"
+      }, {
+        "item" : "larry@larryspringer.org",
+        "count" : "9"
+      }, {
+        "item" : "johnlovick@frontier.com",
+        "count" : "9"
+      }, {
+        "item" : "dtakko@comcast.net",
+        "count" : "8"
+      }, {
+        "item" : "info@marcusriccelli.com",
+        "count" : "8"
+      }, {
+        "item" : "monica.stonier@gmail.com",
+        "count" : "8"
+      }, {
+        "item" : "friendsofvandanaslatter@gmail.com",
+        "count" : "8"
+      }, {
+        "item" : "friendsforcindyryu@yahoo.com",
+        "count" : "8"
+      } ],
+      "smallest" : "?",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "email",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763572,
+    "name" : "candidate_committee_phone",
+    "dataTypeName" : "text",
+    "description" : "The committee phone number. In the case of a candidate, this is the phone number of the candidate, not the candidate's committee.",
+    "fieldName" : "candidate_committee_phone",
+    "position" : 21,
+    "renderTypeName" : "text",
+    "tableColumnId" : 49214868,
+    "width" : 171,
+    "cachedContents" : {
+      "non_null" : "35451",
+      "largest" : "Text or Call: (360) 472-2044",
+      "null" : "22380",
+      "top" : [ {
+        "item" : "206-382-5552",
+        "count" : "415"
+      }, {
+        "item" : "206-682-7328",
+        "count" : "380"
+      }, {
+        "item" : "206-745-2010",
+        "count" : "325"
+      }, {
+        "item" : "425-466-0619",
+        "count" : "127"
+      }, {
+        "item" : "206-617-9762",
+        "count" : "123"
+      }, {
+        "item" : "360-634-8230",
+        "count" : "122"
+      }, {
+        "item" : "2063825552",
+        "count" : "114"
+      }, {
+        "item" : "360-628-8129",
+        "count" : "86"
+      }, {
+        "item" : "425-990-0404",
+        "count" : "73"
+      }, {
+        "item" : "2064200133",
+        "count" : "66"
+      }, {
+        "item" : "253-459-4758",
+        "count" : "59"
+      }, {
+        "item" : "2066827328",
+        "count" : "58"
+      }, {
+        "item" : "253-392-7585",
+        "count" : "52"
+      }, {
+        "item" : "206-441-9762",
+        "count" : "51"
+      }, {
+        "item" : "206-281-8901",
+        "count" : "51"
+      }, {
+        "item" : "509-949-7650",
+        "count" : "49"
+      }, {
+        "item" : "360-956-7279",
+        "count" : "38"
+      }, {
+        "item" : "206-486-0085",
+        "count" : "37"
+      }, {
+        "item" : "425-775-8449",
+        "count" : "37"
+      }, {
+        "item" : "2069472309",
+        "count" : "37"
+      } ],
+      "smallest" : "?",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763573,
+    "name" : "office",
+    "dataTypeName" : "text",
+    "description" : "The office sought by the candidate.",
+    "fieldName" : "office",
+    "position" : 22,
+    "renderTypeName" : "text",
+    "tableColumnId" : 49214869,
+    "width" : 172,
+    "cachedContents" : {
+      "non_null" : "36833",
+      "largest" : "WATER & SEWER COMMISSIONER",
+      "null" : "20998",
+      "top" : [ {
+        "item" : "CITY COUNCIL MEMBER",
+        "count" : "9333"
+      }, {
+        "item" : "SCHOOL DIRECTOR",
+        "count" : "7361"
+      }, {
+        "item" : "FIRE COMMISSIONER",
+        "count" : "3083"
+      }, {
+        "item" : "STATE REPRESENTATIVE",
+        "count" : "2513"
+      }, {
+        "item" : "HOSPITAL COMMISSIONER",
+        "count" : "1247"
+      }, {
+        "item" : "PORT COMMISSIONER",
+        "count" : "1213"
+      }, {
+        "item" : "COUNTY COMMISSIONER",
+        "count" : "1199"
+      }, {
+        "item" : "MAYOR",
+        "count" : "1189"
+      }, {
+        "item" : "SUPERIOR COURT JUDGE",
+        "count" : "1096"
+      }, {
+        "item" : "WATER & SEWER COMMISSIONER",
+        "count" : "1083"
+      }, {
+        "item" : "COUNTY CHARTER REVIEW COMMISSIONER",
+        "count" : "1013"
+      }, {
+        "item" : "PARK & RECREATION COMMISSIONER",
+        "count" : "984"
+      }, {
+        "item" : "DISTRICT COURT JUDGE",
+        "count" : "745"
+      }, {
+        "item" : "STATE SENATOR",
+        "count" : "714"
+      }, {
+        "item" : "PUBLIC UTILITY COMMISSIONER",
+        "count" : "569"
+      }, {
+        "item" : "COUNTY COUNCIL MEMBER",
+        "count" : "542"
+      }, {
+        "item" : "COUNTY SHERIFF",
+        "count" : "404"
+      }, {
+        "item" : "COUNTY ASSESSOR",
+        "count" : "316"
+      }, {
+        "item" : "COUNTY PROSECUTOR",
+        "count" : "312"
+      }, {
+        "item" : "COUNTY AUDITOR",
+        "count" : "296"
+      } ],
+      "smallest" : "APPEALS COURT JUDGE",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763574,
+    "name" : "office_code",
+    "dataTypeName" : "text",
+    "description" : "The numeric code that defines the office. For example the office code 31 defines the office of Mayor. Combined with the jurisdiction_code it defines a particular office such as Mayor of Olympia.",
+    "fieldName" : "office_code",
+    "position" : 23,
+    "renderTypeName" : "text",
+    "tableColumnId" : 50183614,
+    "width" : 75,
+    "cachedContents" : {
+      "non_null" : "36833",
+      "largest" : "69",
+      "null" : "20998",
+      "top" : [ {
+        "item" : "32",
+        "count" : "9333"
+      }, {
+        "item" : "49",
+        "count" : "7361"
+      }, {
+        "item" : "44",
+        "count" : "3083"
+      }, {
+        "item" : "13",
+        "count" : "2513"
+      }, {
+        "item" : "45",
+        "count" : "1247"
+      }, {
+        "item" : "47",
+        "count" : "1213"
+      }, {
+        "item" : "23",
+        "count" : "1199"
+      }, {
+        "item" : "31",
+        "count" : "1189"
+      }, {
+        "item" : "16",
+        "count" : "1096"
+      }, {
+        "item" : "53",
+        "count" : "1083"
+      }, {
+        "item" : "30",
+        "count" : "1013"
+      }, {
+        "item" : "46",
+        "count" : "984"
+      }, {
+        "item" : "17",
+        "count" : "745"
+      }, {
+        "item" : "12",
+        "count" : "714"
+      }, {
+        "item" : "48",
+        "count" : "569"
+      }, {
+        "item" : "25",
+        "count" : "542"
+      }, {
+        "item" : "27",
+        "count" : "404"
+      }, {
+        "item" : "21",
+        "count" : "316"
+      }, {
+        "item" : "26",
+        "count" : "312"
+      }, {
+        "item" : "20",
+        "count" : "296"
+      } ],
+      "smallest" : "03",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763575,
+    "name" : "jurisdiction",
+    "dataTypeName" : "text",
+    "description" : "The political jurisdiction associated with the office of a candidate or the jurisdiction of a ballot measure in the case of a political committee supporting or opposing a ballot measure. This field will be empty when a candidate or ballot measure jurisdiction is statewide.",
+    "fieldName" : "jurisdiction",
+    "position" : 24,
+    "renderTypeName" : "text",
+    "tableColumnId" : 49214870,
+    "width" : 244,
+    "cachedContents" : {
+      "non_null" : "37682",
+      "largest" : "ZILLAH SD 205",
+      "null" : "20149",
+      "top" : [ {
+        "item" : "CITY OF SEATTLE",
+        "count" : "455"
+      }, {
+        "item" : "State of Washington",
+        "count" : "451"
+      }, {
+        "item" : "CLARK CO",
+        "count" : "365"
+      }, {
+        "item" : "PIERCE CO",
+        "count" : "334"
+      }, {
+        "item" : "KING CO SUPERIOR COURT",
+        "count" : "287"
+      }, {
+        "item" : "SNOHOMISH CO",
+        "count" : "266"
+      }, {
+        "item" : "WHATCOM CO",
+        "count" : "252"
+      }, {
+        "item" : "KING CO",
+        "count" : "237"
+      }, {
+        "item" : "CLALLAM CO",
+        "count" : "206"
+      }, {
+        "item" : "SAN JUAN CO",
+        "count" : "169"
+      }, {
+        "item" : "CITY OF SPOKANE",
+        "count" : "167"
+      }, {
+        "item" : "YAKIMA CO",
+        "count" : "164"
+      }, {
+        "item" : "CITY OF TACOMA",
+        "count" : "163"
+      }, {
+        "item" : "SKAGIT CO",
+        "count" : "160"
+      }, {
+        "item" : "LEWIS CO",
+        "count" : "147"
+      }, {
+        "item" : "ASOTIN CO",
+        "count" : "134"
+      }, {
+        "item" : "JEFFERSON CO",
+        "count" : "131"
+      }, {
+        "item" : "SPOKANE CO",
+        "count" : "130"
+      }, {
+        "item" : "CITY OF EVERETT",
+        "count" : "123"
+      }, {
+        "item" : "PIERCE CO SUPERIOR COURT",
+        "count" : "122"
+      } ],
+      "smallest" : "ABERDEEN SD 005",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763576,
+    "name" : "jurisdiction_code",
+    "dataTypeName" : "text",
+    "description" : "The unique identifier of the jurisdiction. It is associated with the office of a candidate or the jurisdiction of a ballot measure in the case of a political committee supporting or opposing a ballot measure. This field will be empty when a candidate or ballot measure jurisdiction is statewide.",
+    "fieldName" : "jurisdiction_code",
+    "position" : 25,
+    "renderTypeName" : "text",
+    "tableColumnId" : 49214871,
+    "width" : 103,
+    "cachedContents" : {
+      "non_null" : "37662",
+      "largest" : "9969",
+      "null" : "20169",
+      "top" : [ {
+        "item" : "4048",
+        "count" : "455"
+      }, {
+        "item" : "1000",
+        "count" : "451"
+      }, {
+        "item" : "3147",
+        "count" : "365"
+      }, {
+        "item" : "3879",
+        "count" : "334"
+      }, {
+        "item" : "3536",
+        "count" : "287"
+      }, {
+        "item" : "4107",
+        "count" : "266"
+      }, {
+        "item" : "4335",
+        "count" : "252"
+      }, {
+        "item" : "5090",
+        "count" : "237"
+      }, {
+        "item" : "3133",
+        "count" : "206"
+      }, {
+        "item" : "4038",
+        "count" : "169"
+      }, {
+        "item" : "4150",
+        "count" : "167"
+      }, {
+        "item" : "4418",
+        "count" : "164"
+      }, {
+        "item" : "4217",
+        "count" : "163"
+      }, {
+        "item" : "4064",
+        "count" : "160"
+      }, {
+        "item" : "3626",
+        "count" : "147"
+      }, {
+        "item" : "3029",
+        "count" : "134"
+      }, {
+        "item" : "3433",
+        "count" : "131"
+      }, {
+        "item" : "4151",
+        "count" : "130"
+      }, {
+        "item" : "3280",
+        "count" : "123"
+      }, {
+        "item" : "3884",
+        "count" : "122"
+      } ],
+      "smallest" : "1000",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763577,
+    "name" : "jurisdiction_county",
+    "dataTypeName" : "text",
+    "description" : "The county associated with the jurisdiction of a candidate or the jurisdiction of a ballot measure in the case of a political committee supporting or opposing a ballot measure. Multi-county jurisdictions are reported as the primary county. This field will be empty when a candidate or ballot measure jurisdiction is statewide.",
+    "fieldName" : "jurisdiction_county",
+    "position" : 26,
+    "renderTypeName" : "text",
+    "tableColumnId" : 49214872,
+    "width" : 121,
+    "cachedContents" : {
+      "non_null" : "37024",
+      "largest" : "YAKIMA",
+      "null" : "20807",
+      "top" : [ {
+        "item" : "KING",
+        "count" : "6633"
+      }, {
+        "item" : "PIERCE",
+        "count" : "2918"
+      }, {
+        "item" : "SNOHOMISH",
+        "count" : "2893"
+      }, {
+        "item" : "SPOKANE",
+        "count" : "1658"
+      }, {
+        "item" : "CLARK",
+        "count" : "1615"
+      }, {
+        "item" : "YAKIMA",
+        "count" : "1364"
+      }, {
+        "item" : "WHATCOM",
+        "count" : "1317"
+      }, {
+        "item" : "KITSAP",
+        "count" : "1177"
+      }, {
+        "item" : "SKAGIT",
+        "count" : "1161"
+      }, {
+        "item" : "THURSTON",
+        "count" : "1153"
+      }, {
+        "item" : "BENTON",
+        "count" : "961"
+      }, {
+        "item" : "GRANT",
+        "count" : "957"
+      }, {
+        "item" : "GRAYS HARBOR",
+        "count" : "939"
+      }, {
+        "item" : "LEWIS",
+        "count" : "904"
+      }, {
+        "item" : "CLALLAM",
+        "count" : "831"
+      }, {
+        "item" : "COWLITZ",
+        "count" : "825"
+      }, {
+        "item" : "CHELAN",
+        "count" : "781"
+      }, {
+        "item" : "MASON",
+        "count" : "662"
+      }, {
+        "item" : "OKANOGAN",
+        "count" : "658"
+      }, {
+        "item" : "WHITMAN",
+        "count" : "613"
+      } ],
+      "smallest" : "ADAMS",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763578,
+    "name" : "jurisdiction_type",
+    "dataTypeName" : "text",
+    "description" : "The type of jurisdiction this a candidate office represents: Statewide, Local, Judicial, etc. In the case of a committee supporting or opposing a ballot measure, it is the jurisdiction type of the ballot measure jurisdiction.",
+    "fieldName" : "jurisdiction_type",
+    "position" : 27,
+    "renderTypeName" : "text",
+    "tableColumnId" : 49214873,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "37618",
+      "largest" : "Various",
+      "null" : "20213",
+      "top" : [ {
+        "item" : "Local",
+        "count" : "30995"
+      }, {
+        "item" : "Legislative",
+        "count" : "3227"
+      }, {
+        "item" : "Judicial",
+        "count" : "2208"
+      }, {
+        "item" : "School District",
+        "count" : "350"
+      }, {
+        "item" : "Statewide",
+        "count" : "341"
+      }, {
+        "item" : "City",
+        "count" : "192"
+      }, {
+        "item" : "County",
+        "count" : "114"
+      }, {
+        "item" : "State",
+        "count" : "110"
+      }, {
+        "item" : "Fire District",
+        "count" : "37"
+      }, {
+        "item" : "Hospital District",
+        "count" : "17"
+      }, {
+        "item" : "Various",
+        "count" : "13"
+      }, {
+        "item" : "Park and Rec District",
+        "count" : "8"
+      }, {
+        "item" : "Port",
+        "count" : "3"
+      }, {
+        "item" : "Public Utility District",
+        "count" : "2"
+      }, {
+        "item" : "Appointed",
+        "count" : "1"
+      } ],
+      "smallest" : "Appointed",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763579,
+    "name" : "jurisdiction_voters",
+    "dataTypeName" : "number",
+    "description" : "The number of registered voters in the jurisdiction. This number is based on the voter count of the prior year's election.",
+    "fieldName" : "jurisdiction_voters",
+    "position" : 28,
+    "renderTypeName" : "number",
+    "tableColumnId" : 151612386,
+    "cachedContents" : {
+      "non_null" : "34507",
+      "largest" : "5098691",
+      "null" : "23324",
+      "top" : [ {
+        "item" : "243155",
+        "count" : "112"
+      }, {
+        "item" : "441987",
+        "count" : "94"
+      }, {
+        "item" : "73724",
+        "count" : "89"
+      }, {
+        "item" : "463183",
+        "count" : "75"
+      }, {
+        "item" : "416727",
+        "count" : "75"
+      }, {
+        "item" : "580880",
+        "count" : "71"
+      }, {
+        "item" : "1081940",
+        "count" : "63"
+      }, {
+        "item" : "1190493",
+        "count" : "61"
+      }, {
+        "item" : "414727",
+        "count" : "60"
+      }, {
+        "item" : "741235",
+        "count" : "59"
+      }, {
+        "item" : "293107",
+        "count" : "59"
+      }, {
+        "item" : "1330075",
+        "count" : "58"
+      }, {
+        "item" : "483946",
+        "count" : "57"
+      }, {
+        "item" : "159720",
+        "count" : "56"
+      }, {
+        "item" : "1379405",
+        "count" : "56"
+      }, {
+        "item" : "22789",
+        "count" : "56"
+      }, {
+        "item" : "502553",
+        "count" : "55"
+      }, {
+        "item" : "46069",
+        "count" : "55"
+      }, {
+        "item" : "127669",
+        "count" : "54"
+      }, {
+        "item" : "554554",
+        "count" : "54"
+      } ],
+      "smallest" : "0",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763580,
+    "name" : "jurisdiction_reporting_code",
+    "dataTypeName" : "text",
+    "description" : "Jurisdictions have different reporting requirements based on the jurisdiction size and local laws adopted by certain jurisdictions. \"N\" indicates that there are no mandatory reporting requirements. \"F\" indicates that candidates are only required to file a financial affairs statement. \"C\" indicates that candidates are required to file both a financial affairs statement and a candidate registration. Candidates in an \"N\" or \"F\" jurisdiction may still have reporting requirements depending on the amount their campaign raises or spends.",
+    "fieldName" : "jurisdiction_reporting_code",
+    "position" : 29,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151612385,
+    "cachedContents" : {
+      "non_null" : "36703",
+      "largest" : "N",
+      "null" : "21128",
+      "top" : [ {
+        "item" : "C",
+        "count" : "28582"
+      }, {
+        "item" : "F",
+        "count" : "4994"
+      }, {
+        "item" : "N",
+        "count" : "3127"
+      } ],
+      "smallest" : "C",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763581,
+    "name" : "jurisdiction_reporting_requirement",
+    "dataTypeName" : "text",
+    "description" : "Text description of the codes in jurisdiction_reporting_code",
+    "fieldName" : "jurisdiction_reporting_requirement",
+    "position" : 30,
+    "renderTypeName" : "text",
+    "tableColumnId" : 151612384,
+    "cachedContents" : {
+      "non_null" : "36837",
+      "largest" : "Registration and financial affairs",
+      "null" : "20994",
+      "top" : [ {
+        "item" : "Registration and financial affairs",
+        "count" : "28716"
+      }, {
+        "item" : "Financial affairs only",
+        "count" : "4994"
+      }, {
+        "item" : "No reporting required",
+        "count" : "3127"
+      } ],
+      "smallest" : "Financial affairs only",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763582,
+    "name" : "committee_category",
+    "dataTypeName" : "text",
+    "description" : "This column contains a category for a political committee (PAC) for example:  Continuing Political Committee, Party Committee,  committees Affiliated with a party, Single election year committee, School levy committee, Local ballot initiative, Caucus political committee, Statewide Initiative committee.",
+    "fieldName" : "committee_category",
+    "position" : 31,
+    "renderTypeName" : "text",
+    "tableColumnId" : 53991264,
+    "width" : 178,
+    "cachedContents" : {
+      "non_null" : "48905",
+      "largest" : "Surplus",
+      "null" : "8926",
+      "top" : [ {
+        "item" : "Candidate",
+        "count" : "28031"
+      }, {
+        "item" : "Other",
+        "count" : "4704"
+      }, {
+        "item" : "Continuing Committee (Business)",
+        "count" : "2401"
+      }, {
+        "item" : "Issue",
+        "count" : "1783"
+      }, {
+        "item" : "Local Ballot Measure",
+        "count" : "1427"
+      }, {
+        "item" : "Continuing Committee (Union)",
+        "count" : "1309"
+      }, {
+        "item" : "Continuing Committee",
+        "count" : "1129"
+      }, {
+        "item" : "Democratic Leg District Party",
+        "count" : "1113"
+      }, {
+        "item" : "Out-of-state political committee",
+        "count" : "1040"
+      }, {
+        "item" : "Education",
+        "count" : "1023"
+      }, {
+        "item" : "Republican Leg District Party",
+        "count" : "893"
+      }, {
+        "item" : "Republican County Party",
+        "count" : "848"
+      }, {
+        "item" : "Democratic County Party",
+        "count" : "793"
+      }, {
+        "item" : "Single Election Committee",
+        "count" : "623"
+      }, {
+        "item" : "Democratic Other",
+        "count" : "472"
+      }, {
+        "item" : "Republican Other",
+        "count" : "418"
+      }, {
+        "item" : "Minor Party",
+        "count" : "332"
+      }, {
+        "item" : "Statewide Ballot Measure",
+        "count" : "329"
+      }, {
+        "item" : "Democratic Caucus Affiliated",
+        "count" : "37"
+      }, {
+        "item" : "Democratic Caucus",
+        "count" : "37"
+      } ],
+      "smallest" : "Candidate",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763583,
+    "name" : "political_committee_type",
+    "dataTypeName" : "text",
+    "description" : "This column designates the persuasion of the PAC; for example, Business, union, PAC, etc.",
+    "fieldName" : "political_committee_type",
+    "position" : 32,
+    "renderTypeName" : "text",
+    "tableColumnId" : 53991522,
+    "width" : 182,
+    "cachedContents" : {
+      "non_null" : "57831",
+      "largest" : "Statewide Ballot Measure",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Candidate",
+        "count" : "36837"
+      }, {
+        "item" : "Other",
+        "count" : "4814"
+      }, {
+        "item" : "Continuing Committee (Business)",
+        "count" : "2401"
+      }, {
+        "item" : "Issue",
+        "count" : "1783"
+      }, {
+        "item" : "Local Ballot Measure",
+        "count" : "1427"
+      }, {
+        "item" : "Continuing Committee (Union)",
+        "count" : "1309"
+      }, {
+        "item" : "Continuing Committee",
+        "count" : "1129"
+      }, {
+        "item" : "Democratic Leg District Party",
+        "count" : "1113"
+      }, {
+        "item" : "Out-of-State",
+        "count" : "1040"
+      }, {
+        "item" : "Education",
+        "count" : "1023"
+      }, {
+        "item" : "Republican Leg District Party",
+        "count" : "893"
+      }, {
+        "item" : "Republican County Party",
+        "count" : "848"
+      }, {
+        "item" : "Democratic County Party",
+        "count" : "793"
+      }, {
+        "item" : "Single Election Committee",
+        "count" : "623"
+      }, {
+        "item" : "Democratic Other",
+        "count" : "472"
+      }, {
+        "item" : "Republican Other",
+        "count" : "418"
+      }, {
+        "item" : "Minor Party",
+        "count" : "332"
+      }, {
+        "item" : "Statewide Ballot Measure",
+        "count" : "329"
+      }, {
+        "item" : "Democratic Caucus Affiliated",
+        "count" : "37"
+      }, {
+        "item" : "Democratic Caucus",
+        "count" : "37"
+      } ],
+      "smallest" : "Candidate",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763584,
+    "name" : "bonafide_committee",
+    "dataTypeName" : "text",
+    "description" : "An X in this column means this is a bona fide party committee",
+    "fieldName" : "bonafide_committee",
+    "position" : 33,
+    "renderTypeName" : "text",
+    "tableColumnId" : 53991589,
+    "width" : 126,
+    "cachedContents" : {
+      "non_null" : "4071",
+      "largest" : "X",
+      "null" : "53760",
+      "top" : [ {
+        "item" : "X",
+        "count" : "4071"
+      } ],
+      "smallest" : "X",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763585,
+    "name" : "bonafide_type",
+    "dataTypeName" : "text",
+    "description" : "The type of bonafide party committee, for example State Party, County Party, Leg Dist Party, party Associated committee.",
+    "fieldName" : "bonafide_type",
+    "position" : 34,
+    "renderTypeName" : "text",
+    "tableColumnId" : 53991630,
+    "width" : 152,
+    "cachedContents" : {
+      "non_null" : "4961",
+      "largest" : "State Party",
+      "null" : "52870",
+      "top" : [ {
+        "item" : "Leg Dist Party",
+        "count" : "2020"
+      }, {
+        "item" : "County Party",
+        "count" : "1659"
+      }, {
+        "item" : "Associated",
+        "count" : "890"
+      }, {
+        "item" : "Minor Party",
+        "count" : "320"
+      }, {
+        "item" : "State Party",
+        "count" : "72"
+      } ],
+      "smallest" : "Associated",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763586,
+    "name" : "position",
+    "dataTypeName" : "text",
+    "description" : "The position associated with an office. This field typically applies to jurisdictions that have multiple positions or seats. This field does not apply to political committees.",
+    "fieldName" : "position",
+    "position" : 35,
+    "renderTypeName" : "text",
+    "tableColumnId" : 50277060,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "15561",
+      "largest" : "Superior Court Judge Position 9",
+      "null" : "42270",
+      "top" : [ {
+        "item" : "2",
+        "count" : "3562"
+      }, {
+        "item" : "1",
+        "count" : "3506"
+      }, {
+        "item" : "3",
+        "count" : "2757"
+      }, {
+        "item" : "4",
+        "count" : "1829"
+      }, {
+        "item" : "5",
+        "count" : "1781"
+      }, {
+        "item" : "7",
+        "count" : "573"
+      }, {
+        "item" : "6",
+        "count" : "536"
+      }, {
+        "item" : "8",
+        "count" : "74"
+      }, {
+        "item" : "9",
+        "count" : "42"
+      }, {
+        "item" : "10",
+        "count" : "25"
+      }, {
+        "item" : "City Council Member District 1, Position 1",
+        "count" : "19"
+      }, {
+        "item" : "11",
+        "count" : "18"
+      }, {
+        "item" : "City Council Member District 1, Position 2",
+        "count" : "18"
+      }, {
+        "item" : "Charter Review Commissioner District 2",
+        "count" : "17"
+      }, {
+        "item" : "Charter Review Commissioner District 1, Position 3",
+        "count" : "17"
+      }, {
+        "item" : "Charter Review Commissioner District 3",
+        "count" : "16"
+      }, {
+        "item" : "Charter Review Commissioner District 1, Position 1",
+        "count" : "16"
+      }, {
+        "item" : "Charter Review Commissioner District 1, Position 2",
+        "count" : "16"
+      }, {
+        "item" : "12",
+        "count" : "16"
+      }, {
+        "item" : "City Council Member District 2, Position 2",
+        "count" : "15"
+      } ],
+      "smallest" : "1",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763587,
+    "name" : "party_code",
+    "dataTypeName" : "text",
+    "description" : "Unique code that represents a candidates party. i.e. R represents Republican.",
+    "fieldName" : "party_code",
+    "position" : 36,
+    "renderTypeName" : "text",
+    "tableColumnId" : 50879709,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "18195",
+      "largest" : "SL",
+      "null" : "39636",
+      "top" : [ {
+        "item" : "N",
+        "count" : "9627"
+      }, {
+        "item" : "R",
+        "count" : "3429"
+      }, {
+        "item" : "D",
+        "count" : "2649"
+      }, {
+        "item" : "NO",
+        "count" : "1779"
+      }, {
+        "item" : "I",
+        "count" : "356"
+      }, {
+        "item" : "O",
+        "count" : "225"
+      }, {
+        "item" : "L",
+        "count" : "103"
+      }, {
+        "item" : "G",
+        "count" : "13"
+      }, {
+        "item" : "CP",
+        "count" : "7"
+      }, {
+        "item" : "S",
+        "count" : "5"
+      }, {
+        "item" : "SL",
+        "count" : "2"
+      } ],
+      "smallest" : "CP",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763588,
+    "name" : "party",
+    "dataTypeName" : "text",
+    "description" : "The political party as declared by the candidate on their C1 registration form. Contains only parties recognized by Washington State law.",
+    "fieldName" : "party",
+    "position" : 37,
+    "renderTypeName" : "text",
+    "tableColumnId" : 49214874,
+    "width" : 160,
+    "cachedContents" : {
+      "non_null" : "22355",
+      "largest" : "WORKERS WORLD",
+      "null" : "35476",
+      "top" : [ {
+        "item" : "NON PARTISAN",
+        "count" : "9627"
+      }, {
+        "item" : "REPUBLICAN",
+        "count" : "5273"
+      }, {
+        "item" : "DEMOCRATIC",
+        "count" : "4628"
+      }, {
+        "item" : "NONE",
+        "count" : "1807"
+      }, {
+        "item" : "INDEPENDENT",
+        "count" : "360"
+      }, {
+        "item" : "OTHER",
+        "count" : "244"
+      }, {
+        "item" : "GREEN",
+        "count" : "206"
+      }, {
+        "item" : "LIBERTARIAN",
+        "count" : "189"
+      }, {
+        "item" : "CONSTITUTION",
+        "count" : "11"
+      }, {
+        "item" : "SOCIALIST WORKERS",
+        "count" : "5"
+      }, {
+        "item" : "AMERICAN HERITAGE",
+        "count" : "2"
+      }, {
+        "item" : "SOCIALISM AND LIBERATION",
+        "count" : "2"
+      }, {
+        "item" : "WORKERS WORLD",
+        "count" : "1"
+      } ],
+      "smallest" : "AMERICAN HERITAGE",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763589,
+    "name" : "election_date",
+    "dataTypeName" : "calendar_date",
+    "description" : "This is the calendar month/day/year of the election where a candidate is elected to office or the date of the election for a ballot initiative committee.",
+    "fieldName" : "election_date",
+    "position" : 38,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 49214875,
+    "width" : 269,
+    "cachedContents" : {
+      "non_null" : "31578",
+      "largest" : "2030-08-06T00:00:00.000",
+      "null" : "26253",
+      "top" : [ {
+        "item" : "2025-11-04T00:00:00.000",
+        "count" : "2500"
+      }, {
+        "item" : "2023-11-07T00:00:00.000",
+        "count" : "2476"
+      }, {
+        "item" : "2021-11-02T00:00:00.000",
+        "count" : "2464"
+      }, {
+        "item" : "2019-11-05T00:00:00.000",
+        "count" : "2150"
+      }, {
+        "item" : "2017-11-07T00:00:00.000",
+        "count" : "2073"
+      }, {
+        "item" : "2015-11-03T00:00:00.000",
+        "count" : "2065"
+      }, {
+        "item" : "2011-11-08T00:00:00.000",
+        "count" : "1970"
+      }, {
+        "item" : "2013-11-05T00:00:00.000",
+        "count" : "1922"
+      }, {
+        "item" : "2009-11-03T00:00:00.000",
+        "count" : "1915"
+      }, {
+        "item" : "2010-11-02T00:00:00.000",
+        "count" : "1338"
+      }, {
+        "item" : "2018-11-06T00:00:00.000",
+        "count" : "1326"
+      }, {
+        "item" : "2014-11-04T00:00:00.000",
+        "count" : "1293"
+      }, {
+        "item" : "2026-11-03T00:00:00.000",
+        "count" : "1181"
+      }, {
+        "item" : "2022-11-08T00:00:00.000",
+        "count" : "1153"
+      }, {
+        "item" : "2020-11-03T00:00:00.000",
+        "count" : "1092"
+      }, {
+        "item" : "2012-11-06T00:00:00.000",
+        "count" : "1089"
+      }, {
+        "item" : "2024-11-05T00:00:00.000",
+        "count" : "1080"
+      }, {
+        "item" : "2016-11-08T00:00:00.000",
+        "count" : "1045"
+      }, {
+        "item" : "2008-11-04T00:00:00.000",
+        "count" : "202"
+      }, {
+        "item" : "2007-11-06T00:00:00.000",
+        "count" : "156"
+      } ],
+      "smallest" : "2007-11-06T00:00:00.000",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "view" : "date",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763590,
+    "name" : "reporting_option",
+    "dataTypeName" : "text",
+    "description" : "This field represents the level of reporting required by the filer. The FULL reporting option requires all contribution and expenditure reports. The MINI reporting option does not require any reports after the C1 registration report is filed. Please consult the PDC web site for more information regarding reporting options.",
+    "fieldName" : "reporting_option",
+    "position" : 39,
+    "renderTypeName" : "text",
+    "tableColumnId" : 49214876,
+    "width" : 292,
+    "cachedContents" : {
+      "non_null" : "38304",
+      "largest" : "mini",
+      "null" : "19527",
+      "top" : [ {
+        "item" : "full",
+        "count" : "26186"
+      }, {
+        "item" : "mini",
+        "count" : "12118"
+      } ],
+      "smallest" : "full",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763591,
+    "name" : "active_candidate",
+    "dataTypeName" : "checkbox",
+    "description" : "Indicates that a candidate campaign is considered \"active\" in the election. Candidates who have withdrawn or discontinued their campaigns are not considered active. Also candidates who registered their campaign with the PDC but did not formally declare their candidacy with elections officials during or after the declarations period are not considered active. Candidates who did not advance from the primary election or did not win the general election are still considered active. Campaigns prior to 2024 may have incomplete or missing data for this field.",
+    "fieldName" : "active_candidate",
+    "position" : 40,
+    "renderTypeName" : "checkbox",
+    "tableColumnId" : 153711773,
+    "cachedContents" : {
+      "non_null" : "36837",
+      "null" : "20994",
+      "top" : [ {
+        "item" : true,
+        "count" : "36132"
+      }, {
+        "item" : false,
+        "count" : "705"
+      } ],
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763592,
+    "name" : "on_primary_election_ballot",
+    "dataTypeName" : "checkbox",
+    "description" : "Indicates that the candidate is appearing on the primary election ballot. This datum is only available after election status has been determined and the field will be null/empty before that point. Campaigns prior to 2024 may have incomplete or missing data for this field.",
+    "fieldName" : "on_primary_election_ballot",
+    "position" : 41,
+    "renderTypeName" : "checkbox",
+    "tableColumnId" : 153711772,
+    "cachedContents" : {
+      "non_null" : "17840",
+      "null" : "39991",
+      "top" : [ {
+        "item" : true,
+        "count" : "11088"
+      }, {
+        "item" : false,
+        "count" : "6752"
+      } ],
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763593,
+    "name" : "on_general_election_ballot",
+    "dataTypeName" : "checkbox",
+    "description" : "Indicates that the candidate is appearing on the general election ballot. This datum is only available after election status has been determined and the field will be null/empty before that point. Campaigns prior to 2024 may have incomplete or missing data for this field.",
+    "fieldName" : "on_general_election_ballot",
+    "position" : 42,
+    "renderTypeName" : "checkbox",
+    "tableColumnId" : 153711771,
+    "cachedContents" : {
+      "non_null" : "17931",
+      "null" : "39900",
+      "top" : [ {
+        "item" : true,
+        "count" : "15378"
+      }, {
+        "item" : false,
+        "count" : "2553"
+      } ],
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763594,
+    "name" : "primary_election_status",
+    "dataTypeName" : "text",
+    "description" : "The most recent status for a candidate in the primary election. Upon registration, this field is empty. After the primary election, the status of the campaign is assigned as Lost in primary; Judge certified before primary; Not in primary; Won in primary; Unopposed in primary. ",
+    "fieldName" : "primary_election_status",
+    "position" : 43,
+    "renderTypeName" : "text",
+    "tableColumnId" : 49214877,
+    "width" : 376,
+    "cachedContents" : {
+      "non_null" : "29397",
+      "largest" : "Unopposed in primary",
+      "null" : "28434",
+      "top" : [ {
+        "item" : "Qualified for general",
+        "count" : "16114"
+      }, {
+        "item" : "Not in primary",
+        "count" : "8188"
+      }, {
+        "item" : "Lost in primary",
+        "count" : "4062"
+      }, {
+        "item" : "Judge certified before primary",
+        "count" : "564"
+      }, {
+        "item" : "Unopposed in primary",
+        "count" : "469"
+      } ],
+      "smallest" : "Judge certified before primary",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763595,
+    "name" : "general_election_status",
+    "dataTypeName" : "text",
+    "description" : "For candidates, this field represents the status at a point in time. The field starts out as empty; after the general election, the status of the campaign is assigned as Lost in general; Judge certified before general; Won in general; Unopposed in general. ",
+    "fieldName" : "general_election_status",
+    "position" : 44,
+    "renderTypeName" : "text",
+    "tableColumnId" : 49214878,
+    "width" : 376,
+    "cachedContents" : {
+      "non_null" : "26256",
+      "largest" : "Won in general",
+      "null" : "31575",
+      "top" : [ {
+        "item" : "Won in general",
+        "count" : "13998"
+      }, {
+        "item" : "Lost in general",
+        "count" : "8103"
+      }, {
+        "item" : "Unopposed in general",
+        "count" : "4137"
+      }, {
+        "item" : "Judge certified before general",
+        "count" : "18"
+      } ],
+      "smallest" : "Judge certified before general",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763596,
+    "name" : "election_status",
+    "dataTypeName" : "text",
+    "description" : "This field represent the status of a candidate jurisdiction relationship. The candidate could be an Incumbent running again for the same office. The candidate could be a challenger running against an incumbent. Or, the seat that is up for election could be an open seat meaning that there is no incumbent running for that seat. ",
+    "fieldName" : "election_status",
+    "position" : 45,
+    "renderTypeName" : "text",
+    "tableColumnId" : 49214879,
+    "width" : 280,
+    "cachedContents" : {
+      "non_null" : "1403",
+      "largest" : "Open seat",
+      "null" : "56428",
+      "top" : [ {
+        "item" : "Incumbent",
+        "count" : "576"
+      }, {
+        "item" : "Challenger",
+        "count" : "564"
+      }, {
+        "item" : "Open seat",
+        "count" : "263"
+      } ],
+      "smallest" : "Challenger",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763597,
+    "name" : "exempt_nonexempt",
+    "dataTypeName" : "text",
+    "description" : "This column designate whether a party committee is exempt from contribution limits or is non-exempt which means it is subject to limits when giving contributions.",
+    "fieldName" : "exempt_nonexempt",
+    "position" : 46,
+    "renderTypeName" : "text",
+    "tableColumnId" : 53991763,
+    "width" : 139,
+    "cachedContents" : {
+      "non_null" : "4078",
+      "largest" : "N",
+      "null" : "53753",
+      "top" : [ {
+        "item" : "N",
+        "count" : "3142"
+      }, {
+        "item" : "E",
+        "count" : "936"
+      } ],
+      "smallest" : "E",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763598,
+    "name" : "ballot_committee",
+    "dataTypeName" : "text",
+    "description" : "An X in this column designates the committee is supporting or opposing one or more ballot measures.",
+    "fieldName" : "ballot_committee",
+    "position" : 47,
+    "renderTypeName" : "text",
+    "tableColumnId" : 53991866,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "2423",
+      "largest" : "X",
+      "null" : "55408",
+      "top" : [ {
+        "item" : "X",
+        "count" : "2423"
+      } ],
+      "smallest" : "X",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763599,
+    "name" : "ballot_proposal_count",
+    "dataTypeName" : "number",
+    "description" : "The number of ballot proposals that the committee is supporting or opposing in the election year. This field does not apply to candidate committees.",
+    "fieldName" : "ballot_proposal_count",
+    "position" : 48,
+    "renderTypeName" : "number",
+    "tableColumnId" : 152615152,
+    "cachedContents" : {
+      "non_null" : "19954",
+      "largest" : "56",
+      "null" : "37877",
+      "top" : [ {
+        "item" : "0",
+        "count" : "18396"
+      }, {
+        "item" : "1",
+        "count" : "1474"
+      }, {
+        "item" : "2",
+        "count" : "38"
+      }, {
+        "item" : "3",
+        "count" : "18"
+      }, {
+        "item" : "5",
+        "count" : "9"
+      }, {
+        "item" : "6",
+        "count" : "6"
+      }, {
+        "item" : "4",
+        "count" : "4"
+      }, {
+        "item" : "7",
+        "count" : "3"
+      }, {
+        "item" : "8",
+        "count" : "3"
+      }, {
+        "item" : "16",
+        "count" : "1"
+      }, {
+        "item" : "28",
+        "count" : "1"
+      }, {
+        "item" : "56",
+        "count" : "1"
+      } ],
+      "smallest" : "0",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763600,
+    "name" : "ballot_number",
+    "dataTypeName" : "text",
+    "description" : "The ballot number or numbers assigned to a ballot proposal. Local ballot proposals in different jurisdictions may have overlapping ballot numbers. This field is a comma separated list of unique ballot numbers being supported or opposed by the committee.",
+    "fieldName" : "ballot_number",
+    "position" : 49,
+    "renderTypeName" : "text",
+    "tableColumnId" : 53992008,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "783",
+      "largest" : "West Valley School District Proposition 1 & 2",
+      "null" : "57048",
+      "top" : [ {
+        "item" : "1",
+        "count" : "238"
+      }, {
+        "item" : "Proposition 1",
+        "count" : "42"
+      }, {
+        "item" : "",
+        "count" : "21"
+      }, {
+        "item" : "TBD",
+        "count" : "21"
+      }, {
+        "item" : "Prop 1",
+        "count" : "19"
+      }, {
+        "item" : "2",
+        "count" : "12"
+      }, {
+        "item" : "Proposition No. 1",
+        "count" : "8"
+      }, {
+        "item" : "522",
+        "count" : "8"
+      }, {
+        "item" : "732",
+        "count" : "5"
+      }, {
+        "item" : "1639",
+        "count" : "4"
+      }, {
+        "item" : "88",
+        "count" : "4"
+      }, {
+        "item" : "Proposition 1, Proposition 2",
+        "count" : "4"
+      }, {
+        "item" : "74",
+        "count" : "4"
+      }, {
+        "item" : "2117",
+        "count" : "4"
+      }, {
+        "item" : "940",
+        "count" : "3"
+      }, {
+        "item" : "1929",
+        "count" : "3"
+      }, {
+        "item" : "1631",
+        "count" : "3"
+      }, {
+        "item" : "8",
+        "count" : "3"
+      }, {
+        "item" : "N/A",
+        "count" : "3"
+      }, {
+        "item" : "126",
+        "count" : "3"
+      } ],
+      "smallest" : "",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763601,
+    "name" : "ballot_title",
+    "dataTypeName" : "text",
+    "description" : "The title of the ballot proposal that the committee is supporting or opposing. For a given year, a committee may choose to support multiple ballot proposals. When there is more than one title, the ballot title will be shown as \"Various\". If there are multiple ballot_proposals but the titles are all the same, the title will be shown.",
+    "fieldName" : "ballot_title",
+    "position" : 50,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152615151,
+    "cachedContents" : {
+      "non_null" : "1377",
+      "largest" : "YET ANOTHER TIM EYMAN INITIATIVE",
+      "null" : "56454",
+      "top" : [ {
+        "item" : "School",
+        "count" : "247"
+      }, {
+        "item" : "City",
+        "count" : "54"
+      }, {
+        "item" : "Various",
+        "count" : "43"
+      }, {
+        "item" : "County",
+        "count" : "40"
+      }, {
+        "item" : "Fire",
+        "count" : "30"
+      }, {
+        "item" : "",
+        "count" : "28"
+      }, {
+        "item" : "Hospital",
+        "count" : "26"
+      }, {
+        "item" : "PROPOSITION 1",
+        "count" : "16"
+      }, {
+        "item" : "LEVY",
+        "count" : "16"
+      }, {
+        "item" : "BOND",
+        "count" : "10"
+      }, {
+        "item" : "Park",
+        "count" : "8"
+      }, {
+        "item" : "SCHOOL BOND",
+        "count" : "8"
+      }, {
+        "item" : "SCHOOL LEVY",
+        "count" : "5"
+      }, {
+        "item" : "PROP 1",
+        "count" : "4"
+      }, {
+        "item" : "Kshama Sawant",
+        "count" : "4"
+      }, {
+        "item" : "CONSTRUCTION BONDS",
+        "count" : "3"
+      }, {
+        "item" : "REGARDING FOOD LABELING",
+        "count" : "3"
+      }, {
+        "item" : "M&O LEVY",
+        "count" : "3"
+      }, {
+        "item" : "SALES TAX INCREASE",
+        "count" : "3"
+      }, {
+        "item" : "ISSAQUAH SCHOOL DISTRICT LEVIES",
+        "count" : "3"
+      } ],
+      "smallest" : "",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763602,
+    "name" : "for_or_against",
+    "dataTypeName" : "text",
+    "description" : "Designates whether the committee is supporting or opposing one or more ballot proposals. If the committee's stance is to both support and oppose various ballot proposals, the value of this field will be \"both\".",
+    "fieldName" : "for_or_against",
+    "position" : 51,
+    "renderTypeName" : "text",
+    "tableColumnId" : 53992009,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "1525",
+      "largest" : "for",
+      "null" : "56306",
+      "top" : [ {
+        "item" : "for",
+        "count" : "1289"
+      }, {
+        "item" : "against",
+        "count" : "230"
+      }, {
+        "item" : "both",
+        "count" : "6"
+      } ],
+      "smallest" : "against",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763603,
+    "name" : "ballot_proposal_detail",
+    "dataTypeName" : "text",
+    "description" : "Full details about all the ballot proposals being supported or opposed by the committee in JSON format, with the intent that this information can be consumed by computer systems. ",
+    "fieldName" : "ballot_proposal_detail",
+    "position" : 52,
+    "renderTypeName" : "text",
+    "tableColumnId" : 152615150,
+    "cachedContents" : {
+      "non_null" : "1558",
+      "largest" : "[{\"proposal_id\" : 9, \"proposal_type\" : \"local\", \"number\" : \"\", \"title\" : \"LEVY\", \"stance\" : \"for\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+      "null" : "56273",
+      "top" : [ {
+        "item" : "[{\"proposal_id\" : 492, \"proposal_type\" : \"local\", \"number\" : \"\", \"title\" : \"\", \"stance\" : \"\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "5"
+      }, {
+        "item" : "[{\"proposal_id\" : 135, \"proposal_type\" : \"local\", \"number\" : \"\", \"title\" : \"\", \"stance\" : \"for\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "4"
+      }, {
+        "item" : "[{\"proposal_id\" : 208, \"proposal_type\" : \"local\", \"number\" : \"\", \"title\" : \"LEVY\", \"stance\" : \"for\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "3"
+      }, {
+        "item" : "[{\"proposal_id\" : 572, \"proposal_type\" : \"statewide\", \"number\" : \"522\", \"title\" : \"REGARDING FOOD LABELING\", \"stance\" : \"for\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "3"
+      }, {
+        "item" : "[{\"proposal_id\" : 641, \"proposal_type\" : \"local\", \"number\" : \"\", \"title\" : \"\", \"stance\" : \"\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "3"
+      }, {
+        "item" : "[{\"proposal_id\" : 289, \"proposal_type\" : \"local\", \"number\" : \"\", \"title\" : \"BOND\", \"stance\" : \"for\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "3"
+      }, {
+        "item" : "[{\"proposal_id\" : 412, \"proposal_type\" : \"local\", \"number\" : \"\", \"title\" : \"\", \"stance\" : \"for\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "3"
+      }, {
+        "item" : "[{\"proposal_id\" : 353, \"proposal_type\" : \"local\", \"number\" : \"\", \"title\" : \"TRANSPORTATION LEVY\", \"stance\" : \"for\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "2"
+      }, {
+        "item" : "[{\"proposal_id\" : 300, \"proposal_type\" : \"local\", \"number\" : \"\", \"title\" : \"\", \"stance\" : \"\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "2"
+      }, {
+        "item" : "[{\"proposal_id\" : 365, \"proposal_type\" : \"local\", \"number\" : \"1\", \"title\" : \"PROPOSITION 1\", \"stance\" : \"for\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "2"
+      }, {
+        "item" : "[{\"proposal_id\" : 282, \"proposal_type\" : \"local\", \"number\" : \"\", \"title\" : \"PROPOSITION 1\", \"stance\" : \"for\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "2"
+      }, {
+        "item" : "[{\"proposal_id\" : 215, \"proposal_type\" : \"local\", \"number\" : \"\", \"title\" : \"BOND AND LEVY\", \"stance\" : \"for\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "2"
+      }, {
+        "item" : "[{\"proposal_id\" : 312, \"proposal_type\" : \"local\", \"number\" : \"1\", \"title\" : \"\", \"stance\" : \"for\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "2"
+      }, {
+        "item" : "[{\"proposal_id\" : 313, \"proposal_type\" : \"statewide\", \"number\" : \"735\", \"title\" : \"GET BIG MONEY OUT OF ELECTIONS\", \"stance\" : \"for\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "2"
+      }, {
+        "item" : "[{\"proposal_id\" : 2083, \"proposal_type\" : \"initiative\", \"number\" : \"I-001\", \"title\" : \"Restore and expand parental rights in public schools\", \"stance\" : \"against\", \"jurisdiction\" : \"State of Washington\", \"jurisdiction_type\" : \"State\", \"jurisdiction_county\" : null}, {\"proposal_id\" : 2084, \"proposal_type\" : \"initiative\", \"number\" : \"I-638\", \"title\" : \"Defending Equity in Interscholastic Sports\", \"stance\" : \"against\", \"jurisdiction\" : \"State of Washington\", \"jurisdiction_type\" : \"State\", \"jurisdiction_county\" : null}, {\"proposal_id\" : 2085, \"proposal_type\" : \"initiative\", \"number\" : \"I-645\", \"title\" : \"Effort to Repeal the Millionaires Tax\", \"stance\" : \"against\", \"jurisdiction\" : \"State of Washington\", \"jurisdiction_type\" : \"State\", \"jurisdiction_county\" : null}, {\"proposal_id\" : 2086, \"proposal_type\" : \"initiative\", \"number\" : \"Proposition No. 1\", \"title\" : \"Adoption of a Foundational Government Services Policy\", \"stance\" : \"against\", \"jurisdiction\" : \"SNOHOMISH CO\", \"jurisdiction_type\" : \"County\", \"jurisdiction_county\" : \"SNOHOMISH\"}, {\"proposal_id\" : 2087, \"proposal_type\" : \"initiative\", \"number\" : \"Proposition No. 2\", \"title\" : \"Prioritize Funding of Budget Stabilization Funds\", \"stance\" : \"against\", \"jurisdiction\" : \"SNOHOMISH CO\", \"jurisdiction_type\" : \"County\", \"jurisdiction_county\" : \"SNOHOMISH\"}, {\"proposal_id\" : 2088, \"proposal_type\" : \"initiative\", \"number\" : \"Proposition No. 3\", \"title\" : \"Converting All Elected County Offices to Nonpartisan Offices\", \"stance\" : \"against\", \"jurisdiction\" : \"SNOHOMISH CO\", \"jurisdiction_type\" : \"County\", \"jurisdiction_county\" : \"SNOHOMISH\"}, {\"proposal_id\" : 2089, \"proposal_type\" : \"initiative\", \"number\" : \"Proposition No. 4\", \"title\" : \"Increasing Public Access to County Financial Transparency\", \"stance\" : \"against\", \"jurisdiction\" : \"SNOHOMISH CO\", \"jurisdiction_type\" : \"County\", \"jurisdiction_county\" : \"SNOHOMISH\"}, {\"proposal_id\" : 2090, \"proposal_type\" : \"initiative\", \"number\" : \"Proposition No. 5\", \"title\" : \"Requiring a 4/5 Supermajority Council Vote to Increase Taxes\", \"stance\" : \"against\", \"jurisdiction\" : \"SNOHOMISH CO\", \"jurisdiction_type\" : \"County\", \"jurisdiction_county\" : \"SNOHOMISH\"}]",
+        "count" : "2"
+      }, {
+        "item" : "[{\"proposal_id\" : 224, \"proposal_type\" : \"local\", \"number\" : \"\", \"title\" : \"PROPOSITION 1\", \"stance\" : \"for\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "2"
+      }, {
+        "item" : "[{\"proposal_id\" : 169, \"proposal_type\" : \"local\", \"number\" : \"\", \"title\" : \"RECALL BD CITY COUNCIL MEMBER PEPPER\", \"stance\" : \"for\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "2"
+      }, {
+        "item" : "[{\"proposal_id\" : 1516, \"proposal_type\" : \"initiative\", \"number\" : \"2117\", \"title\" : \"Climate Committment Act Repeal\", \"stance\" : \"against\", \"jurisdiction\" : \"State of Washington\", \"jurisdiction_type\" : \"State\", \"jurisdiction_county\" : null}]",
+        "count" : "2"
+      }, {
+        "item" : "[{\"proposal_id\" : 181, \"proposal_type\" : \"local\", \"number\" : \"\", \"title\" : \"SCHOOL BOND\", \"stance\" : \"for\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "2"
+      }, {
+        "item" : "[{\"proposal_id\" : 111, \"proposal_type\" : \"local\", \"number\" : \"\", \"title\" : \"EDUCATION AND OPERATIONS LEVY\", \"stance\" : \"for\", \"jurisdiction\" : null, \"jurisdiction_type\" : null, \"jurisdiction_county\" : null}]",
+        "count" : "2"
+      } ],
+      "smallest" : "[{\"proposal_id\" : 1000, \"proposal_type\" : \"levy\", \"number\" : \"1\", \"title\" : \"City\", \"stance\" : \"for\", \"jurisdiction\" : \"CITY OF SHORELINE\", \"jurisdiction_type\" : \"City\", \"jurisdiction_county\" : \"KING\"}]",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763604,
+    "name" : "other_pac",
+    "dataTypeName" : "text",
+    "description" : "An X in this column designates the committee as a Continuing Political Committee.",
+    "fieldName" : "other_pac",
+    "position" : 53,
+    "renderTypeName" : "text",
+    "tableColumnId" : 53992010,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "6526",
+      "largest" : "X",
+      "null" : "51305",
+      "top" : [ {
+        "item" : "X",
+        "count" : "4814"
+      }, {
+        "item" : "",
+        "count" : "1712"
+      } ],
+      "smallest" : "",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763606,
+    "name" : "treasurer_address",
+    "dataTypeName" : "text",
+    "description" : "The address of the treasurer as reported on the C1pc registration.",
+    "fieldName" : "treasurer_address",
+    "position" : 55,
+    "renderTypeName" : "text",
+    "tableColumnId" : 53992068,
+    "width" : 182,
+    "cachedContents" : {
+      "non_null" : "47221",
+      "largest" : "wneville.iv@gmail.com",
+      "null" : "10610",
+      "top" : [ {
+        "item" : "PO BOX 9100",
+        "count" : "547"
+      }, {
+        "item" : "PO Box 9100",
+        "count" : "418"
+      }, {
+        "item" : "PO Box 1283",
+        "count" : "415"
+      }, {
+        "item" : "PO Box 15855",
+        "count" : "364"
+      }, {
+        "item" : "349 16th Ave E #60",
+        "count" : "339"
+      }, {
+        "item" : "P.O. Box 581",
+        "count" : "245"
+      }, {
+        "item" : "PO Box 21961",
+        "count" : "192"
+      }, {
+        "item" : "401 2nd Ave S Ste 303",
+        "count" : "177"
+      }, {
+        "item" : "349 16TH AVE E #60",
+        "count" : "149"
+      }, {
+        "item" : "P.O. Box 15855",
+        "count" : "142"
+      }, {
+        "item" : "603 STEWART ST #819",
+        "count" : "130"
+      }, {
+        "item" : "PO Box 424",
+        "count" : "128"
+      }, {
+        "item" : "P.O. BOX 581",
+        "count" : "122"
+      }, {
+        "item" : "510 Plum St SE",
+        "count" : "122"
+      }, {
+        "item" : "119 1ST AVE S STE 320",
+        "count" : "116"
+      }, {
+        "item" : "119 1ST AVENUE SOUTH, SUITE 320",
+        "count" : "115"
+      }, {
+        "item" : "POST OFFICE BOX 2408",
+        "count" : "113"
+      }, {
+        "item" : "PO BOX 1283",
+        "count" : "105"
+      }, {
+        "item" : "603 STEWART STREET #819",
+        "count" : "101"
+      }, {
+        "item" : "1752 NW Market Street #4155",
+        "count" : "87"
+      } ],
+      "smallest" : "?",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763607,
+    "name" : "treasurer_city",
+    "dataTypeName" : "text",
+    "description" : "The city of the treasurer as reported on the C1pc registration.",
+    "fieldName" : "treasurer_city",
+    "position" : 56,
+    "renderTypeName" : "text",
+    "tableColumnId" : 53992069,
+    "width" : 178,
+    "cachedContents" : {
+      "non_null" : "47223",
+      "largest" : "ZILLAH",
+      "null" : "10608",
+      "top" : [ {
+        "item" : "SEATTLE",
+        "count" : "4020"
+      }, {
+        "item" : "Seattle",
+        "count" : "2914"
+      }, {
+        "item" : "OLYMPIA",
+        "count" : "1303"
+      }, {
+        "item" : "TACOMA",
+        "count" : "1002"
+      }, {
+        "item" : "VANCOUVER",
+        "count" : "912"
+      }, {
+        "item" : "Olympia",
+        "count" : "881"
+      }, {
+        "item" : "SPOKANE",
+        "count" : "843"
+      }, {
+        "item" : "Tacoma",
+        "count" : "626"
+      }, {
+        "item" : "BELLINGHAM",
+        "count" : "612"
+      }, {
+        "item" : "Spokane",
+        "count" : "589"
+      }, {
+        "item" : "BELLEVUE",
+        "count" : "580"
+      }, {
+        "item" : "Puyallup",
+        "count" : "543"
+      }, {
+        "item" : "Vancouver",
+        "count" : "460"
+      }, {
+        "item" : "YAKIMA",
+        "count" : "443"
+      }, {
+        "item" : "EVERETT",
+        "count" : "437"
+      }, {
+        "item" : "PUYALLUP",
+        "count" : "371"
+      }, {
+        "item" : "SPOKANE VALLEY",
+        "count" : "302"
+      }, {
+        "item" : "SHELTON",
+        "count" : "287"
+      }, {
+        "item" : "WOODINVILLE",
+        "count" : "280"
+      }, {
+        "item" : "RENTON",
+        "count" : "276"
+      } ],
+      "smallest" : "?",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763608,
+    "name" : "treasurer_state",
+    "dataTypeName" : "text",
+    "description" : "The state of the treasurer as reported on the C1pc registration.",
+    "fieldName" : "treasurer_state",
+    "position" : 57,
+    "renderTypeName" : "text",
+    "tableColumnId" : 53992076,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "35431",
+      "largest" : "WV",
+      "null" : "22400",
+      "top" : [ {
+        "item" : "WA",
+        "count" : "31575"
+      }, {
+        "item" : "Washington",
+        "count" : "2277"
+      }, {
+        "item" : "Wa",
+        "count" : "599"
+      }, {
+        "item" : "wa",
+        "count" : "268"
+      }, {
+        "item" : "OR",
+        "count" : "73"
+      }, {
+        "item" : "DC",
+        "count" : "67"
+      }, {
+        "item" : "CA",
+        "count" : "62"
+      }, {
+        "item" : "WASHINGTON",
+        "count" : "60"
+      }, {
+        "item" : "WA - WASHINGTON",
+        "count" : "37"
+      }, {
+        "item" : "United States",
+        "count" : "32"
+      }, {
+        "item" : "ID",
+        "count" : "28"
+      }, {
+        "item" : "washington",
+        "count" : "26"
+      }, {
+        "item" : "TN",
+        "count" : "19"
+      }, {
+        "item" : "Texas",
+        "count" : "19"
+      }, {
+        "item" : "Wa.",
+        "count" : "19"
+      }, {
+        "item" : "WA`",
+        "count" : "18"
+      }, {
+        "item" : "WASHINGTON (WA)",
+        "count" : "18"
+      }, {
+        "item" : "FL",
+        "count" : "18"
+      }, {
+        "item" : "WA.",
+        "count" : "16"
+      }, {
+        "item" : "TX",
+        "count" : "15"
+      } ],
+      "smallest" : "3462",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763609,
+    "name" : "treasurer_zip",
+    "dataTypeName" : "text",
+    "description" : "The zip code of the treasurer as reported on the C1pc registration.",
+    "fieldName" : "treasurer_zip",
+    "position" : 58,
+    "renderTypeName" : "text",
+    "tableColumnId" : 53992077,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "47221",
+      "largest" : "WA98620",
+      "null" : "10610",
+      "top" : [ {
+        "item" : "98109",
+        "count" : "1102"
+      }, {
+        "item" : "98501",
+        "count" : "975"
+      }, {
+        "item" : "98104",
+        "count" : "729"
+      }, {
+        "item" : "98115",
+        "count" : "707"
+      }, {
+        "item" : "98101",
+        "count" : "707"
+      }, {
+        "item" : "98371",
+        "count" : "660"
+      }, {
+        "item" : "98507",
+        "count" : "630"
+      }, {
+        "item" : "98401",
+        "count" : "589"
+      }, {
+        "item" : "98112",
+        "count" : "570"
+      }, {
+        "item" : "98584",
+        "count" : "414"
+      }, {
+        "item" : "98111",
+        "count" : "413"
+      }, {
+        "item" : "98632",
+        "count" : "393"
+      }, {
+        "item" : "98072",
+        "count" : "373"
+      }, {
+        "item" : "98926",
+        "count" : "324"
+      }, {
+        "item" : "98362",
+        "count" : "320"
+      }, {
+        "item" : "99362",
+        "count" : "320"
+      }, {
+        "item" : "98225",
+        "count" : "306"
+      }, {
+        "item" : "98837",
+        "count" : "301"
+      }, {
+        "item" : "98531",
+        "count" : "299"
+      }, {
+        "item" : "98250",
+        "count" : "284"
+      } ],
+      "smallest" : "?",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763610,
+    "name" : "treasurer_phone",
+    "dataTypeName" : "text",
+    "description" : "The phone number of the treasurer as reported on the C1pc registration.",
+    "fieldName" : "treasurer_phone",
+    "position" : 59,
+    "renderTypeName" : "text",
+    "tableColumnId" : 53992078,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "32844",
+      "largest" : "Text or Call: (360) 472-2044",
+      "null" : "24987",
+      "top" : [ {
+        "item" : "206-745-2010",
+        "count" : "666"
+      }, {
+        "item" : "206-335-8815",
+        "count" : "531"
+      }, {
+        "item" : "253-988-2455",
+        "count" : "505"
+      }, {
+        "item" : "206-218-3108",
+        "count" : "468"
+      }, {
+        "item" : "206-682-7328",
+        "count" : "403"
+      }, {
+        "item" : "360-628-8129",
+        "count" : "303"
+      }, {
+        "item" : "206-382-5552",
+        "count" : "229"
+      }, {
+        "item" : "2063825552",
+        "count" : "152"
+      }, {
+        "item" : "206-617-9762",
+        "count" : "142"
+      }, {
+        "item" : "(253) 220-5590",
+        "count" : "142"
+      }, {
+        "item" : "206-486-0085",
+        "count" : "135"
+      }, {
+        "item" : "800-225-7166",
+        "count" : "122"
+      }, {
+        "item" : "253-220-5590",
+        "count" : "121"
+      }, {
+        "item" : "(253)220-5590",
+        "count" : "96"
+      }, {
+        "item" : "636-432-3168",
+        "count" : "87"
+      }, {
+        "item" : "509-924-4211",
+        "count" : "73"
+      }, {
+        "item" : "360-671-8200",
+        "count" : "72"
+      }, {
+        "item" : "2066827328",
+        "count" : "72"
+      }, {
+        "item" : "253-208-3523",
+        "count" : "69"
+      }, {
+        "item" : "425-277-4570",
+        "count" : "68"
+      } ],
+      "smallest" : "?",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763611,
+    "name" : "has_reports",
+    "dataTypeName" : "checkbox",
+    "description" : "Indicates if the candidate or committee has filed any campaign finance reports such as C3, C4 or C5. If a committee has only filed a registration and not any financial disclosure reports, the value will be false.",
+    "fieldName" : "has_reports",
+    "position" : 60,
+    "renderTypeName" : "checkbox",
+    "tableColumnId" : 162422828,
+    "cachedContents" : {
+      "non_null" : "57831",
+      "null" : "0",
+      "top" : [ {
+        "item" : false,
+        "count" : "33561"
+      }, {
+        "item" : true,
+        "count" : "24270"
+      } ],
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763612,
+    "name" : "contributions_amount",
+    "dataTypeName" : "number",
+    "description" : "The sum total of all contributions reported. Refer to the \"Contributions to Candidates and Political Committees\" data set for line-item details.",
+    "fieldName" : "contributions_amount",
+    "position" : 61,
+    "renderTypeName" : "number",
+    "tableColumnId" : 49214886,
+    "width" : 340,
+    "cachedContents" : {
+      "non_null" : "24270",
+      "largest" : "31576864.54",
+      "null" : "33561",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "3680"
+      }, {
+        "item" : "100.00",
+        "count" : "91"
+      }, {
+        "item" : "500.00",
+        "count" : "68"
+      }, {
+        "item" : "1000.00",
+        "count" : "59"
+      }, {
+        "item" : "5000.00",
+        "count" : "48"
+      }, {
+        "item" : "2000.00",
+        "count" : "43"
+      }, {
+        "item" : "250.00",
+        "count" : "39"
+      }, {
+        "item" : "200.00",
+        "count" : "32"
+      }, {
+        "item" : "1500.00",
+        "count" : "27"
+      }, {
+        "item" : "50.00",
+        "count" : "26"
+      }, {
+        "item" : "2500.00",
+        "count" : "26"
+      }, {
+        "item" : "600.00",
+        "count" : "25"
+      }, {
+        "item" : "750.00",
+        "count" : "21"
+      }, {
+        "item" : "1200.00",
+        "count" : "20"
+      }, {
+        "item" : "10000.00",
+        "count" : "20"
+      }, {
+        "item" : "300.00",
+        "count" : "19"
+      }, {
+        "item" : "5100.00",
+        "count" : "18"
+      }, {
+        "item" : "150.00",
+        "count" : "18"
+      }, {
+        "item" : "400.00",
+        "count" : "17"
+      }, {
+        "item" : "700.00",
+        "count" : "17"
+      } ],
+      "smallest" : "-6259.87",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "humane" : "false",
+      "currencyStyle" : "USD",
+      "align" : "left"
+    }
+  }, {
+    "id" : 647763613,
+    "name" : "carryforward_amount",
+    "dataTypeName" : "number",
+    "description" : "This filed indicates the amount of money that was reported as the starting balance on the first C4 filed for this filer_id and election year. For continuing committees, this is the balance carried forward for the previous year. For all others, this is money that was remaining from a previous campaign. For example, remaining funds from a candidate's 2012 campaign may be applied as the starting balance of the candidate's 2014 campaign. Any value reported here is not new funds, it was reported as a gain on a previous campaign or election year. Nothing in this definition supersedes applicable WAC/RCW. ",
+    "fieldName" : "carryforward_amount",
+    "position" : 62,
+    "renderTypeName" : "number",
+    "tableColumnId" : 54974309,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "23230",
+      "largest" : "7210678.40",
+      "null" : "34601",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "11642"
+      }, {
+        "item" : "100.00",
+        "count" : "86"
+      }, {
+        "item" : "1000.00",
+        "count" : "60"
+      }, {
+        "item" : "500.00",
+        "count" : "49"
+      }, {
+        "item" : "50.00",
+        "count" : "35"
+      }, {
+        "item" : "5000.00",
+        "count" : "30"
+      }, {
+        "item" : "2000.00",
+        "count" : "28"
+      }, {
+        "item" : "2500.00",
+        "count" : "24"
+      }, {
+        "item" : "200.00",
+        "count" : "24"
+      }, {
+        "item" : "25.00",
+        "count" : "20"
+      }, {
+        "item" : "400.00",
+        "count" : "15"
+      }, {
+        "item" : "250.00",
+        "count" : "15"
+      }, {
+        "item" : "600.00",
+        "count" : "13"
+      }, {
+        "item" : "300.00",
+        "count" : "12"
+      }, {
+        "item" : "10000.00",
+        "count" : "12"
+      }, {
+        "item" : "1500.00",
+        "count" : "11"
+      }, {
+        "item" : "1100.00",
+        "count" : "10"
+      }, {
+        "item" : "150.00",
+        "count" : "10"
+      }, {
+        "item" : "3000.00",
+        "count" : "10"
+      }, {
+        "item" : "800.00",
+        "count" : "8"
+      } ],
+      "smallest" : "-637997.13",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "humane" : "false",
+      "currencyStyle" : "USD",
+      "precision" : "2",
+      "align" : "right"
+    }
+  }, {
+    "id" : 647763614,
+    "name" : "expenditures_amount",
+    "dataTypeName" : "number",
+    "description" : "The sum total of all expenditures reported. Refer to the \"Expenditures by Candidates and Political Committees\" data set for line-item details.",
+    "fieldName" : "expenditures_amount",
+    "position" : 63,
+    "renderTypeName" : "number",
+    "tableColumnId" : 138846206,
+    "width" : 328,
+    "cachedContents" : {
+      "non_null" : "24270",
+      "largest" : "31559800.93",
+      "null" : "33561",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "2820"
+      }, {
+        "item" : "1000.00",
+        "count" : "93"
+      }, {
+        "item" : "500.00",
+        "count" : "83"
+      }, {
+        "item" : "2000.00",
+        "count" : "68"
+      }, {
+        "item" : "2500.00",
+        "count" : "52"
+      }, {
+        "item" : "4000.00",
+        "count" : "33"
+      }, {
+        "item" : "5000.00",
+        "count" : "32"
+      }, {
+        "item" : "250.00",
+        "count" : "29"
+      }, {
+        "item" : "10000.00",
+        "count" : "28"
+      }, {
+        "item" : "3000.00",
+        "count" : "28"
+      }, {
+        "item" : "2400.00",
+        "count" : "26"
+      }, {
+        "item" : "1500.00",
+        "count" : "26"
+      }, {
+        "item" : "4800.00",
+        "count" : "23"
+      }, {
+        "item" : "800.00",
+        "count" : "21"
+      }, {
+        "item" : "1600.00",
+        "count" : "20"
+      }, {
+        "item" : "25000.00",
+        "count" : "19"
+      }, {
+        "item" : "15000.00",
+        "count" : "18"
+      }, {
+        "item" : "6000.00",
+        "count" : "18"
+      }, {
+        "item" : "192.00",
+        "count" : "16"
+      }, {
+        "item" : "60.00",
+        "count" : "15"
+      } ],
+      "smallest" : "-10429.90",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "humane" : "false",
+      "currencyStyle" : "USD",
+      "align" : "right"
+    }
+  }, {
+    "id" : 647763615,
+    "name" : "loans_amount",
+    "dataTypeName" : "number",
+    "description" : "The current outstanding loan balance of the campaign as of the time that the most recent C4 campaign summary report was filed.",
+    "fieldName" : "loans_amount",
+    "position" : 64,
+    "renderTypeName" : "number",
+    "tableColumnId" : 49214888,
+    "width" : 244,
+    "cachedContents" : {
+      "non_null" : "23230",
+      "largest" : "4656000.00",
+      "null" : "34601",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "20355"
+      }, {
+        "item" : "5000.00",
+        "count" : "96"
+      }, {
+        "item" : "1000.00",
+        "count" : "94"
+      }, {
+        "item" : "2000.00",
+        "count" : "79"
+      }, {
+        "item" : "500.00",
+        "count" : "59"
+      }, {
+        "item" : "6000.00",
+        "count" : "51"
+      }, {
+        "item" : "3000.00",
+        "count" : "42"
+      }, {
+        "item" : "7500.00",
+        "count" : "36"
+      }, {
+        "item" : "100.00",
+        "count" : "36"
+      }, {
+        "item" : "2500.00",
+        "count" : "34"
+      }, {
+        "item" : "10000.00",
+        "count" : "33"
+      }, {
+        "item" : "4000.00",
+        "count" : "32"
+      }, {
+        "item" : "1500.00",
+        "count" : "28"
+      }, {
+        "item" : "4700.00",
+        "count" : "23"
+      }, {
+        "item" : "200.00",
+        "count" : "21"
+      }, {
+        "item" : "-5000.00",
+        "count" : "17"
+      }, {
+        "item" : "300.00",
+        "count" : "15"
+      }, {
+        "item" : "5500.00",
+        "count" : "15"
+      }, {
+        "item" : "400.00",
+        "count" : "15"
+      }, {
+        "item" : "-500.00",
+        "count" : "14"
+      } ],
+      "smallest" : "-552002.87",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "humane" : "false",
+      "currencyStyle" : "USD",
+      "precision" : "2",
+      "align" : "right"
+    }
+  }, {
+    "id" : 647763616,
+    "name" : "pledges_amount",
+    "dataTypeName" : "number",
+    "description" : "The current total pledges reported by the campaign as of the time that the most recent C4 campaign summary report was filed.",
+    "fieldName" : "pledges_amount",
+    "position" : 65,
+    "renderTypeName" : "number",
+    "tableColumnId" : 49214889,
+    "width" : 268,
+    "cachedContents" : {
+      "non_null" : "23989",
+      "largest" : "1050000.00",
+      "null" : "33842",
+      "top" : [ {
+        "item" : "0.0",
+        "count" : "23861"
+      }, {
+        "item" : "100.00",
+        "count" : "13"
+      }, {
+        "item" : "500.00",
+        "count" : "11"
+      }, {
+        "item" : "50.00",
+        "count" : "4"
+      }, {
+        "item" : "250.00",
+        "count" : "4"
+      }, {
+        "item" : "625000.00",
+        "count" : "3"
+      }, {
+        "item" : "10000.00",
+        "count" : "3"
+      }, {
+        "item" : "5000.00",
+        "count" : "3"
+      }, {
+        "item" : "25.00",
+        "count" : "3"
+      }, {
+        "item" : "1000.00",
+        "count" : "3"
+      }, {
+        "item" : "2790.10",
+        "count" : "3"
+      }, {
+        "item" : "200.00",
+        "count" : "3"
+      }, {
+        "item" : "125.00",
+        "count" : "2"
+      }, {
+        "item" : "50000.00",
+        "count" : "2"
+      }, {
+        "item" : "180.00",
+        "count" : "2"
+      }, {
+        "item" : "300.00",
+        "count" : "2"
+      }, {
+        "item" : "350.00",
+        "count" : "2"
+      }, {
+        "item" : "225.00",
+        "count" : "2"
+      }, {
+        "item" : "35.00",
+        "count" : "1"
+      }, {
+        "item" : "85.00",
+        "count" : "1"
+      } ],
+      "smallest" : "0.0",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "humane" : "false",
+      "currencyStyle" : "USD",
+      "precision" : "2",
+      "align" : "right"
+    }
+  }, {
+    "id" : 647763617,
+    "name" : "debts_amount",
+    "dataTypeName" : "number",
+    "description" : "The current outstanding debt of the campaign as of the time that the most recent C4 campaign summary report was filed.",
+    "fieldName" : "debts_amount",
+    "position" : 66,
+    "renderTypeName" : "number",
+    "tableColumnId" : 50184689,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "23989",
+      "largest" : "1327387.49",
+      "null" : "33842",
+      "top" : [ {
+        "item" : "0.00",
+        "count" : "22655"
+      }, {
+        "item" : "1250.00",
+        "count" : "45"
+      }, {
+        "item" : "500.00",
+        "count" : "31"
+      }, {
+        "item" : "2000.00",
+        "count" : "25"
+      }, {
+        "item" : "1000.00",
+        "count" : "21"
+      }, {
+        "item" : "250.00",
+        "count" : "20"
+      }, {
+        "item" : "300.00",
+        "count" : "17"
+      }, {
+        "item" : "4000.00",
+        "count" : "15"
+      }, {
+        "item" : "3000.00",
+        "count" : "15"
+      }, {
+        "item" : "1500.00",
+        "count" : "14"
+      }, {
+        "item" : "200.00",
+        "count" : "12"
+      }, {
+        "item" : "845.90",
+        "count" : "12"
+      }, {
+        "item" : "6000.00",
+        "count" : "10"
+      }, {
+        "item" : "600.00",
+        "count" : "10"
+      }, {
+        "item" : "2500.00",
+        "count" : "10"
+      }, {
+        "item" : "2300.00",
+        "count" : "7"
+      }, {
+        "item" : "350.00",
+        "count" : "7"
+      }, {
+        "item" : "800.00",
+        "count" : "7"
+      }, {
+        "item" : "150.00",
+        "count" : "7"
+      }, {
+        "item" : "900.00",
+        "count" : "6"
+      } ],
+      "smallest" : "-75.00",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "humane" : "false",
+      "currencyStyle" : "USD",
+      "precision" : "2",
+      "align" : "right"
+    }
+  }, {
+    "id" : 647763618,
+    "name" : "independent_expenditures_for_amount",
+    "dataTypeName" : "number",
+    "description" : "When the row is a candidate, the sum total of all independent (third party) expenditures made in support of the candidate. When the row is a committee, the sum of all independent expenditures reported by the committee. For candidates, independent expenditures are reported by the entity making the expenditure and the amount reported here only includes amounts where the third party accurately reported the name of the candidate. Refer to the \"Independent Expenditures\" data set for line-item details.",
+    "fieldName" : "independent_expenditures_for_amount",
+    "position" : 67,
+    "renderTypeName" : "number",
+    "tableColumnId" : 49623941,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "4085",
+      "largest" : "1389896.21",
+      "null" : "53746",
+      "top" : [ {
+        "item" : "0",
+        "count" : "162"
+      }, {
+        "item" : "52.72",
+        "count" : "95"
+      }, {
+        "item" : "130.74",
+        "count" : "86"
+      }, {
+        "item" : "120.40",
+        "count" : "59"
+      }, {
+        "item" : "268.31",
+        "count" : "41"
+      }, {
+        "item" : "132.34",
+        "count" : "37"
+      }, {
+        "item" : "131.41",
+        "count" : "35"
+      }, {
+        "item" : "133.71",
+        "count" : "32"
+      }, {
+        "item" : "55.97",
+        "count" : "31"
+      }, {
+        "item" : "398.94",
+        "count" : "23"
+      }, {
+        "item" : "131.96",
+        "count" : "23"
+      }, {
+        "item" : "83.96",
+        "count" : "22"
+      }, {
+        "item" : "173.98",
+        "count" : "22"
+      }, {
+        "item" : "329.93",
+        "count" : "21"
+      }, {
+        "item" : "739.68",
+        "count" : "18"
+      }, {
+        "item" : "527.89",
+        "count" : "17"
+      }, {
+        "item" : "111.94",
+        "count" : "17"
+      }, {
+        "item" : "215.59",
+        "count" : "16"
+      }, {
+        "item" : "115.80",
+        "count" : "15"
+      }, {
+        "item" : "103.25",
+        "count" : "14"
+      } ],
+      "smallest" : "0",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "humane" : "false",
+      "currencyStyle" : "USD",
+      "precision" : "2",
+      "align" : "right"
+    }
+  }, {
+    "id" : 647763619,
+    "name" : "independent_expenditures_against_amount",
+    "dataTypeName" : "number",
+    "description" : "When the row is a candidate, the sum total of all independent (third party) expenditures made in opposition to the candidate. When the row is a committee, the sum of all independent expenditures reported by the committee. For candidates, independent expenditures are reported by the entity making the expenditure and the amount reported here only includes amounts where the third party accurately reported the name of the candidate. Refer to the \"Independent Expenditures\" data set for line-item details.",
+    "fieldName" : "independent_expenditures_against_amount",
+    "position" : 68,
+    "renderTypeName" : "number",
+    "tableColumnId" : 49623942,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "4085",
+      "largest" : "9303879.56",
+      "null" : "53746",
+      "top" : [ {
+        "item" : "0",
+        "count" : "3318"
+      }, {
+        "item" : "91.24",
+        "count" : "9"
+      }, {
+        "item" : "76.13",
+        "count" : "5"
+      }, {
+        "item" : "129.20",
+        "count" : "5"
+      }, {
+        "item" : "624.75",
+        "count" : "4"
+      }, {
+        "item" : "267.64",
+        "count" : "4"
+      }, {
+        "item" : "939.57",
+        "count" : "4"
+      }, {
+        "item" : "1575.00",
+        "count" : "4"
+      }, {
+        "item" : "1700.00",
+        "count" : "3"
+      }, {
+        "item" : "430.25",
+        "count" : "3"
+      }, {
+        "item" : "3175.87",
+        "count" : "3"
+      }, {
+        "item" : "379.61",
+        "count" : "3"
+      }, {
+        "item" : "943.30",
+        "count" : "3"
+      }, {
+        "item" : "203.60",
+        "count" : "3"
+      }, {
+        "item" : "796.25",
+        "count" : "3"
+      }, {
+        "item" : "117.65",
+        "count" : "3"
+      }, {
+        "item" : "150.00",
+        "count" : "3"
+      }, {
+        "item" : "143.33",
+        "count" : "3"
+      }, {
+        "item" : "171.32",
+        "count" : "3"
+      }, {
+        "item" : "4218.75",
+        "count" : "3"
+      } ],
+      "smallest" : "0",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "humane" : "false",
+      "currencyStyle" : "USD",
+      "precision" : "2",
+      "align" : "right"
+    }
+  }, {
+    "id" : 647763620,
+    "name" : "url",
+    "dataTypeName" : "url",
+    "description" : "A link to a PDF version of the candidate C1 registration report as it was filed to the PDC.",
+    "fieldName" : "url",
+    "position" : 69,
+    "renderTypeName" : "url",
+    "tableColumnId" : 49624048,
+    "width" : 239,
+    "format" : {
+      "align" : "left"
+    },
+    "subColumnTypes" : [ "url", "description" ]
+  }, {
+    "id" : 647763621,
+    "name" : "committee_id",
+    "dataTypeName" : "number",
+    "description" : "The unique identifier of a committee. For a continuing committee, this id will be the same for all the years that the committee is registered. Single year committees and candidate committees will have a unique id for each year even though the candidate or committee organization might be the same across years. Surplus accounts will have a single committee id across all years.",
+    "fieldName" : "committee_id",
+    "position" : 70,
+    "renderTypeName" : "number",
+    "tableColumnId" : 122888427,
+    "cachedContents" : {
+      "non_null" : "49026",
+      "largest" : "42463",
+      "null" : "8805",
+      "top" : [ {
+        "item" : "35706",
+        "count" : "19"
+      }, {
+        "item" : "35623",
+        "count" : "19"
+      }, {
+        "item" : "35583",
+        "count" : "19"
+      }, {
+        "item" : "35554",
+        "count" : "19"
+      }, {
+        "item" : "22",
+        "count" : "18"
+      }, {
+        "item" : "7",
+        "count" : "18"
+      }, {
+        "item" : "30",
+        "count" : "18"
+      }, {
+        "item" : "10",
+        "count" : "18"
+      }, {
+        "item" : "27",
+        "count" : "18"
+      }, {
+        "item" : "11",
+        "count" : "18"
+      }, {
+        "item" : "12",
+        "count" : "18"
+      }, {
+        "item" : "21",
+        "count" : "18"
+      }, {
+        "item" : "14",
+        "count" : "18"
+      }, {
+        "item" : "15",
+        "count" : "18"
+      }, {
+        "item" : "9",
+        "count" : "18"
+      }, {
+        "item" : "4",
+        "count" : "18"
+      }, {
+        "item" : "17",
+        "count" : "18"
+      }, {
+        "item" : "19",
+        "count" : "18"
+      }, {
+        "item" : "20",
+        "count" : "18"
+      }, {
+        "item" : "16",
+        "count" : "18"
+      } ],
+      "smallest" : "1",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 647763622,
+    "name" : "person_id",
+    "dataTypeName" : "number",
+    "description" : "The unique ID assigned to a public office holder or candidate. This id is consistent across years and, offices or candidacies and is the preferred id for identifying a natural person.",
+    "fieldName" : "person_id",
+    "position" : 71,
+    "renderTypeName" : "number",
+    "tableColumnId" : 139017204,
+    "cachedContents" : {
+      "non_null" : "56608",
+      "largest" : "60509",
+      "null" : "1223",
+      "top" : [ {
+        "item" : "26189",
+        "count" : "26"
+      }, {
+        "item" : "34128",
+        "count" : "22"
+      }, {
+        "item" : "32906",
+        "count" : "22"
+      }, {
+        "item" : "34070",
+        "count" : "19"
+      }, {
+        "item" : "44338",
+        "count" : "19"
+      }, {
+        "item" : "26954",
+        "count" : "19"
+      }, {
+        "item" : "44269",
+        "count" : "19"
+      }, {
+        "item" : "32907",
+        "count" : "19"
+      }, {
+        "item" : "33893",
+        "count" : "19"
+      }, {
+        "item" : "44421",
+        "count" : "19"
+      }, {
+        "item" : "44298",
+        "count" : "19"
+      }, {
+        "item" : "32729",
+        "count" : "18"
+      }, {
+        "item" : "32739",
+        "count" : "18"
+      }, {
+        "item" : "32728",
+        "count" : "18"
+      }, {
+        "item" : "32732",
+        "count" : "18"
+      }, {
+        "item" : "32740",
+        "count" : "18"
+      }, {
+        "item" : "32741",
+        "count" : "18"
+      }, {
+        "item" : "32737",
+        "count" : "18"
+      }, {
+        "item" : "32736",
+        "count" : "18"
+      }, {
+        "item" : "32747",
+        "count" : "18"
+      } ],
+      "smallest" : "1",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763623,
+    "name" : "candidacy_id",
+    "dataTypeName" : "number",
+    "description" : "Candidacy ID",
+    "fieldName" : "candidacy_id",
+    "position" : 72,
+    "renderTypeName" : "number",
+    "tableColumnId" : 122888425,
+    "cachedContents" : {
+      "non_null" : "36837",
+      "largest" : "3397316",
+      "null" : "20994",
+      "top" : [ {
+        "item" : "3",
+        "count" : "1"
+      }, {
+        "item" : "4",
+        "count" : "1"
+      }, {
+        "item" : "5",
+        "count" : "1"
+      }, {
+        "item" : "6",
+        "count" : "1"
+      }, {
+        "item" : "7",
+        "count" : "1"
+      }, {
+        "item" : "8",
+        "count" : "1"
+      }, {
+        "item" : "9",
+        "count" : "1"
+      }, {
+        "item" : "10",
+        "count" : "1"
+      }, {
+        "item" : "11",
+        "count" : "1"
+      }, {
+        "item" : "12",
+        "count" : "1"
+      }, {
+        "item" : "13",
+        "count" : "1"
+      }, {
+        "item" : "14",
+        "count" : "1"
+      }, {
+        "item" : "15",
+        "count" : "1"
+      }, {
+        "item" : "16",
+        "count" : "1"
+      }, {
+        "item" : "17",
+        "count" : "1"
+      }, {
+        "item" : "18",
+        "count" : "1"
+      }, {
+        "item" : "19",
+        "count" : "1"
+      }, {
+        "item" : "20",
+        "count" : "1"
+      }, {
+        "item" : "21",
+        "count" : "1"
+      }, {
+        "item" : "1",
+        "count" : "1"
+      } ],
+      "smallest" : "1",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 647763624,
+    "name" : "fund_id",
+    "dataTypeName" : "number",
+    "description" : "The unique identifier for all reporting and finance records associated with a single campaign. This can be used to correlate records across different datasets. For candidates and single-year committees, the fund_id is the same for everything reported for that campaign. For continuing political committees, their reporting is annual, and they have a unique fund_id for each reporting year.",
+    "fieldName" : "fund_id",
+    "position" : 73,
+    "renderTypeName" : "number",
+    "tableColumnId" : 122888428,
+    "cachedContents" : {
+      "non_null" : "25029",
+      "largest" : "28637",
+      "null" : "32802",
+      "top" : [ {
+        "item" : "27094",
+        "count" : "2"
+      }, {
+        "item" : "12",
+        "count" : "1"
+      }, {
+        "item" : "62",
+        "count" : "1"
+      }, {
+        "item" : "15",
+        "count" : "1"
+      }, {
+        "item" : "16",
+        "count" : "1"
+      }, {
+        "item" : "19",
+        "count" : "1"
+      }, {
+        "item" : "35",
+        "count" : "1"
+      }, {
+        "item" : "41",
+        "count" : "1"
+      }, {
+        "item" : "44",
+        "count" : "1"
+      }, {
+        "item" : "49",
+        "count" : "1"
+      }, {
+        "item" : "56",
+        "count" : "1"
+      }, {
+        "item" : "57",
+        "count" : "1"
+      }, {
+        "item" : "58",
+        "count" : "1"
+      }, {
+        "item" : "60",
+        "count" : "1"
+      }, {
+        "item" : "14",
+        "count" : "1"
+      }, {
+        "item" : "63",
+        "count" : "1"
+      }, {
+        "item" : "65",
+        "count" : "1"
+      }, {
+        "item" : "66",
+        "count" : "1"
+      }, {
+        "item" : "67",
+        "count" : "1"
+      }, {
+        "item" : "11",
+        "count" : "1"
+      } ],
+      "smallest" : "10",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 647763625,
+    "name" : "legislative_district",
+    "dataTypeName" : "text",
+    "description" : "Legislative District",
+    "fieldName" : "legislative_district",
+    "position" : 74,
+    "renderTypeName" : "text",
+    "tableColumnId" : 122888993,
+    "cachedContents" : {
+      "non_null" : "3227",
+      "largest" : "49",
+      "null" : "54604",
+      "top" : [ {
+        "item" : "30",
+        "count" : "89"
+      }, {
+        "item" : "01",
+        "count" : "84"
+      }, {
+        "item" : "31",
+        "count" : "80"
+      }, {
+        "item" : "22",
+        "count" : "80"
+      }, {
+        "item" : "42",
+        "count" : "79"
+      }, {
+        "item" : "26",
+        "count" : "78"
+      }, {
+        "item" : "05",
+        "count" : "76"
+      }, {
+        "item" : "18",
+        "count" : "75"
+      }, {
+        "item" : "39",
+        "count" : "74"
+      }, {
+        "item" : "37",
+        "count" : "73"
+      }, {
+        "item" : "17",
+        "count" : "72"
+      }, {
+        "item" : "25",
+        "count" : "71"
+      }, {
+        "item" : "24",
+        "count" : "71"
+      }, {
+        "item" : "21",
+        "count" : "70"
+      }, {
+        "item" : "32",
+        "count" : "70"
+      }, {
+        "item" : "04",
+        "count" : "70"
+      }, {
+        "item" : "03",
+        "count" : "69"
+      }, {
+        "item" : "41",
+        "count" : "69"
+      }, {
+        "item" : "28",
+        "count" : "68"
+      }, {
+        "item" : "38",
+        "count" : "68"
+      } ],
+      "smallest" : "01",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 647763626,
+    "name" : "treasurer_name",
+    "dataTypeName" : "text",
+    "description" : "Treasurer Name",
+    "fieldName" : "treasurer_name",
+    "position" : 75,
+    "renderTypeName" : "text",
+    "tableColumnId" : 122888426,
+    "cachedContents" : {
+      "non_null" : "47962",
+      "largest" : "ZIPPORAH J. JARMON",
+      "null" : "9869",
+      "top" : [ {
+        "item" : "JASON BENNETT",
+        "count" : "644"
+      }, {
+        "item" : "PHILIP LLOYD",
+        "count" : "559"
+      }, {
+        "item" : "Jason Bennett",
+        "count" : "557"
+      }, {
+        "item" : "Andy Lo",
+        "count" : "510"
+      }, {
+        "item" : "Tom Perry",
+        "count" : "415"
+      }, {
+        "item" : "Abbot Taylor",
+        "count" : "339"
+      }, {
+        "item" : "JAY PETTERSON",
+        "count" : "290"
+      }, {
+        "item" : "Jason Michaud",
+        "count" : "286"
+      }, {
+        "item" : "ABBOT TAYLOR",
+        "count" : "263"
+      }, {
+        "item" : "HEATHER CLARKE",
+        "count" : "170"
+      }, {
+        "item" : "Heather Clarke",
+        "count" : "166"
+      }, {
+        "item" : "JASON MICHAUD",
+        "count" : "147"
+      }, {
+        "item" : "Philip Lloyd",
+        "count" : "139"
+      }, {
+        "item" : "Julia Gorton",
+        "count" : "133"
+      }, {
+        "item" : "JEFF DAVIS",
+        "count" : "129"
+      }, {
+        "item" : "TOM PERRY",
+        "count" : "127"
+      }, {
+        "item" : "CAM CONSULTING",
+        "count" : "114"
+      }, {
+        "item" : "Sharon Hanek",
+        "count" : "104"
+      }, {
+        "item" : "Jeanne Legault",
+        "count" : "99"
+      }, {
+        "item" : "Josie Olsen",
+        "count" : "92"
+      } ],
+      "smallest" : "?",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763627,
+    "name" : "pac_type",
+    "dataTypeName" : "text",
+    "description" : "Pac_type can be bonafide, candidate, caucus, pac, or surplus",
+    "fieldName" : "pac_type",
+    "position" : 76,
+    "renderTypeName" : "text",
+    "tableColumnId" : 123212601,
+    "cachedContents" : {
+      "non_null" : "49026",
+      "largest" : "pac",
+      "null" : "8805",
+      "top" : [ {
+        "item" : "candidate",
+        "count" : "28032"
+      }, {
+        "item" : "pac",
+        "count" : "15810"
+      }, {
+        "item" : "bonafide",
+        "count" : "4071"
+      }, {
+        "item" : "out-of-state",
+        "count" : "1040"
+      }, {
+        "item" : "caucus",
+        "count" : "73"
+      } ],
+      "smallest" : "bonafide",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763628,
+    "name" : "continuing",
+    "dataTypeName" : "checkbox",
+    "description" : "Whether the PAC is continuing or not. Only set for PACs. Null for candidate, surplus, bonafide and caucus.",
+    "fieldName" : "continuing",
+    "position" : 77,
+    "renderTypeName" : "checkbox",
+    "tableColumnId" : 123212600,
+    "cachedContents" : {
+      "non_null" : "20994",
+      "null" : "36837",
+      "top" : [ {
+        "item" : true,
+        "count" : "18092"
+      }, {
+        "item" : false,
+        "count" : "2902"
+      } ],
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  }, {
+    "id" : 647763629,
+    "name" : "updated_at",
+    "dataTypeName" : "calendar_date",
+    "description" : "The last time that the committee information was updated. This includes information such as the contact information or an amendment to the registration as changes in financial information that result from submitting or amending a report.",
+    "fieldName" : "updated_at",
+    "position" : 78,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 141863138,
+    "cachedContents" : {
+      "non_null" : "57739",
+      "largest" : "2026-11-04T13:54:35.000",
+      "null" : "92",
+      "top" : [ {
+        "item" : "2022-01-11T07:28:27.000",
+        "count" : "6908"
+      }, {
+        "item" : "2025-12-10T15:10:24.000",
+        "count" : "1148"
+      }, {
+        "item" : "2020-05-08T14:55:38.000",
+        "count" : "1117"
+      }, {
+        "item" : "2020-05-08T14:55:31.000",
+        "count" : "497"
+      }, {
+        "item" : "2024-01-18T10:27:08.000",
+        "count" : "433"
+      }, {
+        "item" : "2019-09-30T06:50:36.000",
+        "count" : "231"
+      }, {
+        "item" : "2020-05-08T14:55:35.000",
+        "count" : "211"
+      }, {
+        "item" : "2025-12-10T15:08:02.000",
+        "count" : "157"
+      }, {
+        "item" : "2026-09-17T11:58:11.000",
+        "count" : "153"
+      }, {
+        "item" : "2025-12-10T15:07:59.000",
+        "count" : "146"
+      }, {
+        "item" : "2025-12-10T15:07:49.000",
+        "count" : "137"
+      }, {
+        "item" : "2025-12-10T15:08:16.000",
+        "count" : "131"
+      }, {
+        "item" : "2025-12-10T15:07:51.000",
+        "count" : "126"
+      }, {
+        "item" : "2025-12-10T15:07:44.000",
+        "count" : "112"
+      }, {
+        "item" : "2025-12-10T15:08:19.000",
+        "count" : "110"
+      }, {
+        "item" : "2025-12-10T15:08:14.000",
+        "count" : "106"
+      }, {
+        "item" : "2025-12-10T15:08:04.000",
+        "count" : "105"
+      }, {
+        "item" : "2026-10-09T14:06:49.000",
+        "count" : "102"
+      }, {
+        "item" : "2025-12-10T15:08:12.000",
+        "count" : "92"
+      }, {
+        "item" : "2024-01-20T17:34:00.000",
+        "count" : "80"
+      } ],
+      "smallest" : "2018-12-21T10:44:17.000",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : {
+      "view" : "date_time"
+    }
+  }, {
+    "id" : 647763630,
+    "name" : "row_checksum",
+    "dataTypeName" : "text",
+    "description" : "A checksum to track whether any data has changed in the row.",
+    "fieldName" : "row_checksum",
+    "position" : 79,
+    "renderTypeName" : "text",
+    "tableColumnId" : 172202087,
+    "cachedContents" : {
+      "non_null" : "0",
+      "null" : "57831",
+      "count" : "57831",
+      "cardinality" : "57831"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "Public Domain"
+  },
+  "metadata" : {
+    "rdfSubject" : "0",
+    "custom_fields" : {
+      "Temporal" : {
+        "Posting Frequency" : "Daily",
+        "Period of Time" : "Last 10 years. See description"
+      }
+    },
+    "rowIdentifier" : 647763552,
+    "rowLabel" : "Campaign summary information for a candidate or political committee",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "79jf-2se2",
+    "createdAt" : 1738620373,
+    "displayName" : "PDC-IT",
+    "screenName" : "PDC-IT",
+    "type" : "team",
+    "members" : [ {
+      "id" : "prrr-ps5v",
+      "createdAt" : 1492022136,
+      "displayName" : "Bill King",
+      "screenName" : "Bill King",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "ux2g-av4t",
+      "createdAt" : 1724340944,
+      "displayName" : "David Metzler",
+      "screenName" : "David Metzler",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "7ufr-e4xv",
+      "createdAt" : 1707850431,
+      "displayName" : "Dillon Ching",
+      "screenName" : "Dillon Ching",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "y884-6s37",
+      "createdAt" : 1493835524,
+      "displayName" : "James Gutholm (PDC)",
+      "profileImageUrlLarge" : "/api/users/y884-6s37/profile_images/LARGE",
+      "profileImageUrlMedium" : "/api/users/y884-6s37/profile_images/THUMB",
+      "profileImageUrlSmall" : "/api/users/y884-6s37/profile_images/TINY",
+      "screenName" : "James Gutholm (PDC)",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "qkg5-hqnb",
+      "createdAt" : 1720717790,
+      "displayName" : "Jim Coleman",
+      "screenName" : "Jim Coleman",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "beqm-ecd8",
+      "createdAt" : 1738698255,
+      "displayName" : "Lindy Myers",
+      "screenName" : "Lindy Myers",
+      "teamId" : 1705846,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "wbgp-mrig",
+      "createdAt" : 1707850470,
+      "displayName" : "michael.dailey",
+      "screenName" : "michael.dailey",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "v65d-qje9",
+      "createdAt" : 1787266185,
+      "displayName" : "Nick Holmquist",
+      "screenName" : "Nick Holmquist",
+      "teamId" : 1705846,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "6u2g-9ajj",
+      "createdAt" : 1724341154,
+      "displayName" : "Sravya Yandamuri",
+      "screenName" : "Sravya Yandamuri",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "u89u-rx5w",
+      "createdAt" : 1701793082,
+      "displayName" : "WA Public Disclosure Commission",
+      "profileImageUrlLarge" : "/api/users/u89u-rx5w/profile_images/LARGE",
+      "profileImageUrlMedium" : "/api/users/u89u-rx5w/profile_images/THUMB",
+      "profileImageUrlSmall" : "/api/users/u89u-rx5w/profile_images/TINY",
+      "screenName" : "WA Public Disclosure Commission",
+      "teamId" : 1705846,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    } ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "79jf-2se2",
+    "createdAt" : 1738620373,
+    "displayName" : "PDC-IT",
+    "screenName" : "PDC-IT",
+    "type" : "team",
+    "members" : [ {
+      "id" : "prrr-ps5v",
+      "createdAt" : 1492022136,
+      "displayName" : "Bill King",
+      "screenName" : "Bill King",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "ux2g-av4t",
+      "createdAt" : 1724340944,
+      "displayName" : "David Metzler",
+      "screenName" : "David Metzler",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "7ufr-e4xv",
+      "createdAt" : 1707850431,
+      "displayName" : "Dillon Ching",
+      "screenName" : "Dillon Ching",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "y884-6s37",
+      "createdAt" : 1493835524,
+      "displayName" : "James Gutholm (PDC)",
+      "profileImageUrlLarge" : "/api/users/y884-6s37/profile_images/LARGE",
+      "profileImageUrlMedium" : "/api/users/y884-6s37/profile_images/THUMB",
+      "profileImageUrlSmall" : "/api/users/y884-6s37/profile_images/TINY",
+      "screenName" : "James Gutholm (PDC)",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "qkg5-hqnb",
+      "createdAt" : 1720717790,
+      "displayName" : "Jim Coleman",
+      "screenName" : "Jim Coleman",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "beqm-ecd8",
+      "createdAt" : 1738698255,
+      "displayName" : "Lindy Myers",
+      "screenName" : "Lindy Myers",
+      "teamId" : 1705846,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "wbgp-mrig",
+      "createdAt" : 1707850470,
+      "displayName" : "michael.dailey",
+      "screenName" : "michael.dailey",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "v65d-qje9",
+      "createdAt" : 1787266185,
+      "displayName" : "Nick Holmquist",
+      "screenName" : "Nick Holmquist",
+      "teamId" : 1705846,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "6u2g-9ajj",
+      "createdAt" : 1724341154,
+      "displayName" : "Sravya Yandamuri",
+      "screenName" : "Sravya Yandamuri",
+      "teamId" : 1705846,
+      "teamRole" : "owner",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    }, {
+      "id" : "u89u-rx5w",
+      "createdAt" : 1701793082,
+      "displayName" : "WA Public Disclosure Commission",
+      "profileImageUrlLarge" : "/api/users/u89u-rx5w/profile_images/LARGE",
+      "profileImageUrlMedium" : "/api/users/u89u-rx5w/profile_images/THUMB",
+      "profileImageUrlSmall" : "/api/users/u89u-rx5w/profile_images/TINY",
+      "screenName" : "WA Public Disclosure Commission",
+      "teamId" : 1705846,
+      "teamRole" : "member",
+      "type" : "interactive",
+      "flags" : [ "siteMember" ]
+    } ]
+  },
+  "tags" : [ "political finance", "elections", "campaign", "political committee" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

@@ -30,17 +30,18 @@ Every claim made to voters is something this study should test with numbers, who
 
 - **[Start: open a pre-filled issue](https://github.com/penpro/PUD-Feasibility/issues/new?template=data-submission.md&title=%5BData%5D%20Campaign%20mailer/ad%3A%20)**
 
-### A3. Total up the Prop 1 campaign money
+### A3. Update the Prop 1 campaign money after the final reports
 
-*30 min · OQ-08*
+*15 min · OQ-08*
 
-News stories say PSE spent about $2.4–2.5 million and the Yes side under $10,000. The official numbers are public at the Public Disclosure Commission. We would rather cite the filings than the headlines.
+The state filings so far (Nov 4, 2026) show PSE gave $2,318,178 to the No campaign, 96.5% of the $2,401,233 it raised. The Yes campaign raised $9,055. Committees keep filing after the election, so these totals will change, and we want the final numbers, not the pre-election ones.
 
-1. On the PDC website, find the committees for and against KPUD Proposition 1.
-2. Post each committee's name, total raised, total spent, top contributors, and the links.
+1. Once the post-election reports are filed, run: python scripts/fetch_campaign_finance.py (it archives the new filings and updates the totals).
+2. No Python? Open the two committee pages below and post their new totals raised and spent on the issue.
 
-- [WA Public Disclosure Commission](https://www.pdc.wa.gov/)
-- **[Start: open a pre-filled issue](https://github.com/penpro/PUD-Feasibility/issues/new?template=data-submission.md&title=%5BData%5D%20PDC%20campaign%20finance%20totals%20for%20KPUD%20Prop%201)**
+- [No committee on PDC (Coalition to Protect Kitsap Power)](https://my.pdc.wa.gov/registration/public/-/#/public/registration/70128)
+- [Yes committee on PDC (Unplug PSE)](https://my.pdc.wa.gov/registration/public/-/#/public/registration/70079)
+- **[Start: open a pre-filled issue](https://github.com/penpro/PUD-Feasibility/issues/new?template=data-submission.md&title=%5BData%5D%20Final%20PDC%20campaign%20totals%20for%20KPUD%20Prop%201)**
 
 ### A4. Watch a KPUD board meeting and write down the numbers
 

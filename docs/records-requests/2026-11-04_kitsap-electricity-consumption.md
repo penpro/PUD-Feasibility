@@ -94,5 +94,5 @@ Contact details checked:
 - **Puget Sound Energy**: PSE is a private company and not subject to the PRA. An informal request for
   Kitsap customer counts and MWh by rate class and month is still worth making, since PSE's own
   arguments rest on these numbers.
-- **WA Public Disclosure Commission**: primary campaign-finance records for Prop 1 (PSE's reported
-  ~$2.4M–$2.5M, OQ-08). These are online and need no request.
+- **WA Public Disclosure Commission**: primary campaign-finance records for Prop 1 (OQ-08). Done: pulled
+  from the PDC's open data on 2026-11-04 (S024); no request needed.

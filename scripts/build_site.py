@@ -28,6 +28,9 @@ from model import eia861  # noqa: E402
 from model.common import load_config, val  # noqa: E402
 from model.load import run  # noqa: E402
 
+sys.path.insert(0, str(ROOT / "scripts"))
+import fetch_campaign_finance as pdc  # noqa: E402
+
 DOCS = ROOT / "docs"
 REPO = "https://github.com/penpro/PUD-Feasibility"
 SITE_JS = DOCS / "site-data.js"
@@ -58,6 +61,7 @@ def build() -> dict:
     with ELECTION_CSV.open(encoding="utf-8") as fh:
         election = list(csv.DictReader(fh))[-1]
     run_dt = datetime.fromisoformat(election["run_datetime"])
+    money = pdc.summarize(pdc.snapshots()[-1])   # Prop 1 campaign finance (S024)
 
     res = "load.bottom_up.residential_mwh_per_customer"
     home_kwh = {c: val(cfg, res, c) * 1000 / 12 for c in ("low", "central", "high")}
@@ -116,6 +120,14 @@ def build() -> dict:
         "turnout_pct": f"{float(election['turnout']):.1%}",
         "count_time": nice_date(run_dt, with_time=True),
         "count_status": "Official (certified)" if election["official"] == "True" else "Unofficial",
+        # campaign finance (PDC, S024)
+        "pdc_pse": f"${comma(money['pse'])}",
+        "pdc_pse_share": f"{money['pse_share']:.1%}",
+        "pdc_no_raised": f"${comma(money['no_raised'])}",
+        "pdc_no_spent": f"${comma(money['no_spent'])}",
+        "pdc_yes_raised": f"${comma(money['yes_raised'])}",
+        "pdc_yes_spent": f"${comma(money['yes_spent'])}",
+        "pdc_as_of": nice_date(datetime.fromisoformat(money['snapshot'])),
         # rate context (EIA average revenue per kWh, residential)
         **{f"cents_{key}": f"{bench.loc[uid, 'res_cents_per_kwh']:.1f}" for key, uid in
            (("pse", 15500), ("jefferson", 59013), ("mason3", 15419), ("clallam", 3644),

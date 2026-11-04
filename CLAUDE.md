@@ -21,6 +21,8 @@ that defines "correct": every number is labeled VERIFIED / ESTIMATE / UNVERIFIED
 - Sources: `python scripts/sources.py build|verify`
 - Load model: `python -m model.load` → `data/processed/load/`, `modules/01_load/results.md`
 - Election: `python scripts/fetch_election_results.py` (then `sources.py build`)
+- Campaign finance: `python scripts/fetch_campaign_finance.py` (PDC via data.wa.gov, S024; committees found by
+  jurisdiction "KITSAP PUD 01", not by name; individual donors only as counts/sums). Then `sources.py build`, `build_site.py`.
 - Site: `python scripts/build_site.py` → `docs/site-data.js` + `docs/help-wanted.md` (asks live in `docs/help-wanted.yaml`).
   Page = `docs/index.html` (GitHub Pages from `/docs`, `.nojekyll`). Never type a model number into index.html; bind it with `data-k`.
   Preview: `.claude/launch.json` "site" lives in the OUTER session folder (D:\PUD Feasibility\.claude), port 8174.

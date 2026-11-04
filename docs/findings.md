@@ -56,6 +56,6 @@ inputs are labeled ASSUMPTION until gas-therm and vehicle-registration data repl
 | "Average load ~370 MW (KUOW)" | KUOW did not say "average" (F-03). | S016 |
 | GHG inventory "used kWh data supplied directly by PSE" with "the same PSE emission factor for all sectors" | The report says only "utilities that provide service to each county" and "utility-specific" factors. It names neither PSE nor a single factor. The 69/31 split is therefore conditional (OQ-02). | S006 |
 | $300k–$500k study cost on the KPUD web page | The figure is in KPUD's Fact Publication, not the web page. | S001, S002 |
-| PSE spent ~$2.4M | Axios (citing the Seattle Times) says $2.4M; KUOW says "nearly $2.5 million." PDC filings are the primary source (OQ-08). | S016, S017 |
+| PSE spent ~$2.4M | Close, but $2.4M is the whole No committee. State filings show PSE itself gave **$2,318,178** ($2.1M cash, $218K in-kind), **96.5%** of the **$2,401,233** the committee raised; it had spent $2,304,528. KUOW's "nearly $2.5 million" is high. The Yes committee, Unplug PSE, raised **$9,055** and spent $7,253. Filings through Oct 27, 2026; post-election reports will change the totals (OQ-08). | S024 (supersedes S016, S017 here) |
 | Jefferson: $103M | $103M was the 2010 agreement price, later adjusted to about $109M (PSE now cites $109M). Secondary sources only so far (OQ-11). | S018, S020 |
 | ~$1.5B acquisition estimate, low-quality source | Still unsourced. A search summary attributed $1.2B–$1.5B to a PSE consultant, but no article read contains it (OQ-07). | — |

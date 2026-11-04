@@ -11,6 +11,11 @@ anyone how to vote or what KPUD should do. PSE's strongest objections are listed
 > Not affiliated with KPUD, PSE, or any campaign. Corrections and challenges are welcome: see
 > [CONTRIBUTING.md](CONTRIBUTING.md).
 
+**Started by** Wesley Weaver ([@penpro](https://github.com/penpro)): a decade in nuclear power generation, five
+years in data centers, and ten years running a technology consulting business (engineering work and cost-benefit
+studies), now paired with a computer science degree for the data modeling. The study's credibility rests on its
+sources, not its author: every number is cited so anyone can check it.
+
 **Plain-English version for voters:** <https://penpro.github.io/PUD-Feasibility/> (source: [docs/index.html](docs/index.html))
 **What we need from you:** [Help wanted](docs/help-wanted.md), 20 specific asks sorted by who can help.
 
@@ -70,10 +75,14 @@ python scripts/build_site.py
 `build_site` regenerates the website's numbers (`docs/site-data.js`) and `docs/help-wanted.md` from the model and
 `docs/help-wanted.yaml`. A test fails if the site is out of date.
 
-Track the Prop 1 count:
+Track the Prop 1 count, and the campaign money from state filings:
 
 ```bash
 python scripts/fetch_election_results.py
+```
+
+```bash
+python scripts/fetch_campaign_finance.py
 ```
 
 ## Layout
