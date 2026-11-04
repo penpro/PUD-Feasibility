@@ -1,0 +1,108 @@
+# Single source for this public records request. Edit this file, then run:
+#   python scripts/build_records_requests.py
+# which renders
+#   1. the "Where to send it" + "Request text" block in the .md beside this file (public; blanks for your details)
+#   2. per agency: a PDF letter, its .tex source and a ready-to-paste email, into private/records-requests/
+#      (gitignored, because it carries the requester's name and contact details from private/requester.yaml)
+# Inline markup: **bold**, *italic*, `filename`.
+
+id: 2026-11-04_kitsap-electricity-consumption
+title: Kitsap County electricity consumption data (2022 GHG inventory)
+date: 2026-11-04
+re: >-
+  Public records request under chapter 42.56 RCW: electricity consumption data behind the Kitsap County 2022
+  Greenhouse Gas Emissions Analysis
+email_subject: "Public records request (RCW 42.56): Kitsap County 2022 GHG analysis electricity data"
+fee_limit: 25
+
+agencies:
+  - id: commerce
+    priority: 1
+    name: Washington State Department of Commerce
+    why: Funded and managed the county GHG analyses; its consultants collected the utility data.
+    address:
+      - Public Disclosure Officer
+      - Washington State Department of Commerce
+      - PO Box 42525
+      - Olympia, WA 98504-2525
+    email: publicdisclosure@commerce.wa.gov
+    portal: https://commercewa.govqa.us/WEBAPP/_rs/supporthome.aspx
+    checked: >-
+      commerce.wa.gov/contact/public-records-request (2026-11-04): portal recommended, mail accepted,
+      PublicDisclosure@Commerce.wa.gov listed. WAC 365-10-050(1) accepts requests by email at that address.
+    scope: >-
+      This request covers records held by the Department, including records held on its behalf by the
+      contractors that prepared the analysis.
+    email_note: >-
+      Commerce's website recommends its online portal. RCW 42.56.080(2) and WAC 365-10-050(1) also provide for
+      requests by email, so I am sending it here. If you would prefer that I re-file it through the portal,
+      please let me know.
+
+  - id: kitsap-county
+    priority: 2
+    name: Kitsap County
+    why: >-
+      Its Department of Community Development published the report and may hold the data or the consultant's
+      deliverables.
+    address:
+      - Mark Brockman, Public Records Officer
+      - Kitsap County Department of Administrative Services
+      - 614 Division St., MS-20
+      - Port Orchard, WA 98366
+    email: publicrecords@kitsap.gov
+    portal: https://kitsapcountywa.govqa.us/WEBAPP/_rs/supporthome.aspx
+    checked: >-
+      kitsap.gov/das/Pages/Public-Records.aspx (2026-11-04): email and portal both accepted; requests for all
+      departments except the Sheriff go through this office.
+    scope: >-
+      This request covers records held by any County department, in particular the Department of Community
+      Development.
+    email_note: ""
+
+intro: >-
+  Under the Washington Public Records Act, chapter 42.56 RCW, I request copies of the following records
+  relating to the *Kitsap County 2022 Greenhouse Gas Emissions Analysis* (Version 3.5.1), prepared for the
+  Washington State Department of Commerce by Cascadia Consulting Group and partners and published by Kitsap
+  County Department of Community Development as `CountyGHGAnalysisReport_Kitsap_20250630.pdf`.
+
+items:
+  - >-
+    **Electricity consumption data** (kWh or MWh) for Kitsap County for calendar year 2022, as provided by
+    Puget Sound Energy and any other electric utility (including Peninsula Light Company, Mason County PUD
+    No. 3, and the Bonneville Power Administration), broken down by sector or rate class (residential,
+    commercial, industrial, and any other categories such as street lighting), in the form received.
+  - >-
+    Any **monthly or other sub-annual** breakdown of the data in item 1, and the same data for any other years
+    collected (for example, a baseline year).
+  - >-
+    Any **customer or account counts** by sector that accompanied the data in item 1.
+  - >-
+    The **emission factors** applied to electricity in the analysis: the factor or factors used for each
+    utility (value, units, year and source, including whether upstream emissions were included) and the eGRID
+    factor used for the location-based figure of 219,570 MTCO2e. Also any calculation workbooks, ClearPath
+    exports or data summaries showing how the 828,336 MTCO2e electricity total was computed.
+  - >-
+    **Natural gas consumption data** (therms) for Kitsap County for 2022 by sector, as provided by Cascade
+    Natural Gas or any other gas utility, plus any propane and fuel oil activity data used.
+  - >-
+    **Data request letters or emails** sent to the utilities for the data above, the utilities' transmittal
+    messages, and any data-sharing, confidentiality or non-disclosure agreements covering that data.
+
+closing:
+  - >-
+    I am requesting **aggregate, sector-level totals only**. I am not seeking any individual customer's name,
+    address, account number or usage. If any responsive record contains customer-level information, please
+    redact that portion and release the remainder.
+  - >-
+    If you withhold or redact any record or portion, please cite the specific statutory exemption and briefly
+    explain how it applies, as RCW 42.56.210(3) requires, and release all reasonably segregable non-exempt
+    portions. If you intend to notify a third party under RCW 42.56.540 before release, please let me know
+    the expected timeline.
+  - >-
+    **Format:** electronic copies (original spreadsheet formats such as .xlsx or .csv preferred, or PDF) by
+    email or download link. Installments are welcome; please send item 1 first if it is ready sooner.
+  - >-
+    **Fees:** please contact me before incurring charges above ${fee_limit}.
+  - >-
+    Please confirm receipt and provide the estimated response time required by RCW 42.56.520.
+  - Thank you.

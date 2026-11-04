@@ -10,3 +10,6 @@ Thumbs.db
 ~$*.xlsx
 scratch/
 .claude/
+
+# Personal details and the letters built from them (records requests)
+private/

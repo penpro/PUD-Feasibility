@@ -9,6 +9,7 @@
 | Hand-editing `modules/*/results.md` or `data/SOURCES.md` | Never: both are generated. Edit config/sources.yaml and rerun. |
 | Copyrighted sources (news, commercial sites) | Link in `data/sources.yaml` with `archive_note`; never commit copies. |
 | Framing | Neutral: "what would it cost / what would rates be", never "vote yes/no". Test PSE's objections; do not dismiss them. |
+| `private/` | Gitignored: Wes's contact details (`requester.yaml`) and the built records-request letters. Never commit, never copy its contents into tracked files. |
 
 ## What this is
 Independent, open-source feasibility study of KPUD taking over PSE's electric service in Kitsap County.
@@ -23,6 +24,9 @@ that defines "correct": every number is labeled VERIFIED / ESTIMATE / UNVERIFIED
 - Site: `python scripts/build_site.py` → `docs/site-data.js` + `docs/help-wanted.md` (asks live in `docs/help-wanted.yaml`).
   Page = `docs/index.html` (GitHub Pages from `/docs`, `.nojekyll`). Never type a model number into index.html; bind it with `data-k`.
   Preview: `.claude/launch.json` "site" lives in the OUTER session folder (D:\PUD Feasibility\.claude), port 8174.
+- Records requests: wording lives in `docs/records-requests/<id>.yaml`. `python scripts/build_records_requests.py`
+  regenerates the public .md block (blanks) and, from `private/requester.yaml`, a PDF letter + .tex + paste-ready
+  email per agency in `private/records-requests/` (XeLaTeX via MiKTeX; Cambria for lining figures).
 - Tests: `python -m pytest -q`. Verify by reading the regenerated results.md and looking at the site, not just test passes.
 
 ## House rules (inherited, see D:\ClaudeMaster\CLAUDE_BIBLE.md)

@@ -59,6 +59,10 @@ python scripts/build_site.py
 ```
 
 ```bash
+python scripts/build_records_requests.py --md-only
+```
+
+```bash
 python -m pytest -q
 ```
 

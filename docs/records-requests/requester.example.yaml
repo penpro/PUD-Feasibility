@@ -1,0 +1,10 @@
+# Copy to private/requester.yaml (gitignored) and fill in, then run:
+#   python scripts/build_records_requests.py
+# Only name and email are needed: RCW 42.56.080 lets you file by email, and agencies deliver records there.
+# Phone and mailing address are optional (Commerce's rule, WAC 365-10-050, says a request "should" include them).
+name: Your Name
+email: you@example.com
+phone: ""
+address: []          # e.g. ["123 Main St", "Bremerton, WA 98337"]
+affiliation: Kitsap Public Power Feasibility Study (independent, open source)
+affiliation_url: https://github.com/penpro/PUD-Feasibility
