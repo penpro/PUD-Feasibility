@@ -17,7 +17,8 @@ studies), now paired with a computer science degree for the data modeling. The s
 sources, not its author: every number is cited so anyone can check it.
 
 **Plain-English version for voters:** <https://penpro.github.io/PUD-Feasibility/> (source: [docs/index.html](docs/index.html))
-**What we need from you:** [Help wanted](docs/help-wanted.md), 20 specific asks sorted by who can help.
+**What we need from you:** [Help wanted](docs/help-wanted.md), 21 specific asks sorted by who can help.
+**What we still don't know:** [the biggest gaps, each with a plan to close it](docs/open-questions.md#plans-to-close-the-gaps).
 
 ## Status (2026-11-04)
 

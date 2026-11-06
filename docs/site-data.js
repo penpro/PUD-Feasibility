@@ -64,10 +64,18 @@ window.SITE_DATA = {
   "owners_dividends": "$62.9 million",
   "owners_contrib_2024": "$292.8 million",
   "owners_net_cash_3yr": "$45.7 million",
+  "bpa_new_total": "200",
+  "bpa_new_per_period": "50",
+  "bpa_first_share": "21%",
+  "bpa_first_share_low": "16%",
+  "bpa_first_share_high": "24%",
+  "bpa_cap_share": "82%",
+  "bpa_cap_share_low": "64%",
+  "bpa_cap_share_high": "97%",
   "rr_sent": "Nov 4, 2026, 2:30 PM",
   "rr_due": "Thu, Nov 12",
   "rr_agencies": "2",
-  "as_of": "Nov 4, 2026",
+  "as_of": "Nov 5, 2026",
   "study_version": "0.1.0"
  },
  "charts": {
@@ -554,6 +562,7 @@ window.SITE_DATA = {
    "how": [
     "Find the UTC order approving PSE's sale to Jefferson PUD.",
     "Find Jefferson PUD's audited financial statements (State Auditor's Office) and bond documents (EMMA).",
+    "Check the Jefferson County Auditor's election records from 2009 through 2013 for any PUD bond measure.",
     "Post links with page numbers for the purchase price, adjustments, separation costs and financing."
    ],
    "effort": "1–2 hours",
@@ -602,10 +611,11 @@ window.SITE_DATA = {
    "group": "experts",
    "priority": "top",
    "title": "How much cheap federal hydropower could a new PUD actually get?",
-   "why": "This may be the biggest single factor in whether bills go up or down. PSE says a new PUD would start with none. KUOW reported that public utilities can get 200 megawatts. Both can't be fully right, so we need BPA's actual rules.",
+   "why": "This may be the biggest single factor in whether bills go up or down. BPA's policy answers part of it: new public utilities share a limit of 200 average megawatts through 2044, with no more than 50 added in any two-year rate period, first come, first served. We still need to know whether BPA would count KPUD as a new public, how much of the limit would be left, and what Tier 2 power would cost.",
    "how": [
-    "Find BPA's \"Provider of Choice\" policy and contract documents covering new public utilities.",
-    "Post the rule, the amount, the timeline, and the document and page number."
+    "If you know BPA contracts, tell us how BPA would treat an existing PUD that starts electric service, with the document and page number.",
+    "Point us to any published list of new-public requests or the balance left in the limit (BPA's \"Above-CHWM Load Process\").",
+    "Point us to BPA's current Tier 2 rate."
    ],
    "effort": "1–2 hours",
    "oq": [
@@ -615,8 +625,12 @@ window.SITE_DATA = {
    "issue_title": "[Data] BPA Tier 1 rules for a new public utility",
    "links": [
     {
-     "text": "Bonneville Power Administration",
-     "url": "https://www.bpa.gov/"
+     "text": "BPA Provider of Choice Policy",
+     "url": "https://bpa.gov/-/media/Aep/power/provider-of-choice/provider-of-choice-policy-march-2024.pdf"
+    },
+    {
+     "text": "BPA CHWM Implementation Policy",
+     "url": "https://bpa.gov/-/media/Aep/power/provider-of-choice/chwm-implementation-policy-20250814.pdf"
     }
    ],
    "issue_url": "https://github.com/penpro/PUD-Feasibility/issues/new?template=data-submission.md&title=%5BData%5D%20BPA%20Tier%201%20rules%20for%20a%20new%20public%20utility"
@@ -695,6 +709,26 @@ window.SITE_DATA = {
    "links": []
   },
   {
+   "id": "D6",
+   "group": "experts",
+   "priority": "high",
+   "title": "Would a takeover need a second public vote?",
+   "why": "Prop 1 did not approve financing, and KPUD's fact sheet promises no second vote. State law sends some general debt to voters, but its revenue-bond section mentions no vote. That is our reading of the statute, and a lawyer should check it.",
+   "how": [
+    "If you know Washington municipal finance, tell us which debt would need a vote under RCW 54.24.018, with citations.",
+    "If you know how Jefferson PUD financed its takeover, and whether it held a second vote, point us to the record."
+   ],
+   "effort": "1 hour",
+   "oq": [
+    "OQ-16",
+    "OQ-11"
+   ],
+   "template": "data-submission.md",
+   "issue_title": "[Data] Second vote and PUD bond authority",
+   "issue_url": "https://github.com/penpro/PUD-Feasibility/issues/new?template=data-submission.md&title=%5BData%5D%20Second%20vote%20and%20PUD%20bond%20authority",
+   "links": []
+  },
+  {
    "id": "E1",
    "group": "data",
    "priority": "normal",
@@ -750,6 +784,330 @@ window.SITE_DATA = {
    "template": "correction.md",
    "issue_title": "[Correction] ",
    "issue_url": "https://github.com/penpro/PUD-Feasibility/issues/new?template=correction.md&title=%5BCorrection%5D%20",
+   "links": []
+  }
+ ],
+ "gap_groups": [
+  {
+   "id": "power",
+   "title": "Where the power would come from"
+  },
+  {
+   "id": "law",
+   "title": "What the law and KPUD would require"
+  },
+  {
+   "id": "cost",
+   "title": "What a takeover would cost"
+  },
+  {
+   "id": "load",
+   "title": "How much electricity Kitsap uses"
+  }
+ ],
+ "gaps": [
+  {
+   "oq": [
+    "OQ-06"
+   ],
+   "group": "power",
+   "status": "Partly answered",
+   "question": "How much cheap federal hydropower could a new Kitsap utility actually get?",
+   "known": "BPA's policy opens its lowest-priced (Tier 1) power to new public utilities, with limits: no more than 50 average megawatts added in any two-year rate period, and 200 in total through September 2044. All new utilities share that total, first come, first served. For Kitsap, that would cover about 21% of average use at first and at most about 82% roughly six years later.",
+   "unknown": "Whether BPA would count KPUD as a \"new public\", since BPA's definition says \"newly formed\" and KPUD already exists. How much of the 200 would be left. What BPA's Tier 2 power and other sellers' power would cost.",
+   "plan": [
+    "Ask BPA in writing whether KPUD would qualify, how much of the limit is left, and the earliest start date. BPA wants a request at least three years before service begins.",
+    "Ask Jefferson PUD how its 2013 start with BPA worked.",
+    "Price Tier 1, Tier 2 and market power in Part 2, using BPA's current rate schedules."
+   ],
+   "who": "The study team writes to BPA and Jefferson PUD. People who know BPA contracts can help (D1).",
+   "closed_when": "BPA answers in writing, and Part 2 prices both tiers.",
+   "asks": [
+    "D1"
+   ],
+   "links": [
+    {
+     "text": "BPA Provider of Choice Policy",
+     "url": "https://bpa.gov/-/media/Aep/power/provider-of-choice/provider-of-choice-policy-march-2024.pdf"
+    },
+    {
+     "text": "BPA CHWM Implementation Policy",
+     "url": "https://bpa.gov/-/media/Aep/power/provider-of-choice/chwm-implementation-policy-20250814.pdf"
+    }
+   ]
+  },
+  {
+   "oq": [
+    "OQ-18"
+   ],
+   "group": "power",
+   "status": "Open",
+   "question": "How much would bills move with natural gas and carbon prices, at KPUD and at PSE?",
+   "known": "PSE's supply plan includes 665 MW from Grays Harbor and 700 MW from a converted Centralia plant, and its annual report says power-cost swings are split between PSE and customers on a graduated scale. KPUD has chosen no power source.",
+   "unknown": "How much of a new utility's power beyond BPA's limits would depend on gas. How much of PSE's swings reach customers' bills.",
+   "plan": [
+    "Apply the same gas and carbon price ranges to KPUD and PSE in Part 2, using actual auction prices and only the years they existed.",
+    "Read PSE's Power Cost Adjustment tariff (Schedule 95) and annual reports for the sharing bands.",
+    "Carry the result into the Part 6 bill comparison."
+   ],
+   "who": "The study team.",
+   "closed_when": "Part 2 shows a range for both sides, and Part 6 uses it.",
+   "asks": [],
+   "links": []
+  },
+  {
+   "oq": [
+    "OQ-20"
+   ],
+   "group": "power",
+   "status": "Open",
+   "question": "What did natural gas cost at the Northwest Sumas hub each year, including 2022?",
+   "known": "EIA reports averages of $1.87 per MMBtu for 2024 through October and $1.59 for 2025 through August, both historic lows. A public chart uses $7.94 for 2022, which we could not confirm.",
+   "unknown": "Full-year averages. The hub data is licensed, so EIA's articles only give pieces of it.",
+   "plan": [
+    "Ask Northwest Power Council staff for the annual values behind the Sumas price history in its 2023 forecast.",
+    "Check the gas price assumptions in PSE's rate case (docket UE-260005) and its resource plan.",
+    "Ask anyone with licensed price data for annual averages only."
+   ],
+   "who": "The study team. Anyone with licensed gas price data can help.",
+   "closed_when": "Annual averages for 2021 through 2025 come from a citable source, with the 2022 figure confirmed or corrected.",
+   "links": [
+    {
+     "text": "Northwest Power Council 2023 gas price forecast",
+     "url": "https://www.nwcouncil.org/fs/18551/2023_12_p2.pdf"
+    }
+   ],
+   "asks": []
+  },
+  {
+   "oq": [
+    "OQ-21"
+   ],
+   "group": "power",
+   "status": "Waiting on regulator",
+   "question": "Will regulators approve PSE's Centralia gas deal, and what kind of plant will it be?",
+   "known": "PSE asked the state regulator (WUTC) in its 2026 rate case to find the deal prudent and let it recover the costs from customers. We found no decision yet. PSE's annual report calls the converted plant combined cycle, while TransAlta describes a coal-to-gas conversion.",
+   "unknown": "The regulator's decision. The plant's type and heat rate, which set how much gas it burns. Whether a reported federal (FERC) rejection of a related TransAlta tariff changes the deal; we haven't confirmed that report.",
+   "plan": [
+    "Watch WUTC dockets UE-260005 and UG-260006 for the final order.",
+    "Read PSE's power-cost testimony (Exh. BDM-1CT) and the public parts of its Centralia documents (Exh. CJP-25) for the plant's design.",
+    "Check FERC docket ER26-2422."
+   ],
+   "who": "The study team. Anyone can watch the docket and tell us when the order lands.",
+   "closed_when": "A WUTC order is on file, and a filing states the plant's type or heat rate.",
+   "links": [
+    {
+     "text": "PSE testimony in the rate case",
+     "url": "https://apiproxy.utc.wa.gov/cases/GetDocument?docID=92&year=2026&docketNumber=260005"
+    }
+   ],
+   "asks": []
+  },
+  {
+   "oq": [
+    "OQ-22"
+   ],
+   "group": "power",
+   "status": "Open",
+   "question": "How many no-cost carbon allowances would a new utility get?",
+   "known": "Consumer-owned and investor-owned electric utilities are eligible for no-cost allowances, which state law says are meant to limit the cost to customers. Ecology publishes a schedule through 2030, revised in October 2026.",
+   "unknown": "How a utility that starts after the schedule was set would be treated. How much allowances offset carbon costs per kWh.",
+   "plan": [
+    "Work out allowances per kWh for PSE and similar PUDs from Ecology's data set.",
+    "Ask Ecology in writing how a newly serving utility would enter the schedule.",
+    "Net the result out of carbon costs in Part 2."
+   ],
+   "who": "The study team.",
+   "closed_when": "Ecology answers in writing, and the per-kWh figures are in Part 2.",
+   "links": [
+    {
+     "text": "Ecology no-cost allowance page",
+     "url": "https://ecology.wa.gov/air-climate/climate-commitment-act/cap-and-invest/no-cost-allowances"
+    }
+   ],
+   "asks": []
+  },
+  {
+   "oq": [
+    "OQ-19"
+   ],
+   "group": "power",
+   "status": "Open",
+   "question": "What would removing the lower Snake River dams do to BPA's rates?",
+   "known": "Estimates of replacing the dams' benefits range from $10 billion to $31 billion, mostly electricity and grid services. The Army Corps doesn't consider itself free to breach them without action from Congress, and we found no sign of that.",
+   "unknown": "What removal would mean for BPA's rates, and when, if it ever happens.",
+   "plan": [
+    "Read the August 2022 Benefit Replacement Report and the studies it draws on.",
+    "Turn the range into a BPA rate effect in Part 2, labeled as a long-term sensitivity.",
+    "Track the federal lawsuit and any legislation."
+   ],
+   "who": "The study team.",
+   "closed_when": "Part 2 shows a sourced rate range.",
+   "links": [
+    {
+     "text": "Congressional Research Service report",
+     "url": "https://www.everycrsreport.com/files/2026-07-31_R48089_bad001768c585fb5797f80ad80ecc088f185947b.html"
+    }
+   ],
+   "asks": []
+  },
+  {
+   "oq": [
+    "OQ-16"
+   ],
+   "group": "law",
+   "status": "Open",
+   "question": "Would a takeover need a second public vote?",
+   "known": "Prop 1 did not approve financing, and KPUD promises no second vote. State law sends some general debt to voters, but its revenue-bond section mentions no vote. KUOW paraphrased KPUD's general manager as saying a takeover would likely need a voter-approved bond.",
+   "unknown": "Whether a takeover paid for with revenue bonds would need a public vote. Our reading of the statute is not legal advice.",
+   "plan": [
+    "Ask KPUD in writing how it reads RCW 54.24.018 for a takeover.",
+    "Check how other Washington PUDs sold electric revenue bonds, using their bond documents on EMMA.",
+    "Have a Washington municipal finance lawyer check our reading (D6)."
+   ],
+   "who": "The study team writes to KPUD. This needs a lawyer's help (D6).",
+   "closed_when": "KPUD's lawyers or a bond attorney answer in writing, with citations.",
+   "asks": [
+    "D6"
+   ],
+   "links": [
+    {
+     "text": "RCW 54.24.018",
+     "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=54.24.018"
+    }
+   ]
+  },
+  {
+   "oq": [
+    "OQ-17"
+   ],
+   "group": "law",
+   "status": "Open",
+   "question": "Could KPUD study this without a vote, and who would pay?",
+   "known": "State law lets a PUD make studies for electric systems and requires a vote only to build or buy. KPUD says voting first was its own choice, because of the study's cost and past votes elsewhere. A new vote on authority couldn't happen before the 2028 general election.",
+   "unknown": "Whether anything stops KPUD from studying after a \"No\". What money could pay for it; KPUD's fact sheet doesn't say how the study would be funded.",
+   "plan": [
+    "Ask KPUD both questions in writing.",
+    "Review KPUD's board recordings and slides from before Prop 1 (OQ-14)."
+   ],
+   "who": "The study team.",
+   "closed_when": "KPUD answers in writing.",
+   "links": [
+    {
+     "text": "RCW 54.16.010",
+     "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=54.16.010"
+    },
+    {
+     "text": "RCW 54.08.070",
+     "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=54.08.070"
+    }
+   ],
+   "asks": []
+  },
+  {
+   "oq": [
+    "OQ-07"
+   ],
+   "group": "cost",
+   "status": "Open",
+   "question": "What would it cost to buy PSE's Kitsap equipment?",
+   "known": "A $1.2–1.5 billion figure keeps getting repeated, but we have found no original source for it. PSE's own release gives no Kitsap estimate.",
+   "unknown": "The actual value, and what it would cost to separate Kitsap from PSE's system.",
+   "plan": [
+    "Trace where the repeated figure came from (A1).",
+    "Value Kitsap's equipment from PSE's federal and state filings in Part 3.",
+    "Model a court-set price and separation costs, tested against Jefferson County's experience."
+   ],
+   "who": "Anyone can help trace the figure (A1). The study team builds Part 3.",
+   "closed_when": "The figure is sourced or retired, and Part 3 publishes a range.",
+   "asks": [
+    "A1"
+   ],
+   "links": []
+  },
+  {
+   "oq": [
+    "OQ-11"
+   ],
+   "group": "cost",
+   "status": "Open",
+   "question": "How was Jefferson PUD's takeover paid for, and was there a second vote?",
+   "known": "News coverage reports a $103 million agreement that rose to about $109 million, with most of the money from a federal USDA loan, after a 2008 vote gave the PUD authority.",
+   "unknown": "The final loan and bond terms, the separation costs, and whether voters were asked again. We have found no record of a second vote, but we haven't ruled one out.",
+   "plan": [
+    "Pull the WUTC order, Jefferson PUD's audited statements (State Auditor) and its bond documents (EMMA).",
+    "Check the Jefferson County Auditor's election records from 2009 through 2013 for any PUD bond measure.",
+    "Ask Jefferson PUD directly. State public records law applies."
+   ],
+   "who": "Records help is wanted (C4).",
+   "closed_when": "Primary documents show the financing, and election records show whether a second vote happened.",
+   "asks": [
+    "C4"
+   ],
+   "links": []
+  },
+  {
+   "oq": [
+    "OQ-01",
+    "OQ-02"
+   ],
+   "group": "load",
+   "status": "Requests sent",
+   "question": "How much electricity does Kitsap actually use, measured rather than estimated?",
+   "known": "Our estimate is about 2.04 TWh a year (range 1.74–2.60), built from indirect data.",
+   "unknown": "The measured kWh behind the county's 2022 greenhouse gas inventory, by sector, and which emission factor it used.",
+   "plan": [
+    "Records requests went to Commerce and Kitsap County on Nov 4, 2026, 2:30 PM. First replies are due by Thu, Nov 12.",
+    "Log each reply on this site and follow up on any delay.",
+    "Replace the back-calculation with the measured numbers."
+   ],
+   "who": "The study team, waiting on the two agencies.",
+   "closed_when": "Measured kWh by sector is on file and in the model.",
+   "asks": [
+    "C2"
+   ],
+   "links": []
+  },
+  {
+   "oq": [
+    "OQ-03"
+   ],
+   "group": "load",
+   "status": "Open",
+   "question": "How many PSE customers are in Kitsap, by type?",
+   "known": "PSE says about 130,000. That number is rounded and comes from PSE's own press release.",
+   "unknown": "The exact count, split between homes and businesses.",
+   "plan": [
+    "Check PSE's filings with the state regulator and its community reports.",
+    "Ask PSE directly.",
+    "If neither gives the count, file a records request with the regulator."
+   ],
+   "who": "The study team. Records help is welcome (C5).",
+   "closed_when": "A filed or agency count by customer type is in the model.",
+   "asks": [
+    "C5"
+   ],
+   "links": []
+  },
+  {
+   "oq": [
+    "OQ-05"
+   ],
+   "group": "load",
+   "status": "Open",
+   "question": "What is Kitsap's actual peak demand?",
+   "known": "Our range is 342–738 MW, taken from neighboring utilities' patterns rather than Kitsap measurements. Peak demand sets how much equipment and transmission a utility needs.",
+   "unknown": "The measured Kitsap peak, and what a severe winter would do to it.",
+   "plan": [
+    "Read PSE's Kitsap non-wires-alternatives request for proposals and its area load forecasts.",
+    "Ask the state regulator for area load data through a records request.",
+    "Check BPA's transmission planning documents."
+   ],
+   "who": "The study team. Records help is welcome (C1).",
+   "closed_when": "A measured or filed Kitsap-area peak, adjusted for weather, is in the model.",
+   "asks": [
+    "C1"
+   ],
    "links": []
   }
  ],

@@ -58,12 +58,14 @@ header.top { border-bottom: 1px solid var(--border); background: var(--surface);
 header.top .wrap { display: flex; align-items: center; gap: 12px; min-height: 56px; max-width: 1080px; }
 .brand { font-weight: 700; font-size: 17px; color: var(--ink); text-decoration: none; display: flex; gap: 8px; align-items: center; white-space: nowrap; }
 .brand svg { flex: none; }
-nav.jump { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; flex: 1; justify-content: flex-end; }
+nav.jump { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; flex: 1; }
+nav.jump a:first-child { margin-left: auto; }
 nav.jump::-webkit-scrollbar { display: none; }
 nav.jump a { font-size: 15px; color: var(--ink-2); text-decoration: none; padding: 6px 10px; border-radius: 6px; white-space: nowrap; }
 nav.jump a:hover { background: var(--wash); color: var(--ink); }
 .theme-btn { flex: none; background: none; border: 1px solid var(--border); color: var(--ink-2); border-radius: 8px; width: 36px; height: 36px; cursor: pointer; font-size: 16px; }
 @media (max-width: 720px) { nav.jump { display: none; } header.top .wrap { justify-content: space-between; } }
+@media (min-width: 721px) and (max-width: 1120px) { .brand { font-size: 0; gap: 0; } nav.jump a { padding: 6px 7px; } }
 
 .hero { padding: 48px 0 32px; }
 .pill { display: inline-block; font-size: 14px; color: var(--ink-2); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; background: var(--surface); }
@@ -224,6 +226,17 @@ details.faq { background: var(--card); border: 1px solid var(--border); border-r
 details.faq summary { cursor: pointer; font-weight: 600; }
 details.faq p { margin: 10px 0 0; }
 
+/* what we still don't know */
+.gap-count { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 0; }
+.gap-h { font-size: 19px; margin: 24px 0 10px; }
+details.gap summary { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; }
+details.gap summary::-webkit-details-marker { margin-right: 6px; }
+details.gap .gap-q { flex: 1 1 280px; }
+details.gap .gap-lead { font-weight: 650; }
+details.gap ol { margin: 6px 0 0; padding-left: 22px; }
+details.gap ol li { margin-bottom: 4px; }
+details.gap .links { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin-top: 12px; font-size: 15px; }
+
 footer { border-top: 1px solid var(--border); padding: 28px 0 48px; font-size: 15px; color: var(--ink-2); }
 footer a { color: var(--ink-2); }
 </style>
@@ -238,7 +251,7 @@ footer a { color: var(--ink-2); }
     </a>
     <nav class="jump" aria-label="Sections">
       <a href="#vote">Prop 1</a><a href="#how-much">How much power</a><a href="#bills">Your bill</a>
-      <a href="#arguments">Arguments</a><a href="#help">Help wanted</a><a href="#faq">FAQ</a>
+      <a href="#arguments">Arguments</a><a href="#unknowns">Unknowns</a><a href="#help">Help wanted</a><a href="#faq">FAQ</a>
     </nav>
     <button class="theme-btn" id="theme" type="button" aria-label="Switch light or dark mode" title="Light / dark">◐</button>
   </div>
@@ -417,7 +430,7 @@ footer a { color: var(--ink-2); }
     <div>
       <div class="side-h">Concerns raised by PSE</div>
       <div class="card arg"><div class="claim-t">"KPUD has no public plan to pay for, run or power a utility for 130,000+ customers."</div><div class="test"><b>Test:</b> this project is building those numbers in public, one part at a time.</div></div>
-      <div class="card arg"><div class="claim-t">"A new PUD would lose access to cheap federal hydropower and start with none."</div><div class="test"><b>Test:</b> BPA's actual rules for new public utilities (Part 2; help wanted D1).</div></div>
+      <div class="card arg"><div class="claim-t">"A new PUD would lose access to cheap federal hydropower and start with none."</div><div class="test"><b>First result:</b> partly right. A new PUD would start with no allocation, but BPA's policy lets a new public utility add up to <span data-k="bpa_new_per_period"></span> average megawatts per rate period, with at most <span data-k="bpa_new_total"></span> in total, shared by all new utilities. BPA still has to say whether KPUD would qualify (Part 2; <a href="#unknowns">what's still unknown</a>).</div></div>
       <div class="card arg"><div class="claim-t">"Buying PSE's system would be very expensive. In Jefferson County, supporters estimated $47 million and it cost $109 million."</div><div class="test"><b>Test:</b> value Kitsap's equipment from PSE's own regulatory filings, and get Jefferson's original documents (Part 3; C4).</div></div>
       <div class="card arg"><div class="claim-t">"KPUD has never run an electric utility, let alone one this size."</div><div class="test"><b>Test:</b> staffing and cost benchmarks from utilities of similar size (Part 5; D4).</div></div>
       <div class="card arg"><div class="claim-t">"PSE has 70+ employees and 50+ contractors in Kitsap and can bring crews from across the West after storms."</div><div class="test"><b>Test:</b> crew sizing, mutual-aid agreements and federal outage records for PSE vs. public utilities (Part 5).</div></div>
@@ -426,11 +439,19 @@ footer a { color: var(--ink-2); }
     <div>
       <div class="side-h">Points raised by supporters</div>
       <div class="card arg"><div class="claim-t">"PSE rates are rising fast." PSE has asked for residential increases of about 30% over three years, as reported by Axios and KUOW.</div><div class="test"><b>Test:</b> the bill comparison uses PSE's filed and approved increases from the state regulator (Part 6).</div></div>
-      <div class="card arg"><div class="claim-t">"Public utilities get first call on cheap federal hydropower." BPA must give preference to public utilities.</div><div class="test"><b>Test:</b> the same BPA question as PSE's concern above, from the other side (Part 2; D1).</div></div>
+      <div class="card arg"><div class="claim-t">"Public utilities get first call on cheap federal hydropower." BPA must give preference to public utilities.</div><div class="test"><b>First result:</b> partly right, within limits. If KPUD qualified, BPA's limits would cover about <span data-k="bpa_first_share"></span> of Kitsap's average use at first and at most about <span data-k="bpa_cap_share"></span> later. More than that from BPA would be at its higher-priced Tier 2 rate (Part 2; <a href="#unknowns">what's still unknown</a>).</div></div>
       <div class="card arg"><div class="claim-t">"A PUD is run by locally elected commissioners, in public meetings, under public-records law."</div><div class="test"><b>Test:</b> that's not a dollar question. We note it, and voters weigh it.</div></div>
       <p class="small">Sources: PSE press release (July 28, 2026); KUOW (Oct 30, 2026); Axios (Oct 29, 2026); KPUD Fact Publication (Aug 2026). Know a claim we missed, from either side? <a href="#help">Send it (A2).</a></p>
     </div>
   </div>
+</div></section>
+
+<section id="unknowns"><div class="wrap">
+  <h2>What we still don't know</h2>
+  <p>These are the biggest gaps in this study, and in the debate over Prop 1. Open any one to see what we know, what we don't, the plan to close it, and what will count as closed. Each gap stays here until that happens.</p>
+  <div class="gap-count" id="gap-count"></div>
+  <div id="gaps"></div>
+  <p class="small" style="margin-top:16px">Our readings of state law are not legal advice. See something wrong or know the answer? <a href="#help">Tell us.</a> Full list: <a id="open-q-link" href="#">open questions on GitHub</a>.</p>
 </div></section>
 
 <section id="help"><div class="wrap wide">
@@ -457,7 +478,7 @@ footer a { color: var(--ink-2); }
 <section id="faq"><div class="wrap">
   <h2>Questions</h2>
   <details class="faq"><summary>Who made this? Is it for or against public power?</summary><p>Wesley Weaver started it: a decade in nuclear power generation, five years in data centers, and ten years running a technology consulting business doing engineering work and cost-benefit studies, now paired with a computer science degree for the data modeling. It's independent and open source, not affiliated with Kitsap PUD, PSE or any campaign.</p><p>The study isn't for or against public power. It answers "what would it cost, and what would bills look like," and tests claims from both sides the same way. You don't have to trust the author: every number is sourced, so you can check it yourself.</p></details>
-  <details class="faq"><summary>Prop 1 looks like it's failing. Why keep going?</summary><p>If "No" holds, KPUD's own study stops. The underlying questions don't: PSE's rate increases, future proposals, and other communities weighing the same choice. Public, checkable numbers help whatever comes next.</p></details>
+  <details class="faq"><summary>Prop 1 looks like it's failing. Why keep going?</summary><p>If "No" holds, KPUD says its own study won't move forward. That order was KPUD's choice: it decided to ask voters first because of the study's cost and past votes elsewhere. State law doesn't appear to require a vote just to study the idea, and a new vote on authority couldn't happen before the 2028 general election. The underlying questions don't go away: PSE's rate increases, future proposals, and other communities weighing the same choice. Public, checkable numbers help whatever comes next.</p></details>
   <details class="faq"><summary>Can I trust these numbers?</summary><p>Don't take our word for it. Every number is labeled, sourced and reproducible from public files, and the code that produces it is public. If you find a mistake, <a href="#help">report it (E3)</a>. Corrections are part of the project.</p></details>
   <details class="faq"><summary>What's a kWh, a megawatt, a terawatt-hour?</summary><p>A <strong>kWh</strong> (kilowatt-hour) is the unit on your bill. A <strong>megawatt</strong> (MW) is 1,000 kilowatts of power at one moment; utilities size wires and power contracts in MW. A <strong>terawatt-hour</strong> (TWh) is a billion kWh, the scale of a whole county's yearly use.</p></details>
   <details class="faq"><summary>Why does peak demand matter so much?</summary><p>Power lines, substations and some power contracts have to handle the single highest-demand hour of the year, usually a cold winter evening. Average use tells you how much energy to buy; the peak tells you how big the system has to be. We don't have Kitsap's real peak yet (help wanted C1).</p></details>
@@ -854,6 +875,51 @@ footer a { color: var(--ink-2); }
     });
   }
   renderAsks();
+
+  // ---- What we still don't know (docs/gaps.yaml)
+  var el = function (tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text !== undefined) n.textContent = text;
+    return n;
+  };
+  var labeled = function (label, text) {
+    var p = el("p");
+    p.appendChild(el("span", "gap-lead", label + " "));
+    p.appendChild(document.createTextNode(text));
+    return p;
+  };
+  var oqUrl = D.repo + "/blob/main/docs/open-questions.md";
+  document.getElementById("open-q-link").href = oqUrl;
+  var counts = {};
+  D.gaps.forEach(function (g) { counts[g.status] = (counts[g.status] || 0) + 1; });
+  var countBox = document.getElementById("gap-count");
+  Object.keys(counts).forEach(function (s) { countBox.appendChild(el("span", "badge", s + ": " + counts[s])); });
+  var gapBox = document.getElementById("gaps");
+  D.gap_groups.forEach(function (group) {
+    gapBox.appendChild(el("h3", "gap-h", group.title));
+    D.gaps.filter(function (g) { return g.group === group.id; }).forEach(function (g) {
+      var d = el("details", "faq gap");
+      var s = el("summary");
+      s.appendChild(el("span", "gap-q", g.question));
+      s.appendChild(el("span", "badge", g.status));
+      d.appendChild(s);
+      d.appendChild(labeled("What we know:", g.known));
+      d.appendChild(labeled("Still unknown:", g.unknown));
+      var pl = el("p"); pl.appendChild(el("span", "gap-lead", "Plan to close it:")); d.appendChild(pl);
+      var ol = el("ol");
+      g.plan.forEach(function (step) { ol.appendChild(el("li", "", step)); });
+      d.appendChild(ol);
+      d.appendChild(labeled("Who:", g.who));
+      d.appendChild(labeled("Closed when:", g.closed_when));
+      var lk = el("div", "links");
+      g.links.forEach(function (l) { var a = el("a", "", l.text + " ↗"); a.href = l.url; a.rel = "noopener"; lk.appendChild(a); });
+      g.oq.forEach(function (id) { var o = el("a", "oq", id); o.href = oqUrl; o.title = "Open question " + id; lk.appendChild(o); });
+      g.asks.forEach(function (id) { var o = el("a", "oq", "Help: " + id); o.href = "#help"; lk.appendChild(o); });
+      d.appendChild(lk);
+      gapBox.appendChild(d);
+    });
+  });
 })();
 </script>
 </body>

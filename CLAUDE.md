@@ -25,6 +25,8 @@ that defines "correct": every number is labeled VERIFIED / ESTIMATE / UNVERIFIED
   jurisdiction "KITSAP PUD 01", not by name; individual donors only as counts/sums). Then `sources.py build`, `build_site.py`.
 - Site: `python scripts/build_site.py` → `docs/site-data.js` + `docs/help-wanted.md` (asks live in `docs/help-wanted.yaml`).
   Page = `docs/index.html` (GitHub Pages from `/docs`, `.nojekyll`). Never type a model number into index.html; bind it with `data-k`.
+  Unknowns live in `docs/gaps.yaml`: `build_site.py` renders the site's "What we still don't know" section and the generated
+  block in `docs/open-questions.md`. Every open P1 question must appear there, and a gap leaves only when its `closed_when` is true.
   Preview: `.claude/launch.json` "site" lives in the OUTER session folder (D:\PUD Feasibility\.claude), port 8174.
 - Records requests: wording lives in `docs/records-requests/<id>.yaml`. `python scripts/build_records_requests.py`
   regenerates the public .md block (blanks) and, from `private/requester.yaml`, a PDF letter + .tex + paste-ready
@@ -47,3 +49,9 @@ Honest verdicts. Decisive on small calls, surface true forks. Local/free/offline
   in raw HTML and breaks the hashes on clone.
 - 2026-11-04: Run Python that reads downloaded files with `-P` (not `-I`: `-I` hides user site-packages
   such as pandas and fitz on this machine).
+- 2026-11-05: Prop 1 was a vote on authority and funded nothing. KPUD chose to vote before studying (S002 p.3), and
+  RCW 54.16.010 allows a study without a vote (S026). Say "a vote tied to a study", never "blocked the study" or
+  "the study Prop 1 would fund". `tests/test_prop1_debate.py` enforces this on the public docs.
+- 2026-11-05: WA carbon has more than one price a quarter. Use settlement prices from Ecology's own reports: Sept 2025
+  settled at $64.30, while $60.43 was the fixed price for that fall's reserve auctions (S028). Search-result summaries
+  and secondary write-ups can mix these up, so check the primary document before quoting a price.

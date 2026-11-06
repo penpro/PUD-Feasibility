@@ -143,7 +143,8 @@ Jefferson County took over from PSE in 2013, the only recent Washington example.
 
 1. Find the UTC order approving PSE's sale to Jefferson PUD.
 2. Find Jefferson PUD's audited financial statements (State Auditor's Office) and bond documents (EMMA).
-3. Post links with page numbers for the purchase price, adjustments, separation costs and financing.
+3. Check the Jefferson County Auditor's election records from 2009 through 2013 for any PUD bond measure.
+4. Post links with page numbers for the purchase price, adjustments, separation costs and financing.
 
 - [WA State Auditor reports](https://sao.wa.gov/)
 - [EMMA municipal bond documents](https://emma.msrb.org/)
@@ -169,12 +170,14 @@ Point us to the rule, the filing or the page number.
 
 *1–2 hours · 🔴 most needed · OQ-06*
 
-This may be the biggest single factor in whether bills go up or down. PSE says a new PUD would start with none. KUOW reported that public utilities can get 200 megawatts. Both can't be fully right, so we need BPA's actual rules.
+This may be the biggest single factor in whether bills go up or down. BPA's policy answers part of it: new public utilities share a limit of 200 average megawatts through 2044, with no more than 50 added in any two-year rate period, first come, first served. We still need to know whether BPA would count KPUD as a new public, how much of the limit would be left, and what Tier 2 power would cost.
 
-1. Find BPA's "Provider of Choice" policy and contract documents covering new public utilities.
-2. Post the rule, the amount, the timeline, and the document and page number.
+1. If you know BPA contracts, tell us how BPA would treat an existing PUD that starts electric service, with the document and page number.
+2. Point us to any published list of new-public requests or the balance left in the limit (BPA's "Above-CHWM Load Process").
+3. Point us to BPA's current Tier 2 rate.
 
-- [Bonneville Power Administration](https://www.bpa.gov/)
+- [BPA Provider of Choice Policy](https://bpa.gov/-/media/Aep/power/provider-of-choice/provider-of-choice-policy-march-2024.pdf)
+- [BPA CHWM Implementation Policy](https://bpa.gov/-/media/Aep/power/provider-of-choice/chwm-implementation-policy-20250814.pdf)
 - **[Start: open a pre-filled issue](https://github.com/penpro/PUD-Feasibility/issues/new?template=data-submission.md&title=%5BData%5D%20BPA%20Tier%201%20rules%20for%20a%20new%20public%20utility)**
 
 ### D2. Do the Navy bases still buy power straight from BPA?
@@ -219,6 +222,17 @@ If PSE would not sell, state law (RCW 54.16.020) allows a court process to set a
 1. Point us to Washington cases, appraisal methods, or the costs of past condemnations, with citations.
 
 - **[Start: open a pre-filled issue](https://github.com/penpro/PUD-Feasibility/issues/new?template=data-submission.md&title=%5BData%5D%20Utility%20valuation%20/%20condemnation%20precedent)**
+
+### D6. Would a takeover need a second public vote?
+
+*1 hour · 🟠 high · OQ-16, OQ-11*
+
+Prop 1 did not approve financing, and KPUD's fact sheet promises no second vote. State law sends some general debt to voters, but its revenue-bond section mentions no vote. That is our reading of the statute, and a lawyer should check it.
+
+1. If you know Washington municipal finance, tell us which debt would need a vote under RCW 54.24.018, with citations.
+2. If you know how Jefferson PUD financed its takeover, and whether it held a second vote, point us to the record.
+
+- **[Start: open a pre-filled issue](https://github.com/penpro/PUD-Feasibility/issues/new?template=data-submission.md&title=%5BData%5D%20Second%20vote%20and%20PUD%20bond%20authority)**
 
 ## Data & code
 

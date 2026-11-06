@@ -3,7 +3,7 @@
 This study is only useful if people on every side of the debate can check it. Challenges are as
 welcome as data.
 
-**Not sure where to start?** [docs/help-wanted.md](docs/help-wanted.md) lists 20 specific things we need,
+**Not sure where to start?** [docs/help-wanted.md](docs/help-wanted.md) lists 21 specific things we need,
 from 5-minute tasks to records requests, each with a pre-filled issue link.
 
 ## Three ways to contribute

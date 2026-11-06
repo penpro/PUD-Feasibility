@@ -35,6 +35,18 @@ Source kinds: **primary** (the producer of the number), **secondary** (journalis
 | S022 | [Creative Commons Attribution 4.0 International legal code](https://creativecommons.org/licenses/by/4.0/legalcode.txt) | Creative Commons | primary | 2026-11-04 |
 | S024 | [Campaign finance for KPUD Proposition 1 (2026): committee totals and contributions](https://data.wa.gov/Politics/Contributions-to-Candidates-and-Political-Committ/kv7h-kjye) | WA Public Disclosure Commission via data.wa.gov (datasets 3h9x-7bvm and kv7h-kjye) | primary | 2026-11-04 |
 | S025 | [Puget Energy, Inc. and Puget Sound Energy, Inc. Form 10-K for fiscal year 2025 (filed 2026-02-19)](https://www.sec.gov/Archives/edgar/data/1085392/000108539226000008/psd-20251231.htm) | Puget Energy, Inc. / Puget Sound Energy, Inc. via SEC EDGAR (accession 0001085392-26-000008) | primary | 2026-11-04 |
+| S026 | [Revised Code of Washington sections on PUD electric authority, studies, debt and carbon allowances](https://app.leg.wa.gov/RCW/default.aspx?cite=54.16.010) | Washington State Legislature (certified 2024-07-12 for the RCW 54 sections) | primary | 2026-11-05 |
+| S027 | [Washington Cap-and-Invest Program Auction #14, June 2026 Summary Report (publication 26-14-039)](https://apps.ecology.wa.gov/publications/documents/2614039.pdf) | WA Department of Ecology | primary | 2026-11-05 |
+| S028 | [September cap-and-invest auction results announced (news release, 2025-09-10)](https://ecology.wa.gov/about-us/who-we-are/news/2025/sept-10-september-cap-and-invest-auction-results-announced) | WA Department of Ecology | primary | 2026-11-05 |
+| S029 | [Washington State's emissions allowance program held its first auctions in 2023 (Today in Energy, 2024-03-07)](https://www.eia.gov/todayinenergy/detail.php?id=61544) | U.S. Energy Information Administration | primary | 2026-11-05 |
+| S030 | [Northwest Sumas natural gas prices (Today in Energy articles, 2024-2026)](https://www.eia.gov/todayinenergy/detail.php?id=66084) | U.S. Energy Information Administration (price data from Natural Gas Intelligence) | primary | 2026-11-05 |
+| S031 | [Memorandum on Stopping Radical Environmentalism To Generate Power for the Columbia River Basin (2025-06-12)](https://www.govinfo.gov/content/pkg/DCPD-202500686/pdf/DCPD-202500686.pdf) | Executive Office of the President, Compilation of Presidential Documents (DCPD-202500686) via govinfo.gov | primary | 2026-11-05 |
+| S032 | [Columbia River System Operations and the Future of the Lower Snake River Dams (R48089, updated 2026-07-31)](https://www.everycrsreport.com/files/2026-07-31_R48089_bad001768c585fb5797f80ad80ecc088f185947b.html) | Congressional Research Service, via EveryCRSReport.com | primary | 2026-11-05 |
+| S033 | [TransAlta release on converting Centralia to natural gas under a tolling agreement with PSE](https://transalta.com/?p=9583) | TransAlta Corporation | primary | 2026-11-05 |
+| S034 | [Tulalips join tribes calling for removal of Snake River dams](https://www.heraldnet.com/2026/03/26/tulalips-join-tribes-calling-for-removal-of-snake-river-dams/) | The Daily Herald (HeraldNet), carrying an Associated Press report, 2026-03-26 | secondary | 2026-11-05 |
+| S035 | [BPA Provider of Choice Policy (March 2024) and CHWM Implementation Policy (2025-08-14)](https://bpa.gov/-/media/Aep/power/provider-of-choice/provider-of-choice-policy-march-2024.pdf) | Bonneville Power Administration | primary | 2026-11-05 |
+| S036 | [Prefiled direct testimony, Exh. CJP-1HCT, WUTC Dockets UE-260005 and UG-260006 (PSE 2026 general rate case)](https://apiproxy.utc.wa.gov/cases/GetDocument?docID=92&year=2026&docketNumber=260005) | Puget Sound Energy, filed with the WA Utilities and Transportation Commission (public version), 2026-02-27 | advocacy | 2026-11-05 |
+| S037 | [No-cost allowance allocation (web page)](https://ecology.wa.gov/air-climate/climate-commitment-act/cap-and-invest/no-cost-allowances) | WA Department of Ecology | primary | 2026-11-05 |
 
 ## S001 — Exploring Electric Service in Kitsap County (web page)
 
@@ -54,7 +66,7 @@ Source kinds: **primary** (the producer of the number), **secondary** (journalis
 - **Accessed:** 2026-11-04
 - **Files:**
   - `data/raw/kpud_fact_publication/FINAL-KPUD-Prop-1-Fact-Publication.pdf` (sha256 `4be3cc1aae7a…`)
-- **Notes:** p.3: feasibility study "estimated to cost between $300,000 and $500,000"; of four electric authority measures in WA in 2008 and 2012, one was approved. p.2: a "No" vote means the study "would not move forward." p.4: no power source selected; BPA named as one option; condemnation authority under RCW 54.16.020; Jefferson PUD took "approximately five years." Note: p.2 misstates the election date as November 4, 2026 (it was November 3).
+- **Notes:** p.3: feasibility study "estimated to cost between $300,000 and $500,000"; of four electric authority measures in WA in 2008 and 2012, one was approved. p.2: a "No" vote means the study "would not move forward." p.4: no power source selected; BPA named as one option; condemnation authority under RCW 54.16.020; Jefferson PUD took "approximately five years." p.2: Prop 1 does not "Approve financing or issuance of bonds"; a later decision would be made "by the Board during a public meeting" (no second vote is promised). p.3: the Board chose to ask voters before studying, "prudent to seek voter direction first", given the study's cost and past votes. The publication does not say how the study would be funded. Note: p.2 misstates the election date as November 4, 2026 (it was November 3).
 
 ## S003 — KPUD Resolution No. 26-07-28A (ballot proposition, adopted 2026-07-28)
 
@@ -203,7 +215,7 @@ Source kinds: **primary** (the producer of the number), **secondary** (journalis
 - **URL:** <https://www.kuow.org/topics/soundside/2026-10-30/kitsap-to-vote-on-energy-measure-as-pse-pours-millions-into-campaign-against-it>
 - **Accessed:** 2026-11-04
 - **Files:** none archived. Copyrighted journalism; link only.
-- **Notes:** Reporter's text: "Kitsap needs around 370 megawatts" (does not say average or peak; no source given); "Public utilities can get 200 megawatts of tier 1 rate power"; PSE investors put "nearly $2.5 million" into the No campaign; Yes side raised "less than $10,000" (PDC, S024: PSE $2,318,178; No committee $2,401,233; Yes $9,055). KPUD GM Angela Bennink (paraphrased): an acquisition would likely need a voter-approved bond.
+- **Notes:** Reporter's text: "Kitsap needs around 370 megawatts" (does not say average or peak; no source given); "Public utilities can get 200 megawatts of tier 1 rate power"; PSE investors put "nearly $2.5 million" into the No campaign; Yes side raised "less than $10,000" (PDC, S024: PSE $2,318,178; No committee $2,401,233; Yes $9,055). BPA's own policy (S035): the 200 aMW is a total shared by all new publics over the contract period, at most 50 aMW per rate period. KPUD GM Angela Bennink (paraphrased): an acquisition would likely need a voter-approved bond.
 
 ## S017 — Kitsap County will vote on public power amid rising bills
 
@@ -291,4 +303,128 @@ Source kinds: **primary** (the producer of the number), **secondary** (journalis
 - **Accessed:** 2026-11-04
 - **Files:**
   - `data/raw/sec_puget_energy_10k_fy2025/psd-20251231.htm` (sha256 `cb79804d710c…`)
-- **Notes:** Item 1: Puget Holdings, which indirectly owns all of Puget Energy (PSE's parent), "is owned by a consortium of long-term infrastructure investors including" BCIMC, AIMCo, OMERS (Canada), Ontario Teachers' Pension Plan (Canada), PGGM Vermogensbeheer (Netherlands) and Macquarie Washington Clean Energy Investment, L.P. (managed by Australia-based Macquarie; its own investors are not disclosed). No ownership percentages are given. Puget Energy consolidated statements (USD thousands, 2025 / 2024 / 2023): net income 369,368 / 265,255 / 53,740; dividends paid 62,887 / 175,861 / 99,760; capital contribution from owners 0 / 292,800 / 0. PSE alone: net income 458,715 / 346,148 / 131,059 (before Puget Energy's holding-company interest).
+- **Notes:** Item 1: Puget Holdings, which indirectly owns all of Puget Energy (PSE's parent), "is owned by a consortium of long-term infrastructure investors including" BCIMC, AIMCo, OMERS (Canada), Ontario Teachers' Pension Plan (Canada), PGGM Vermogensbeheer (Netherlands) and Macquarie Washington Clean Energy Investment, L.P. (managed by Australia-based Macquarie; its own investors are not disclosed). No ownership percentages are given. Puget Energy consolidated statements (USD thousands, 2025 / 2024 / 2023): net income 369,368 / 265,255 / 53,740; dividends paid 62,887 / 175,861 / 99,760; capital contribution from owners 0 / 292,800 / 0. PSE alone: net income 458,715 / 346,148 / 131,059 (before Puget Energy's holding-company interest). Power supply (Item 1): capacity reductions of 1,050 MW "planned to be offset by 1,365 MW" from the Gray's Harbor contract (665 MW) and the conversion of TransAlta's Centralia coal plant "to a combined cycle plant for 700 MW in 2028"; projected capacity shortfall of 576 MW in 2026 and 1,404 MW by 2030, covered in 2026 through market purchases and other activities. Tariff Schedule 95 is PSE's Power Cost Adjustment mechanism.
+
+## S026 — Revised Code of Washington sections on PUD electric authority, studies, debt and carbon allowances
+
+- **Publisher:** Washington State Legislature (certified 2024-07-12 for the RCW 54 sections)
+- **Kind:** primary
+- **URL:** <https://app.leg.wa.gov/RCW/default.aspx?cite=54.16.010>
+- **Accessed:** 2026-11-05
+- **Files:**
+  - `data/raw/wa_rcw/rcw_54.08.070.pdf` (sha256 `51c019c3823e…`)
+  - `data/raw/wa_rcw/rcw_54.16.010.pdf` (sha256 `effb76a5d824…`)
+  - `data/raw/wa_rcw/rcw_54.16.020.pdf` (sha256 `b80b6f39475f…`)
+  - `data/raw/wa_rcw/rcw_54.24.018.pdf` (sha256 `300c47489fd9…`)
+  - `data/raw/wa_rcw/rcw_70A.65.120.pdf` (sha256 `7447e06ec7c9…`)
+- **Notes:** Same URL pattern for each cite, with &pdf=true for the archived copy. RCW 54.16.010: a district "may make surveys, plans, investigations or studies" for electric generation, transmission and distribution systems; it names no vote. RCW 54.08.070: a district like KPUD "shall not construct or acquire" electric facilities without voter approval, and the proposal goes to voters at a general election in an even-numbered year. RCW 54.16.020: purchase and eminent domain. RCW 54.24.018: general indebtedness that takes non-voter debt above three-fourths of one percent of taxable value goes to voters; subsection (3) lets the commission issue revenue bonds payable only from a special fund when it does not want general indebtedness, and it mentions no vote. A separate sentence on a three-fifths vote refers to "general or public utility bonds", so the text is not fully settled (OQ-16). RCW 70A.65.120: consumer-owned and investor-owned electric utilities are eligible for no-cost carbon allowances "to mitigate the cost burden" on customers. This is our reading of the text, not legal advice.
+
+## S027 — Washington Cap-and-Invest Program Auction #14, June 2026 Summary Report (publication 26-14-039)
+
+- **Publisher:** WA Department of Ecology
+- **Kind:** primary
+- **URL:** <https://apps.ecology.wa.gov/publications/documents/2614039.pdf>
+- **Accessed:** 2026-11-05
+- **Files:**
+  - `data/raw/wa_ecology_auctions/ecology_pub_2614039.pdf` (sha256 `9e4060881bdb…`)
+- **Notes:** Auction held 2026-06-03. Current-vintage settlement price $64.56; advance auction $30.00; floor $27.92.
+
+## S028 — September cap-and-invest auction results announced (news release, 2025-09-10)
+
+- **Publisher:** WA Department of Ecology
+- **Kind:** primary
+- **URL:** <https://ecology.wa.gov/about-us/who-we-are/news/2025/sept-10-september-cap-and-invest-auction-results-announced>
+- **Accessed:** 2026-11-05
+- **Files:**
+  - `data/raw/wa_ecology_auctions/ecology_news_2025-09-10_auction.html` (sha256 `11f3896a8326…`)
+- **Notes:** Quarterly auction held Sept. 3, settled at $64.30. Reserve auctions on Oct. 1 and Nov. 12, 2025 were fixed at $60.43. Those are two different prices; do not cite $60.43 as the September settlement.
+
+## S029 — Washington State's emissions allowance program held its first auctions in 2023 (Today in Energy, 2024-03-07)
+
+- **Publisher:** U.S. Energy Information Administration
+- **Kind:** primary
+- **URL:** <https://www.eia.gov/todayinenergy/detail.php?id=61544>
+- **Accessed:** 2026-11-05
+- **Files:**
+  - `data/raw/eia_today_in_energy/eia_tie_61544.html` (sha256 `0698964b0be7…`)
+- **Notes:** First auction 2023-02-28 at $48.50; later 2023 auctions about $56, $63 and $52. No Washington allowance cost existed before this program began in 2023.
+
+## S030 — Northwest Sumas natural gas prices (Today in Energy articles, 2024-2026)
+
+- **Publisher:** U.S. Energy Information Administration (price data from Natural Gas Intelligence)
+- **Kind:** primary
+- **URL:** <https://www.eia.gov/todayinenergy/detail.php?id=66084>
+- **Accessed:** 2026-11-05
+- **Files:**
+  - `data/raw/eia_today_in_energy/eia_tie_63744.html` (sha256 `a7fe9b86ac76…`)
+  - `data/raw/eia_today_in_energy/eia_tie_66084.html` (sha256 `d22382fa7f25…`)
+  - `data/raw/eia_today_in_energy/eia_tie_66984.html` (sha256 `245285912b98…`)
+- **Notes:** Also https://www.eia.gov/todayinenergy/detail.php?id=63744 and id=66984. Daily spot averaged $1.87/MMBtu in 2024 through October (lowest monthly average $0.97, May) and $1.59 in 2025 through August (record-low monthly average $0.56, June). The annual average fell $0.24/MMBtu in 2025. These are partial-year figures from licensed data; a full annual series, including 2022, is not yet sourced.
+
+## S031 — Memorandum on Stopping Radical Environmentalism To Generate Power for the Columbia River Basin (2025-06-12)
+
+- **Publisher:** Executive Office of the President, Compilation of Presidential Documents (DCPD-202500686) via govinfo.gov
+- **Kind:** primary
+- **URL:** <https://www.govinfo.gov/content/pkg/DCPD-202500686/pdf/DCPD-202500686.pdf>
+- **Accessed:** 2026-11-05
+- **Files:**
+  - `data/raw/presidential_memo_2025_columbia/DCPD-202500686.pdf` (sha256 `a060fb74a785…`)
+- **Notes:** Revokes the 2023 memorandum and directs agencies to withdraw from the December 2023 Columbia Basin agreement.
+
+## S032 — Columbia River System Operations and the Future of the Lower Snake River Dams (R48089, updated 2026-07-31)
+
+- **Publisher:** Congressional Research Service, via EveryCRSReport.com
+- **Kind:** primary
+- **URL:** <https://www.everycrsreport.com/files/2026-07-31_R48089_bad001768c585fb5797f80ad80ecc088f185947b.html>
+- **Accessed:** 2026-11-05
+- **Files:**
+  - `data/raw/crs_r48089/crs_R48089_2026-07-31.html` (sha256 `c67c7b0188b1…`)
+- **Notes:** Estimates of replacing the dams' benefits "generally have ranged from $10 billion to $31 billion", mostly electricity and grid services (CRS's summary of other studies, not a CRS estimate). USACE "does not consider itself as having discretion to breach" an authorized dam "without action from Congress". Litigation resumed after the June 2025 memorandum.
+
+## S033 — TransAlta release on converting Centralia to natural gas under a tolling agreement with PSE
+
+- **Publisher:** TransAlta Corporation
+- **Kind:** primary
+- **URL:** <https://transalta.com/?p=9583>
+- **Accessed:** 2026-11-05
+- **Files:** none archived. Corporate copyright; link only.
+- **Notes:** 700 MW, 16-year fixed-price tolling agreement with PSE from late 2028 through 2044-12-31, about US$600M capital cost, subject to WUTC approval, final investment decision expected early 2027. Describes a coal-to-gas conversion; S025 calls the result a combined cycle plant. Which it is decides the heat rate (OQ-21). PSE's request for approval is in its 2026 rate case (S036).
+
+## S034 — Tulalips join tribes calling for removal of Snake River dams
+
+- **Publisher:** The Daily Herald (HeraldNet), carrying an Associated Press report, 2026-03-26
+- **Kind:** secondary
+- **URL:** <https://www.heraldnet.com/2026/03/26/tulalips-join-tribes-calling-for-removal-of-snake-river-dams/>
+- **Accessed:** 2026-11-05
+- **Files:** none archived. Copyrighted journalism; link only.
+- **Notes:** Describes a plan for dam removals in 2030-31. We found no sign that Congress has authorized it, and CRS says breaching would need action from Congress (S032).
+
+## S035 — BPA Provider of Choice Policy (March 2024) and CHWM Implementation Policy (2025-08-14)
+
+- **Publisher:** Bonneville Power Administration
+- **Kind:** primary
+- **URL:** <https://bpa.gov/-/media/Aep/power/provider-of-choice/provider-of-choice-policy-march-2024.pdf>
+- **Accessed:** 2026-11-05
+- **Files:**
+  - `data/raw/bpa_provider_of_choice/chwm-implementation-policy-20250814.pdf` (sha256 `7e301af92823…`)
+  - `data/raw/bpa_provider_of_choice/provider-of-choice-policy-march-2024.pdf` (sha256 `0df20d18a97e…`)
+- **Notes:** Also https://bpa.gov/-/media/Aep/power/provider-of-choice/chwm-implementation-policy-20250814.pdf. POC Policy s.2.4.2.2: Tier 1 for new public utilities limited "to a total of 200 aMW during the Provider of Choice contract period, with no more than 50 aMW added in any rate period", "first come, first serve"; above those limits a new public buys only at PF Tier 2 rates for net requirements until the next long-term contract. s.2.4.2.3: tribal utility adjustments (up to 40 aMW) count against the same limits. s.11.1: contracts expire 2044-09-30. CHWM Policy (repeats the limits) s.3.2.1: a new public is "a newly formed public utility that is not an existing customer of Bonneville"; it must request service by the earlier of three years before the service date or March 1 of the forecast year for the next rate period. s.3.2.1.3.2: requests above the limit are prorated and phased in. Not settled here: whether KPUD, an existing PUD, counts as "newly formed" (OQ-06).
+
+## S036 — Prefiled direct testimony, Exh. CJP-1HCT, WUTC Dockets UE-260005 and UG-260006 (PSE 2026 general rate case)
+
+- **Publisher:** Puget Sound Energy, filed with the WA Utilities and Transportation Commission (public version), 2026-02-27
+- **Kind:** advocacy
+- **URL:** <https://apiproxy.utc.wa.gov/cases/GetDocument?docID=92&year=2026&docketNumber=260005>
+- **Accessed:** 2026-11-05
+- **Files:** none archived. A party's filing; link only.
+- **Notes:** PSE asks the Commission to find its decision to enter the "Centralia Energy Transition Tolling Agreement" prudent and to authorize recovery of its costs through rates. Testimony says signed contracts and load updates reduced the 2030 peak capacity deficit to 1,134 MW in winter and 339 MW in summer (later than the 10-K figures in S025). Points to Exh. BDM-1CT for power-cost effects and Exh. CJP-25HC for Centralia documents. We found no final order as of 2026-11-05.
+
+## S037 — No-cost allowance allocation (web page)
+
+- **Publisher:** WA Department of Ecology
+- **Kind:** primary
+- **URL:** <https://ecology.wa.gov/air-climate/climate-commitment-act/cap-and-invest/no-cost-allowances>
+- **Accessed:** 2026-11-05
+- **Files:**
+  - `data/raw/wa_ecology_auctions/ecology_no_cost_allowances_page.html` (sha256 `614fcbff2573…`)
+- **Notes:** Electric utilities subject to the Clean Energy Transformation Act are eligible. They must use no-cost allowances for compliance, save them, transfer them where eligible, or sell them at quarterly auctions, with proceeds benefiting customers. Lists a 2023-2030 allocation schedule (publication 23-02-031) and data set, revised October 2026. Our copy does not include the schedule itself. How a utility that starts after the schedule was set would be treated is OQ-22.

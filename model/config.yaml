@@ -12,7 +12,7 @@
 
 meta:
   study_version: 0.1.0
-  config_as_of: 2026-11-04
+  config_as_of: 2026-11-05
 
 settings:
   base_year: 2025                 # EIA-861 2025 is the latest annual data (released Oct 2026)
@@ -255,6 +255,26 @@ params:
         note: About 11,000 mi/yr x 0.25-0.35 kWh/mi at the meter; PHEVs pull the fleet average down.
 
   context:
+    # BPA's limits on Tier 1 power for new public utilities. Not yet used by a model (module 2 isn't built).
+    # tests/test_prop1_debate.py re-reads both values from the archived policy (S035).
+    bpa_new_public:
+      tier1_total_amw:
+        value: 200
+        unit: aMW
+        label: VERIFIED
+        source: [S035]
+        as_of: 2026-11-05
+        note: >-
+          Total for all new public utilities during the Provider of Choice contract period (contracts expire
+          2044-09-30), first come, first served. Tribal utility adjustments count against it. POC Policy s.2.4.2.2.
+      tier1_per_rate_period_amw:
+        value: 50
+        unit: aMW per two-year rate period
+        label: VERIFIED
+        source: [S035]
+        as_of: 2026-11-05
+        note: Above this limit or the total, a new public buys from BPA only at PF Tier 2 rates until the next long-term contract.
+
     # Not used by the load model. Quoted on the website's "earned for PSE's owners" counter.
     # tests/test_owners.py re-derives every value from the archived 10-K (S025). Dollars, not thousands.
     pse_owners:
